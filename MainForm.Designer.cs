@@ -30,21 +30,21 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.clientsDataGrid = new System.Windows.Forms.DataGridView();
-            this.servicesDataGrid = new System.Windows.Forms.DataGridView();
-            this.btnAddClient = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.clientsDataGrid = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnAddService = new System.Windows.Forms.Button();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.servicesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 595);
+            this.tabControl1.Size = new System.Drawing.Size(776, 579);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -68,10 +68,55 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 566);
+            this.tabPage1.Size = new System.Drawing.Size(768, 550);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(24, 82);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(219, 22);
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.Text = "Email";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(24, 54);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(219, 22);
+            this.txtAddress.TabIndex = 3;
+            this.txtAddress.Text = "Address";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(24, 26);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(219, 22);
+            this.txtName.TabIndex = 2;
+            this.txtName.Text = "Name";
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.Location = new System.Drawing.Point(324, 54);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(91, 23);
+            this.btnAddClient.TabIndex = 1;
+            this.btnAddClient.Text = "Add Client";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // clientsDataGrid
+            // 
+            this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsDataGrid.Location = new System.Drawing.Point(6, 131);
+            this.clientsDataGrid.Name = "clientsDataGrid";
+            this.clientsDataGrid.RowHeadersWidth = 51;
+            this.clientsDataGrid.RowTemplate.Height = 24;
+            this.clientsDataGrid.Size = new System.Drawing.Size(756, 413);
+            this.clientsDataGrid.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -88,61 +133,13 @@
             this.tabPage2.Text = "Services";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // clientsDataGrid
+            // lblPrice
             // 
-            this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDataGrid.Location = new System.Drawing.Point(6, 131);
-            this.clientsDataGrid.Name = "clientsDataGrid";
-            this.clientsDataGrid.RowHeadersWidth = 51;
-            this.clientsDataGrid.RowTemplate.Height = 24;
-            this.clientsDataGrid.Size = new System.Drawing.Size(756, 429);
-            this.clientsDataGrid.TabIndex = 0;
-            // 
-            // servicesDataGrid
-            // 
-            this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.servicesDataGrid.Location = new System.Drawing.Point(6, 127);
-            this.servicesDataGrid.Name = "servicesDataGrid";
-            this.servicesDataGrid.RowHeadersWidth = 51;
-            this.servicesDataGrid.RowTemplate.Height = 24;
-            this.servicesDataGrid.Size = new System.Drawing.Size(756, 433);
-            this.servicesDataGrid.TabIndex = 0;
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.Location = new System.Drawing.Point(324, 54);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(91, 23);
-            this.btnAddClient.TabIndex = 1;
-            this.btnAddClient.Text = "Add Client";
-            this.btnAddClient.UseVisualStyleBackColor = true;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(24, 26);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(219, 22);
-            this.txtName.TabIndex = 2;
-            this.txtName.Text = "Name";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(24, 54);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(219, 22);
-            this.txtAddress.TabIndex = 3;
-            this.txtAddress.Text = "Address";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(24, 82);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 22);
-            this.txtEmail.TabIndex = 4;
-            this.txtEmail.Text = "Email";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(40, 95);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 16);
+            this.lblPrice.TabIndex = 8;
             // 
             // txtPrice
             // 
@@ -170,28 +167,31 @@
             this.btnAddService.UseVisualStyleBackColor = true;
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
-            // lblPrice
+            // servicesDataGrid
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(40, 95);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(0, 16);
-            this.lblPrice.TabIndex = 8;
+            this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.servicesDataGrid.Location = new System.Drawing.Point(6, 127);
+            this.servicesDataGrid.Name = "servicesDataGrid";
+            this.servicesDataGrid.RowHeadersWidth = 51;
+            this.servicesDataGrid.RowTemplate.Height = 24;
+            this.servicesDataGrid.Size = new System.Drawing.Size(756, 433);
+            this.servicesDataGrid.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 619);
+            this.ClientSize = new System.Drawing.Size(800, 599);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).EndInit();
             this.ResumeLayout(false);
 
