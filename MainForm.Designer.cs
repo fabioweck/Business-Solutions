@@ -30,6 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.radBtnEmail = new System.Windows.Forms.RadioButton();
+            this.radBtnName = new System.Windows.Forms.RadioButton();
+            this.radBtnID = new System.Windows.Forms.RadioButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -43,6 +49,7 @@
             this.servicesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
@@ -60,6 +67,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtEmail);
             this.tabPage1.Controls.Add(this.txtAddress);
             this.tabPage1.Controls.Add(this.txtName);
@@ -72,6 +80,70 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnFind);
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.radBtnEmail);
+            this.groupBox1.Controls.Add(this.radBtnName);
+            this.groupBox1.Controls.Add(this.radBtnID);
+            this.groupBox1.Location = new System.Drawing.Point(441, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(321, 121);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search";
+            // 
+            // btnFind
+            // 
+            this.btnFind.Location = new System.Drawing.Point(123, 78);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 26);
+            this.btnFind.TabIndex = 4;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(110, 19);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 22);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // radBtnEmail
+            // 
+            this.radBtnEmail.AutoSize = true;
+            this.radBtnEmail.Location = new System.Drawing.Point(235, 52);
+            this.radBtnEmail.Name = "radBtnEmail";
+            this.radBtnEmail.Size = new System.Drawing.Size(80, 20);
+            this.radBtnEmail.TabIndex = 2;
+            this.radBtnEmail.TabStop = true;
+            this.radBtnEmail.Text = "by Email";
+            this.radBtnEmail.UseVisualStyleBackColor = true;
+            // 
+            // radBtnName
+            // 
+            this.radBtnName.AutoSize = true;
+            this.radBtnName.Location = new System.Drawing.Point(119, 50);
+            this.radBtnName.Name = "radBtnName";
+            this.radBtnName.Size = new System.Drawing.Size(83, 20);
+            this.radBtnName.TabIndex = 1;
+            this.radBtnName.TabStop = true;
+            this.radBtnName.Text = "by Name";
+            this.radBtnName.UseVisualStyleBackColor = true;
+            // 
+            // radBtnID
+            // 
+            this.radBtnID.AutoSize = true;
+            this.radBtnID.Location = new System.Drawing.Point(6, 50);
+            this.radBtnID.Name = "radBtnID";
+            this.radBtnID.Size = new System.Drawing.Size(59, 20);
+            this.radBtnID.TabIndex = 0;
+            this.radBtnID.TabStop = true;
+            this.radBtnID.Text = "by ID";
+            this.radBtnID.UseVisualStyleBackColor = true;
             // 
             // txtEmail
             // 
@@ -99,9 +171,9 @@
             // 
             // btnAddClient
             // 
-            this.btnAddClient.Location = new System.Drawing.Point(324, 54);
+            this.btnAddClient.Location = new System.Drawing.Point(249, 40);
             this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(91, 23);
+            this.btnAddClient.Size = new System.Drawing.Size(57, 51);
             this.btnAddClient.TabIndex = 1;
             this.btnAddClient.Text = "Add Client";
             this.btnAddClient.UseVisualStyleBackColor = true;
@@ -128,7 +200,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 566);
+            this.tabPage2.Size = new System.Drawing.Size(768, 550);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -189,6 +261,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -212,6 +286,12 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radBtnEmail;
+        private System.Windows.Forms.RadioButton radBtnName;
+        private System.Windows.Forms.RadioButton radBtnID;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
 
