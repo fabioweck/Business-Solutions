@@ -31,5 +31,48 @@ namespace BusinessManager
                 clientsDataGrid.Rows[lastIndex].Selected = true; // Optionally select the last row
             }
         }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if(radBtnID.Checked)
+            {
+                foreach(DataGridViewRow row in clientsDataGrid.Rows)
+                {
+                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == txtSearch.Text)
+                    {
+                        clientsDataGrid.ClearSelection();
+                        clientsDataGrid.Rows[row.Index].Selected = true;
+                        clientsDataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+
+            if(radBtnName.Checked)
+            {
+                foreach (DataGridViewRow row in clientsDataGrid.Rows)
+                {
+                    if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().StartsWith(txtSearch.Text.ToLower()))
+                    {
+                        clientsDataGrid.ClearSelection();
+                        clientsDataGrid.Rows[row.Index].Selected = true;
+                        clientsDataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+
+            if (radBtnEmail.Checked)
+            {
+                foreach (DataGridViewRow row in clientsDataGrid.Rows)
+                {
+                    if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().StartsWith(txtSearch.Text.ToLower()))
+                    {
+                        clientsDataGrid.ClearSelection();
+                        clientsDataGrid.Rows[row.Index].Selected = true;
+                        clientsDataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+        }
+
     }
 }
