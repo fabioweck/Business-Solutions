@@ -36,8 +36,14 @@
     <Reference Include="Syncfusion.Compression.Base, Version=23.1460.40.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Compression.Base.23.1.40\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.ExcelToPdfConverter.Base, Version=23.1460.40.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.ExcelToPdfConverter.WinForms.23.1.40\lib\net46\Syncfusion.ExcelToPdfConverter.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Licensing, Version=23.1460.40.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.Licensing.23.1.40\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=23.1460.40.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Pdf.WinForms.23.1.40\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.XlsIO.Base, Version=23.1460.40.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>packages\Syncfusion.XlsIO.WinForms.23.1.40\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
@@ -104,6 +110,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

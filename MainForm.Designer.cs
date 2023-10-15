@@ -54,14 +54,15 @@ namespace BusinessManager
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabExcel = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.txtIdWorksheet = new System.Windows.Forms.TextBox();
-            this.txtQtyWorksheet = new System.Windows.Forms.TextBox();
-            this.txtDescriptionWorksheet = new System.Windows.Forms.TextBox();
-            this.txtPriceWorksheet = new System.Windows.Forms.TextBox();
-            this.txtNameWorksheet = new System.Windows.Forms.TextBox();
-            this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
+            this.lblPath = new System.Windows.Forms.Label();
             this.txtPhoneWorksheet = new System.Windows.Forms.TextBox();
+            this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
+            this.txtNameWorksheet = new System.Windows.Forms.TextBox();
+            this.txtPriceWorksheet = new System.Windows.Forms.TextBox();
+            this.txtDescriptionWorksheet = new System.Windows.Forms.TextBox();
+            this.txtQtyWorksheet = new System.Windows.Forms.TextBox();
+            this.txtIdWorksheet = new System.Windows.Forms.TextBox();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -271,6 +272,7 @@ namespace BusinessManager
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblPath);
             this.tabPage3.Controls.Add(this.txtPhoneWorksheet);
             this.tabPage3.Controls.Add(this.txtEmailWorksheet);
             this.tabPage3.Controls.Add(this.txtNameWorksheet);
@@ -287,55 +289,21 @@ namespace BusinessManager
             this.tabPage3.Text = "Excel test";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // btnGenerate
+            // lblPath
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(315, 414);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(139, 47);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "Generate my template";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnLoadTemplate);
+            this.lblPath.Location = new System.Drawing.Point(58, 507);
+            this.lblPath.Name = "lblPath";
+            this.lblPath.Size = new System.Drawing.Size(653, 112);
+            this.lblPath.TabIndex = 9;
+            this.lblPath.Text = "label1";
             // 
-            // txtIdWorksheet
+            // txtPhoneWorksheet
             // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(175, 360);
-            this.txtIdWorksheet.Name = "txtIdWorksheet";
-            this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtIdWorksheet.TabIndex = 1;
-            this.txtIdWorksheet.Text = "ID";
-            // 
-            // txtQtyWorksheet
-            // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(281, 360);
-            this.txtQtyWorksheet.Name = "txtQtyWorksheet";
-            this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtQtyWorksheet.TabIndex = 2;
-            this.txtQtyWorksheet.Text = "Quantity";
-            // 
-            // txtDescriptionWorksheet
-            // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(388, 360);
-            this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
-            this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtDescriptionWorksheet.TabIndex = 3;
-            this.txtDescriptionWorksheet.Text = "Description";
-            // 
-            // txtPriceWorksheet
-            // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(494, 360);
-            this.txtPriceWorksheet.Name = "txtPriceWorksheet";
-            this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtPriceWorksheet.TabIndex = 4;
-            this.txtPriceWorksheet.Text = "Price";
-            // 
-            // txtNameWorksheet
-            // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(175, 324);
-            this.txtNameWorksheet.Name = "txtNameWorksheet";
-            this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtNameWorksheet.TabIndex = 6;
-            this.txtNameWorksheet.Text = "Name";
+            this.txtPhoneWorksheet.Location = new System.Drawing.Point(494, 324);
+            this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
+            this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtPhoneWorksheet.TabIndex = 8;
+            this.txtPhoneWorksheet.Text = "Phone";
             // 
             // txtEmailWorksheet
             // 
@@ -345,13 +313,55 @@ namespace BusinessManager
             this.txtEmailWorksheet.TabIndex = 7;
             this.txtEmailWorksheet.Text = "Email";
             // 
-            // txtPhoneWorksheet
+            // txtNameWorksheet
             // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(494, 324);
-            this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
-            this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
-            this.txtPhoneWorksheet.TabIndex = 8;
-            this.txtPhoneWorksheet.Text = "Phone";
+            this.txtNameWorksheet.Location = new System.Drawing.Point(175, 324);
+            this.txtNameWorksheet.Name = "txtNameWorksheet";
+            this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtNameWorksheet.TabIndex = 6;
+            this.txtNameWorksheet.Text = "Name";
+            // 
+            // txtPriceWorksheet
+            // 
+            this.txtPriceWorksheet.Location = new System.Drawing.Point(494, 360);
+            this.txtPriceWorksheet.Name = "txtPriceWorksheet";
+            this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtPriceWorksheet.TabIndex = 4;
+            this.txtPriceWorksheet.Text = "Price";
+            // 
+            // txtDescriptionWorksheet
+            // 
+            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(388, 360);
+            this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
+            this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtDescriptionWorksheet.TabIndex = 3;
+            this.txtDescriptionWorksheet.Text = "Description";
+            // 
+            // txtQtyWorksheet
+            // 
+            this.txtQtyWorksheet.Location = new System.Drawing.Point(281, 360);
+            this.txtQtyWorksheet.Name = "txtQtyWorksheet";
+            this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtQtyWorksheet.TabIndex = 2;
+            this.txtQtyWorksheet.Text = "Quantity";
+            // 
+            // txtIdWorksheet
+            // 
+            this.txtIdWorksheet.Location = new System.Drawing.Point(175, 360);
+            this.txtIdWorksheet.Name = "txtIdWorksheet";
+            this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
+            this.txtIdWorksheet.TabIndex = 1;
+            this.txtIdWorksheet.Text = "ID";
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(315, 414);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(139, 47);
+            this.btnGenerate.TabIndex = 0;
+            this.btnGenerate.Text = "Generate my template";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnLoadTemplate);
             // 
             // MainForm
             // 
@@ -405,6 +415,7 @@ namespace BusinessManager
         private TextBox txtPhoneWorksheet;
         private TextBox txtEmailWorksheet;
         private TextBox txtNameWorksheet;
+        private Label lblPath;
     }
 }
 
