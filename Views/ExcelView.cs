@@ -5,6 +5,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Syncfusion.Pdf;
+using Syncfusion.ExcelToPdfConverter;
+using System.IO;
+using System.Windows.Forms;
 
 namespace BusinessManager
 {
@@ -192,28 +196,52 @@ namespace BusinessManager
 
         private void btnLoadTemplate(object sender, EventArgs e)
         {
-            ExcelEngine excelEngine = new ExcelEngine();
-            IApplication application = excelEngine.Excel;
-            application.DefaultVersion = ExcelVersion.Xlsx;
+            using(ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+
+                string currentDirectory = Directory.GetCurrentDirectory();
+                int index = currentDirectory.LastIndexOf("bin");
+                string path = currentDirectory.Substring(0, index);
+
+                IWorkbook workbook = application.Workbooks.Open(path + "Assets\\work_order.xlsx");
+                IWorksheet worksheet = workbook.Worksheets[0];
+
+                //Disable gridlines in the worksheet
+                worksheet.IsGridLinesVisible = false;
+
+                worksheet.Range["B10"].Text = txtNameWorksheet.Text;
+                worksheet.Range["B11"].Text = txtEmailWorksheet.Text;
+                worksheet.Range["B12"].Text = txtPhoneWorksheet.Text;
+
+                worksheet.Range["B18"].Number = Convert.ToDouble(txtIdWorksheet.Text);
+                worksheet.Range["C18"].Number = Convert.ToDouble(txtQtyWorksheet.Text);
+                worksheet.Range["D18"].Text = txtDescriptionWorksheet.Text;
+                worksheet.Range["F18"].Number = Convert.ToDouble(txtPriceWorksheet.Text);
+                worksheet.Range["G18"].Formula = "=C18*F18";
 
 
-            IWorkbook workbook = application.Workbooks.Open("work_order.xlsx");
-            IWorksheet worksheet = workbook.Worksheets[0];
+                //Initialize ExcelToPdfConverter
+                ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
 
-            //Disable gridlines in the worksheet
-            worksheet.IsGridLinesVisible = false;
+                //Initialize PDF document
+                PdfDocument pdfDocument = new PdfDocument();
 
-            worksheet.Range["B10"].Text = txtNameWorksheet.Text;
-            worksheet.Range["B11"].Text = txtEmailWorksheet.Text;
-            worksheet.Range["B12"].Text = txtPhoneWorksheet.Text;
+                //Convert Excel document into PDF document
+                pdfDocument = converter.Convert();
 
-            worksheet.Range["B18"].Number = Convert.ToDouble(txtIdWorksheet.Text);
-            worksheet.Range["C18"].Number = Convert.ToDouble(txtQtyWorksheet.Text);
-            worksheet.Range["D18"].Text = txtDescriptionWorksheet.Text;
-            worksheet.Range["F18"].Number = Convert.ToDouble(txtPriceWorksheet.Text);
-            worksheet.Range["G18"].Formula = "=C18*F18";
+                //Save the converted PDF document
 
-            workbook.SaveAs("radProjectWorksheet.xlsx");
+
+                using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "PDF Document | *.pdf", ValidateNames = true })
+                {
+                    if (saveFile.ShowDialog() == DialogResult.OK)
+                    {
+                        pdfDocument.Save(saveFile.FileName);
+                    }
+                }
+            }     
         }
     }
 }
