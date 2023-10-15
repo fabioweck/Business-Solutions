@@ -1,6 +1,7 @@
 ﻿using BusinessManager.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,11 @@ namespace BusinessManager.ViewModels
 {
     public class ClientViewModel
     {
-        public List<ClientModel> Clients { get; set; }
+        public BindingList<ClientModel> Clients { get; set; }
 
         public ClientViewModel() 
         {
-            Clients = new List<ClientModel>();
+            Clients = new BindingList<ClientModel>();
             PopulateClients();
         }
 
