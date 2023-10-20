@@ -41,6 +41,7 @@ namespace BusinessManager
             this.btnAddService = new System.Windows.Forms.Button();
             this.servicesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblClientDetails = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -54,6 +55,8 @@ namespace BusinessManager
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabExcel = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.invoicesDataGrid = new System.Windows.Forms.DataGridView();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.lblPath = new System.Windows.Forms.Label();
             this.txtPhoneWorksheet = new System.Windows.Forms.TextBox();
             this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
@@ -63,6 +66,8 @@ namespace BusinessManager
             this.txtQtyWorksheet = new System.Windows.Forms.TextBox();
             this.txtIdWorksheet = new System.Windows.Forms.TextBox();
             this.btnGenerate = new System.Windows.Forms.Button();
+            this.tabAdmin = new System.Windows.Forms.TabPage();
+            this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -70,6 +75,9 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
             this.tabExcel.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
+            this.tabAdmin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -82,7 +90,7 @@ namespace BusinessManager
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 654);
+            this.tabPage2.Size = new System.Drawing.Size(1230, 700);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -125,15 +133,16 @@ namespace BusinessManager
             // 
             this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.servicesDataGrid.Location = new System.Drawing.Point(6, 127);
+            this.servicesDataGrid.Location = new System.Drawing.Point(33, 127);
             this.servicesDataGrid.Name = "servicesDataGrid";
             this.servicesDataGrid.RowHeadersWidth = 51;
             this.servicesDataGrid.RowTemplate.Height = 24;
-            this.servicesDataGrid.Size = new System.Drawing.Size(756, 433);
+            this.servicesDataGrid.Size = new System.Drawing.Size(1150, 500);
             this.servicesDataGrid.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblClientDetails);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtEmail);
             this.tabPage1.Controls.Add(this.txtAddress);
@@ -143,10 +152,18 @@ namespace BusinessManager
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 654);
+            this.tabPage1.Size = new System.Drawing.Size(1230, 700);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblClientDetails
+            // 
+            this.lblClientDetails.AutoSize = true;
+            this.lblClientDetails.Location = new System.Drawing.Point(202, 607);
+            this.lblClientDetails.Name = "lblClientDetails";
+            this.lblClientDetails.Size = new System.Drawing.Size(0, 16);
+            this.lblClientDetails.TabIndex = 6;
             // 
             // groupBox1
             // 
@@ -164,7 +181,7 @@ namespace BusinessManager
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(123, 78);
+            this.btnFind.Location = new System.Drawing.Point(123, 76);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 26);
             this.btnFind.TabIndex = 4;
@@ -182,7 +199,7 @@ namespace BusinessManager
             // radBtnEmail
             // 
             this.radBtnEmail.AutoSize = true;
-            this.radBtnEmail.Location = new System.Drawing.Point(235, 52);
+            this.radBtnEmail.Location = new System.Drawing.Point(235, 50);
             this.radBtnEmail.Name = "radBtnEmail";
             this.radBtnEmail.Size = new System.Drawing.Size(80, 20);
             this.radBtnEmail.TabIndex = 2;
@@ -193,7 +210,7 @@ namespace BusinessManager
             // radBtnName
             // 
             this.radBtnName.AutoSize = true;
-            this.radBtnName.Location = new System.Drawing.Point(119, 50);
+            this.radBtnName.Location = new System.Drawing.Point(119, 48);
             this.radBtnName.Name = "radBtnName";
             this.radBtnName.Size = new System.Drawing.Size(83, 20);
             this.radBtnName.TabIndex = 1;
@@ -204,7 +221,7 @@ namespace BusinessManager
             // radBtnID
             // 
             this.radBtnID.AutoSize = true;
-            this.radBtnID.Location = new System.Drawing.Point(6, 50);
+            this.radBtnID.Location = new System.Drawing.Point(6, 48);
             this.radBtnID.Name = "radBtnID";
             this.radBtnID.Size = new System.Drawing.Size(59, 20);
             this.radBtnID.TabIndex = 0;
@@ -214,7 +231,7 @@ namespace BusinessManager
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(24, 82);
+            this.txtEmail.Location = new System.Drawing.Point(99, 138);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(219, 22);
             this.txtEmail.TabIndex = 4;
@@ -222,7 +239,7 @@ namespace BusinessManager
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(24, 54);
+            this.txtAddress.Location = new System.Drawing.Point(99, 110);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(219, 22);
             this.txtAddress.TabIndex = 3;
@@ -230,7 +247,7 @@ namespace BusinessManager
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(24, 26);
+            this.txtName.Location = new System.Drawing.Point(99, 82);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(219, 22);
             this.txtName.TabIndex = 2;
@@ -238,7 +255,7 @@ namespace BusinessManager
             // 
             // btnAddClient
             // 
-            this.btnAddClient.Location = new System.Drawing.Point(249, 40);
+            this.btnAddClient.Location = new System.Drawing.Point(324, 96);
             this.btnAddClient.Name = "btnAddClient";
             this.btnAddClient.Size = new System.Drawing.Size(57, 51);
             this.btnAddClient.TabIndex = 1;
@@ -250,28 +267,35 @@ namespace BusinessManager
             // 
             this.clientsDataGrid.AllowUserToAddRows = false;
             this.clientsDataGrid.AllowUserToDeleteRows = false;
-            this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDataGrid.Location = new System.Drawing.Point(6, 206);
+            this.clientsDataGrid.Location = new System.Drawing.Point(40, 206);
             this.clientsDataGrid.Name = "clientsDataGrid";
+            this.clientsDataGrid.ReadOnly = true;
             this.clientsDataGrid.RowHeadersWidth = 51;
             this.clientsDataGrid.RowTemplate.Height = 24;
-            this.clientsDataGrid.Size = new System.Drawing.Size(756, 442);
+            this.clientsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.clientsDataGrid.Size = new System.Drawing.Size(1150, 350);
             this.clientsDataGrid.TabIndex = 0;
+            this.clientsDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCell);
             // 
             // tabExcel
             // 
             this.tabExcel.Controls.Add(this.tabPage1);
             this.tabExcel.Controls.Add(this.tabPage2);
             this.tabExcel.Controls.Add(this.tabPage3);
+            this.tabExcel.Controls.Add(this.tabAdmin);
             this.tabExcel.Location = new System.Drawing.Point(12, 12);
             this.tabExcel.Name = "tabExcel";
             this.tabExcel.SelectedIndex = 0;
-            this.tabExcel.Size = new System.Drawing.Size(776, 683);
+            this.tabExcel.Size = new System.Drawing.Size(1238, 729);
             this.tabExcel.TabIndex = 0;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.invoicesDataGrid);
+            this.tabPage3.Controls.Add(this.btnAdmin);
             this.tabPage3.Controls.Add(this.lblPath);
             this.tabPage3.Controls.Add(this.txtPhoneWorksheet);
             this.tabPage3.Controls.Add(this.txtEmailWorksheet);
@@ -284,14 +308,37 @@ namespace BusinessManager
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(768, 654);
+            this.tabPage3.Size = new System.Drawing.Size(1230, 700);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Excel test";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // invoicesDataGrid
+            // 
+            this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoicesDataGrid.Location = new System.Drawing.Point(41, 282);
+            this.invoicesDataGrid.Name = "invoicesDataGrid";
+            this.invoicesDataGrid.RowHeadersWidth = 51;
+            this.invoicesDataGrid.RowTemplate.Height = 24;
+            this.invoicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.invoicesDataGrid.Size = new System.Drawing.Size(1148, 385);
+            this.invoicesDataGrid.TabIndex = 11;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Location = new System.Drawing.Point(552, 220);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(117, 23);
+            this.btnAdmin.TabIndex = 10;
+            this.btnAdmin.Text = "Unlock tab";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
+            // 
             // lblPath
             // 
-            this.lblPath.Location = new System.Drawing.Point(58, 507);
+            this.lblPath.Location = new System.Drawing.Point(108, 211);
             this.lblPath.Name = "lblPath";
             this.lblPath.Size = new System.Drawing.Size(653, 112);
             this.lblPath.TabIndex = 9;
@@ -299,7 +346,7 @@ namespace BusinessManager
             // 
             // txtPhoneWorksheet
             // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(494, 324);
+            this.txtPhoneWorksheet.Location = new System.Drawing.Point(712, 40);
             this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
             this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPhoneWorksheet.TabIndex = 8;
@@ -307,7 +354,7 @@ namespace BusinessManager
             // 
             // txtEmailWorksheet
             // 
-            this.txtEmailWorksheet.Location = new System.Drawing.Point(334, 324);
+            this.txtEmailWorksheet.Location = new System.Drawing.Point(552, 40);
             this.txtEmailWorksheet.Name = "txtEmailWorksheet";
             this.txtEmailWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtEmailWorksheet.TabIndex = 7;
@@ -315,7 +362,7 @@ namespace BusinessManager
             // 
             // txtNameWorksheet
             // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(175, 324);
+            this.txtNameWorksheet.Location = new System.Drawing.Point(393, 40);
             this.txtNameWorksheet.Name = "txtNameWorksheet";
             this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtNameWorksheet.TabIndex = 6;
@@ -323,7 +370,7 @@ namespace BusinessManager
             // 
             // txtPriceWorksheet
             // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(494, 360);
+            this.txtPriceWorksheet.Location = new System.Drawing.Point(712, 76);
             this.txtPriceWorksheet.Name = "txtPriceWorksheet";
             this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPriceWorksheet.TabIndex = 4;
@@ -331,7 +378,7 @@ namespace BusinessManager
             // 
             // txtDescriptionWorksheet
             // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(388, 360);
+            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(606, 76);
             this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
             this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtDescriptionWorksheet.TabIndex = 3;
@@ -339,7 +386,7 @@ namespace BusinessManager
             // 
             // txtQtyWorksheet
             // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(281, 360);
+            this.txtQtyWorksheet.Location = new System.Drawing.Point(499, 76);
             this.txtQtyWorksheet.Name = "txtQtyWorksheet";
             this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtQtyWorksheet.TabIndex = 2;
@@ -347,7 +394,7 @@ namespace BusinessManager
             // 
             // txtIdWorksheet
             // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(175, 360);
+            this.txtIdWorksheet.Location = new System.Drawing.Point(393, 76);
             this.txtIdWorksheet.Name = "txtIdWorksheet";
             this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtIdWorksheet.TabIndex = 1;
@@ -355,7 +402,7 @@ namespace BusinessManager
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(315, 414);
+            this.btnGenerate.Location = new System.Drawing.Point(533, 130);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(139, 47);
             this.btnGenerate.TabIndex = 0;
@@ -363,11 +410,36 @@ namespace BusinessManager
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnLoadTemplate);
             // 
+            // tabAdmin
+            // 
+            this.tabAdmin.Controls.Add(this.employeesDataGrid);
+            this.tabAdmin.Location = new System.Drawing.Point(4, 25);
+            this.tabAdmin.Name = "tabAdmin";
+            this.tabAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdmin.Size = new System.Drawing.Size(1230, 700);
+            this.tabAdmin.TabIndex = 3;
+            this.tabAdmin.Text = "Admin";
+            this.tabAdmin.UseVisualStyleBackColor = true;
+            // 
+            // employeesDataGrid
+            // 
+            this.employeesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.employeesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesDataGrid.Location = new System.Drawing.Point(40, 129);
+            this.employeesDataGrid.Name = "employeesDataGrid";
+            this.employeesDataGrid.RowHeadersWidth = 51;
+            this.employeesDataGrid.RowTemplate.Height = 24;
+            this.employeesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.employeesDataGrid.Size = new System.Drawing.Size(1150, 375);
+            this.employeesDataGrid.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 707);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1262, 753);
             this.Controls.Add(this.tabExcel);
             this.Name = "MainForm";
             this.Text = "Form1";
@@ -382,6 +454,9 @@ namespace BusinessManager
             this.tabExcel.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
+            this.tabAdmin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,6 +491,11 @@ namespace BusinessManager
         private TextBox txtEmailWorksheet;
         private TextBox txtNameWorksheet;
         private Label lblPath;
+        private TabPage tabAdmin;
+        private Button btnAdmin;
+        private Label lblClientDetails;
+        private DataGridView employeesDataGrid;
+        private DataGridView invoicesDataGrid;
     }
 }
 

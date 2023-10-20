@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace BusinessManager
     {
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text);
+            ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
 
             //Change data source to null to clear the grid view, then set data source again with new list
 
@@ -72,6 +73,21 @@ namespace BusinessManager
                     }
                 }
             }
+        }
+
+        private void SelectedCell(object sender, DataGridViewCellEventArgs e)
+        {
+            if (clientsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+
+                // Assuming your DataGridView has columns named "NameColumn" and "AgeColumn"
+                string name = selectedRow.Cells["Name"].Value.ToString();
+
+                // Display the selected row's data in a label
+                lblClientDetails.Text = $"Name: {name}";
+            }
+
         }
 
     }
