@@ -87,7 +87,6 @@ namespace BusinessManager
                 // Display the selected row's data in a label
                 lblClientDetails.Text = $"Name: {name}";
             }
-
         }
 
     }

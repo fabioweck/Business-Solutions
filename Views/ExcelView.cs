@@ -9,11 +9,20 @@ using Syncfusion.Pdf;
 using Syncfusion.ExcelToPdfConverter;
 using System.IO;
 using System.Windows.Forms;
+using Syncfusion.Pdf.Graphics;
+using System.ComponentModel;
+using System.Windows;
+using Syncfusion.Pdf.Parsing;
+using static System.Net.Mime.MediaTypeNames;
+using BusinessManager.ViewModels;
+using BusinessManager.Views;
 
 namespace BusinessManager
 {
     public partial class MainForm
     {
+        string path;
+
         private void btnLoadTemplate(object sender, EventArgs e)
         {
             //Initialize excel engine
@@ -69,6 +78,28 @@ namespace BusinessManager
                     }
                 }
             }     
+        }
+
+        private void SelectedCellInvoice(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (invoicesDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = invoicesDataGrid.SelectedRows[0];
+
+                // Assuming your DataGridView has columns named "NameColumn" and "AgeColumn"
+                string name = selectedRow.Cells["File"].Value.ToString();
+
+                // Display the selected row's data in a label
+                lblFile.Text = $"File: {name}";
+                path = name;
+            }
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            InvoiceView invoiceView = new InvoiceView(path);
+            invoiceView.ShowDialog();
         }
     }
 }
