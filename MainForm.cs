@@ -18,6 +18,8 @@ namespace BusinessManager
     {
         ClientViewModel ListOfClients { get; set; }
         ServicesViewModel ListOfServices { get; set; }
+        EmployeeViewModel ListOfEmployees { get; set; }
+        InvoiceViewModel ListOfInvoices { get; set; }
 
         //SYNCFUSION TEST
         private Button btnCreate;
@@ -29,15 +31,25 @@ namespace BusinessManager
 
             ListOfServices = new ServicesViewModel();
             ListOfClients = new ClientViewModel();
+            ListOfEmployees = new EmployeeViewModel();
+            ListOfInvoices = new InvoiceViewModel();
 
             //Assigns collections to data grids
             clientsDataGrid.DataSource = ListOfClients.Clients;
             servicesDataGrid.DataSource = ListOfServices.Services;
+            employeesDataGrid.DataSource = ListOfEmployees.Employees;
+            invoicesDataGrid.DataSource = ListOfInvoices.Invoices;
 
-            clientsDataGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            clientsDataGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            clientsDataGrid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            tabAdmin.Enabled = false;
           
+        }
+
+        private void btnAdmin_Click_1(object sender, EventArgs e)
+        {
+            if(tabAdmin.Enabled) tabAdmin.Enabled = false;
+            else tabAdmin.Enabled = true;
+
+            groupBox1.Text = "Changed text";
         }
     }
 }
