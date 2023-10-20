@@ -55,9 +55,10 @@ namespace BusinessManager
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabExcel = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblFile = new System.Windows.Forms.Label();
+            this.btnInvoice = new System.Windows.Forms.Button();
             this.invoicesDataGrid = new System.Windows.Forms.DataGridView();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.lblPath = new System.Windows.Forms.Label();
             this.txtPhoneWorksheet = new System.Windows.Forms.TextBox();
             this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
             this.txtNameWorksheet = new System.Windows.Forms.TextBox();
@@ -294,9 +295,10 @@ namespace BusinessManager
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblFile);
+            this.tabPage3.Controls.Add(this.btnInvoice);
             this.tabPage3.Controls.Add(this.invoicesDataGrid);
             this.tabPage3.Controls.Add(this.btnAdmin);
-            this.tabPage3.Controls.Add(this.lblPath);
             this.tabPage3.Controls.Add(this.txtPhoneWorksheet);
             this.tabPage3.Controls.Add(this.txtEmailWorksheet);
             this.tabPage3.Controls.Add(this.txtNameWorksheet);
@@ -313,22 +315,42 @@ namespace BusinessManager
             this.tabPage3.Text = "Excel test";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lblFile
+            // 
+            this.lblFile.AutoSize = true;
+            this.lblFile.Location = new System.Drawing.Point(96, 558);
+            this.lblFile.Name = "lblFile";
+            this.lblFile.Size = new System.Drawing.Size(44, 16);
+            this.lblFile.TabIndex = 13;
+            this.lblFile.Text = "label1";
+            // 
+            // btnInvoice
+            // 
+            this.btnInvoice.Location = new System.Drawing.Point(577, 624);
+            this.btnInvoice.Name = "btnInvoice";
+            this.btnInvoice.Size = new System.Drawing.Size(76, 46);
+            this.btnInvoice.TabIndex = 12;
+            this.btnInvoice.Text = "Visualize Invoice";
+            this.btnInvoice.UseVisualStyleBackColor = true;
+            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            // 
             // invoicesDataGrid
             // 
             this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.invoicesDataGrid.Location = new System.Drawing.Point(41, 282);
+            this.invoicesDataGrid.Location = new System.Drawing.Point(41, 150);
             this.invoicesDataGrid.Name = "invoicesDataGrid";
             this.invoicesDataGrid.RowHeadersWidth = 51;
             this.invoicesDataGrid.RowTemplate.Height = 24;
             this.invoicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.invoicesDataGrid.Size = new System.Drawing.Size(1148, 385);
             this.invoicesDataGrid.TabIndex = 11;
+            this.invoicesDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCellInvoice);
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(552, 220);
+            this.btnAdmin.Location = new System.Drawing.Point(1014, 40);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(117, 23);
             this.btnAdmin.TabIndex = 10;
@@ -336,17 +358,9 @@ namespace BusinessManager
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
-            // lblPath
-            // 
-            this.lblPath.Location = new System.Drawing.Point(108, 211);
-            this.lblPath.Name = "lblPath";
-            this.lblPath.Size = new System.Drawing.Size(653, 112);
-            this.lblPath.TabIndex = 9;
-            this.lblPath.Text = "label1";
-            // 
             // txtPhoneWorksheet
             // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(712, 40);
+            this.txtPhoneWorksheet.Location = new System.Drawing.Point(359, 40);
             this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
             this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPhoneWorksheet.TabIndex = 8;
@@ -354,7 +368,7 @@ namespace BusinessManager
             // 
             // txtEmailWorksheet
             // 
-            this.txtEmailWorksheet.Location = new System.Drawing.Point(552, 40);
+            this.txtEmailWorksheet.Location = new System.Drawing.Point(199, 40);
             this.txtEmailWorksheet.Name = "txtEmailWorksheet";
             this.txtEmailWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtEmailWorksheet.TabIndex = 7;
@@ -362,7 +376,7 @@ namespace BusinessManager
             // 
             // txtNameWorksheet
             // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(393, 40);
+            this.txtNameWorksheet.Location = new System.Drawing.Point(40, 40);
             this.txtNameWorksheet.Name = "txtNameWorksheet";
             this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtNameWorksheet.TabIndex = 6;
@@ -370,7 +384,7 @@ namespace BusinessManager
             // 
             // txtPriceWorksheet
             // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(712, 76);
+            this.txtPriceWorksheet.Location = new System.Drawing.Point(359, 76);
             this.txtPriceWorksheet.Name = "txtPriceWorksheet";
             this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPriceWorksheet.TabIndex = 4;
@@ -378,7 +392,7 @@ namespace BusinessManager
             // 
             // txtDescriptionWorksheet
             // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(606, 76);
+            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(253, 76);
             this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
             this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtDescriptionWorksheet.TabIndex = 3;
@@ -386,7 +400,7 @@ namespace BusinessManager
             // 
             // txtQtyWorksheet
             // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(499, 76);
+            this.txtQtyWorksheet.Location = new System.Drawing.Point(146, 76);
             this.txtQtyWorksheet.Name = "txtQtyWorksheet";
             this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtQtyWorksheet.TabIndex = 2;
@@ -394,7 +408,7 @@ namespace BusinessManager
             // 
             // txtIdWorksheet
             // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(393, 76);
+            this.txtIdWorksheet.Location = new System.Drawing.Point(40, 76);
             this.txtIdWorksheet.Name = "txtIdWorksheet";
             this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtIdWorksheet.TabIndex = 1;
@@ -402,7 +416,7 @@ namespace BusinessManager
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(533, 130);
+            this.btnGenerate.Location = new System.Drawing.Point(493, 51);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(139, 47);
             this.btnGenerate.TabIndex = 0;
@@ -490,12 +504,13 @@ namespace BusinessManager
         private TextBox txtPhoneWorksheet;
         private TextBox txtEmailWorksheet;
         private TextBox txtNameWorksheet;
-        private Label lblPath;
         private TabPage tabAdmin;
         private Button btnAdmin;
         private Label lblClientDetails;
         private DataGridView employeesDataGrid;
         private DataGridView invoicesDataGrid;
+        private Button btnInvoice;
+        private Label lblFile;
     }
 }
 
