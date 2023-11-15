@@ -20,6 +20,5 @@ namespace BusinessManager.Models
             File = path;
             Date = date;
         }
-
     }
 }
