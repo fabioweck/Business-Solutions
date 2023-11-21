@@ -37,6 +37,8 @@
             // 
             // pdfViewerControl
             // 
+            this.pdfViewerControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pdfViewerControl.CursorMode = Syncfusion.Windows.Forms.PdfViewer.PdfViewerCursorMode.SelectTool;
             this.pdfViewerControl.EnableContextMenu = true;
             this.pdfViewerControl.EnableNotificationBar = true;
@@ -44,7 +46,7 @@
             this.pdfViewerControl.IsBookmarkEnabled = true;
             this.pdfViewerControl.IsTextSearchEnabled = true;
             this.pdfViewerControl.IsTextSelectionEnabled = true;
-            this.pdfViewerControl.Location = new System.Drawing.Point(64, 12);
+            this.pdfViewerControl.Location = new System.Drawing.Point(12, 12);
             messageBoxSettings1.EnableNotification = true;
             this.pdfViewerControl.MessageBoxSettings = messageBoxSettings1;
             this.pdfViewerControl.MinimumZoomPercentage = 50;
@@ -61,7 +63,7 @@
             this.pdfViewerControl.ShowHorizontalScrollBar = true;
             this.pdfViewerControl.ShowToolBar = true;
             this.pdfViewerControl.ShowVerticalScrollBar = true;
-            this.pdfViewerControl.Size = new System.Drawing.Size(947, 925);
+            this.pdfViewerControl.Size = new System.Drawing.Size(1100, 900);
             this.pdfViewerControl.SpaceBetweenPages = 8;
             this.pdfViewerControl.TabIndex = 0;
             this.pdfViewerControl.Text = "pdfViewerControl";
@@ -69,6 +71,7 @@
             textSearchSettings1.HighlightAllInstance = true;
             textSearchSettings1.OtherInstanceColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.pdfViewerControl.TextSearchSettings = textSearchSettings1;
+            this.pdfViewerControl.ThemeName = "Default";
             this.pdfViewerControl.VerticalScrollOffset = 0;
             this.pdfViewerControl.VisualStyle = Syncfusion.Windows.Forms.PdfViewer.VisualStyle.Default;
             this.pdfViewerControl.ZoomMode = Syncfusion.Windows.Forms.PdfViewer.ZoomMode.Default;
@@ -77,7 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 987);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1137, 873);
             this.Controls.Add(this.pdfViewerControl);
             this.Name = "InvoiceView";
             this.Text = "InvoiceView";

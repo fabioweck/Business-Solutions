@@ -16,12 +16,6 @@ namespace BusinessManager.Views
         public InvoiceView(string path)
         {
             InitializeComponent();
-
-            string currentDirectory = Directory.GetCurrentDirectory();
-            int index = currentDirectory.LastIndexOf("bin");
-            //string path = currentDirectory.Substring(0, index);
-
-            //pdfViewerControl.Load(path + "\\Assets\\Harry.pdf");
             pdfViewerControl.Load(path);
         }
     }

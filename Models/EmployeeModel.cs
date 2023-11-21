@@ -13,9 +13,9 @@ namespace BusinessManager.Models
         public string Address { get; private set; }
         public string Phone { get; private set; }
         public string Email { get; private set; }
-        public DateTime Contract { get; private set; }
+        public string Contract { get; private set; }
 
-        public EmployeeModel(int id, string name, string address, string phone, string email, DateTime date)
+        public EmployeeModel(int id, string name, string address, string phone, string email, string date)
         { 
             Id = id;
             Name = name;

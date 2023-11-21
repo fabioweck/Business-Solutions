@@ -30,6 +30,7 @@ namespace BusinessManager.ViewModels
             Invoices.Add(new InvoiceModel(Invoices.Count, "Leandro #001", path + "Assets\\Leandro.pdf", new DateTime(2023, 05, 13)));
             Invoices.Add(new InvoiceModel(Invoices.Count, "Harry #002", path + "Assets\\Harry.pdf", new DateTime(2023, 06, 02)));
             Invoices.Add(new InvoiceModel(Invoices.Count, "Alfredo #003", path + "Assets\\Alfredo.pdf", new DateTime(2023, 07, 22)));
+
         }
     }
 }
