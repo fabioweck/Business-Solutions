@@ -1,4 +1,5 @@
-﻿using BusinessManager.ViewModels;
+﻿using BusinessManager.Properties;
+using BusinessManager.ViewModels;
 using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;

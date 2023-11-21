@@ -34,6 +34,7 @@ namespace BusinessManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@ namespace BusinessManager
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
-            this.tabExcel = new System.Windows.Forms.TabControl();
+            this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblFile = new System.Windows.Forms.Label();
             this.btnInvoice = new System.Windows.Forms.Button();
@@ -69,12 +70,13 @@ namespace BusinessManager
             this.btnGenerate = new System.Windows.Forms.Button();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
-            this.tabExcel.SuspendLayout();
+            this.tabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
             this.tabAdmin.SuspendLayout();
@@ -91,7 +93,7 @@ namespace BusinessManager
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1230, 700);
+            this.tabPage2.Size = new System.Drawing.Size(1203, 686);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -143,6 +145,7 @@ namespace BusinessManager
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.lblClientDetails);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtEmail);
@@ -153,10 +156,9 @@ namespace BusinessManager
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1230, 700);
+            this.tabPage1.Size = new System.Drawing.Size(1203, 686);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // lblClientDetails
             // 
@@ -173,7 +175,7 @@ namespace BusinessManager
             this.groupBox1.Controls.Add(this.radBtnEmail);
             this.groupBox1.Controls.Add(this.radBtnName);
             this.groupBox1.Controls.Add(this.radBtnID);
-            this.groupBox1.Location = new System.Drawing.Point(441, 4);
+            this.groupBox1.Location = new System.Drawing.Point(744, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(321, 121);
             this.groupBox1.TabIndex = 5;
@@ -271,7 +273,7 @@ namespace BusinessManager
             this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDataGrid.Location = new System.Drawing.Point(40, 206);
+            this.clientsDataGrid.Location = new System.Drawing.Point(26, 206);
             this.clientsDataGrid.Name = "clientsDataGrid";
             this.clientsDataGrid.ReadOnly = true;
             this.clientsDataGrid.RowHeadersWidth = 51;
@@ -281,17 +283,17 @@ namespace BusinessManager
             this.clientsDataGrid.TabIndex = 0;
             this.clientsDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCell);
             // 
-            // tabExcel
+            // tabs
             // 
-            this.tabExcel.Controls.Add(this.tabPage1);
-            this.tabExcel.Controls.Add(this.tabPage2);
-            this.tabExcel.Controls.Add(this.tabPage3);
-            this.tabExcel.Controls.Add(this.tabAdmin);
-            this.tabExcel.Location = new System.Drawing.Point(12, 12);
-            this.tabExcel.Name = "tabExcel";
-            this.tabExcel.SelectedIndex = 0;
-            this.tabExcel.Size = new System.Drawing.Size(1238, 729);
-            this.tabExcel.TabIndex = 0;
+            this.tabs.Controls.Add(this.tabPage1);
+            this.tabs.Controls.Add(this.tabPage2);
+            this.tabs.Controls.Add(this.tabPage3);
+            this.tabs.Controls.Add(this.tabAdmin);
+            this.tabs.Location = new System.Drawing.Point(26, 19);
+            this.tabs.Name = "tabs";
+            this.tabs.SelectedIndex = 0;
+            this.tabs.Size = new System.Drawing.Size(1211, 715);
+            this.tabs.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -310,7 +312,7 @@ namespace BusinessManager
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1230, 700);
+            this.tabPage3.Size = new System.Drawing.Size(1203, 686);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Excel test";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -426,11 +428,12 @@ namespace BusinessManager
             // 
             // tabAdmin
             // 
+            this.tabAdmin.Controls.Add(this.button1);
             this.tabAdmin.Controls.Add(this.employeesDataGrid);
             this.tabAdmin.Location = new System.Drawing.Point(4, 25);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdmin.Size = new System.Drawing.Size(1230, 700);
+            this.tabAdmin.Size = new System.Drawing.Size(1203, 686);
             this.tabAdmin.TabIndex = 3;
             this.tabAdmin.Text = "Admin";
             this.tabAdmin.UseVisualStyleBackColor = true;
@@ -448,15 +451,26 @@ namespace BusinessManager
             this.employeesDataGrid.Size = new System.Drawing.Size(1150, 375);
             this.employeesDataGrid.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(607, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BusinessManager.Properties.Resources.backgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 753);
-            this.Controls.Add(this.tabExcel);
+            this.Controls.Add(this.tabs);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Business Manager 1.0";
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).EndInit();
@@ -465,7 +479,7 @@ namespace BusinessManager
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
-            this.tabExcel.ResumeLayout(false);
+            this.tabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
@@ -494,7 +508,7 @@ namespace BusinessManager
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.DataGridView clientsDataGrid;
-        private System.Windows.Forms.TabControl tabExcel;
+        private System.Windows.Forms.TabControl tabs;
         private TabPage tabPage3;
         private Button btnGenerate;
         private TextBox txtPriceWorksheet;
@@ -504,13 +518,14 @@ namespace BusinessManager
         private TextBox txtPhoneWorksheet;
         private TextBox txtEmailWorksheet;
         private TextBox txtNameWorksheet;
-        private TabPage tabAdmin;
         private Button btnAdmin;
         private Label lblClientDetails;
         private DataGridView employeesDataGrid;
         private DataGridView invoicesDataGrid;
         private Button btnInvoice;
         private Label lblFile;
+        public TabPage tabAdmin;
+        private Button button1;
     }
 }
 

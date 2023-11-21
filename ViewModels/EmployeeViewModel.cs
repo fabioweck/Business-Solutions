@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,23 @@ namespace BusinessManager.ViewModels
 
         public void PopulateEmployees()
         {
-            Employees.Add(new EmployeeModel(Employees.Count, "Fabio Augusto Weck", "0908 15st, Beltline, Calgary", "587-892-3124", "fabio@rad.com", new DateTime(2023, 03, 01)));
-            Employees.Add(new EmployeeModel(Employees.Count, "Uyara Martins", "1112 Oak Ave., North, Calgary", "981-282-3461", "uyara@rad.com", new DateTime(2023, 03, 05)));
-            Employees.Add(new EmployeeModel(Employees.Count, "Leandro Evaristo", "85 Orange Blossom, Calgary", "354-654-1916", "leandro@rad.com", new DateTime(2023, 03, 07)));
+
+            string currentDirectory = Directory.GetCurrentDirectory();
+            int index = currentDirectory.LastIndexOf("bin");
+            string path = currentDirectory.Substring(0, index);
+
+            using (StreamReader sr = new StreamReader(path + "Assets\\database\\employees.csv"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    if (line != null)
+                    {
+                        string[] splitted = line.Split(';');
+                        Employees.Add(new EmployeeModel(Employees.Count, splitted[0], splitted[1], splitted[2], splitted[3], splitted[4]));
+                    }
+                }
+            }
         }
     }
 }
