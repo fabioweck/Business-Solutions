@@ -23,3 +23,5 @@ C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application 
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\bin\Debug\Syncfusion.PdfViewer.Windows.xml
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\bin\Debug\Syncfusion.Shared.Base.xml
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.InvoiceView.resources
+C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.ClientDetailsView.resources
+C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.UpdateClientView.resources

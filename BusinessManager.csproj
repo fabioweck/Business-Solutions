@@ -83,13 +83,19 @@
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\InvoiceViewModel.cs" />
     <Compile Include="ViewModels\ServicesViewModel.cs" />
+    <Compile Include="Views\ClientDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClientDetailsView.Designer.cs">
+      <DependentUpon>ClientDetailsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ClientView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EmployeeView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ExcelView.cs">
+    <Compile Include="Views\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\InvoiceView.cs">
@@ -98,8 +104,17 @@
     <Compile Include="Views\InvoiceView.Designer.cs">
       <DependentUpon>InvoiceView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\RegistryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\ServiceView.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateClientView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateClientView.Designer.cs">
+      <DependentUpon>UpdateClientView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -114,8 +129,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ClientDetailsView.resx">
+      <DependentUpon>ClientDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\InvoiceView.resx">
       <DependentUpon>InvoiceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateClientView.resx">
+      <DependentUpon>UpdateClientView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
