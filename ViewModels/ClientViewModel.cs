@@ -12,7 +12,7 @@ namespace BusinessManager.ViewModels
 {
     public class ClientViewModel
     {
-        public BindingList<ClientModel> Clients { get; set; }
+        public static BindingList<ClientModel> Clients { get; set; }
 
         public ClientViewModel() 
         {
@@ -38,12 +38,24 @@ namespace BusinessManager.ViewModels
                     }
                 }
             }
-
         }
 
-        public void AddClient(string name, string address, string email, string phone)
+        public static void AddClient(string name, string address, string email, string phone)
         {
             Clients.Add(new ClientModel(Clients.Count, name, address, email, phone));
+        }
+
+        public static void UpdateClient(int id, string address, string email, string phone)
+        {
+            foreach(ClientModel client in Clients)
+            {
+                if(client.Id == id)
+                {
+                    if(address != string.Empty) client.Address = address;
+                    if(email != string.Empty) client.Email = email;
+                    if(phone != string.Empty) client.Phone = phone;
+                }
+            }
         }
     }
 }

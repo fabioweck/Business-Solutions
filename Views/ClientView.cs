@@ -1,4 +1,5 @@
 ﻿using BusinessManager.ViewModels;
+using BusinessManager.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,12 +20,12 @@ namespace BusinessManager
     {
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
+            //ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
 
             //Change data source to null to clear the grid view, then set data source again with new list
 
             clientsDataGrid.DataSource = null;
-            clientsDataGrid.DataSource = ListOfClients.Clients;
+            clientsDataGrid.DataSource = ClientViewModel.Clients;
 
             if (clientsDataGrid.Rows.Count > 0)
             {
@@ -33,13 +35,13 @@ namespace BusinessManager
             }
         }
 
-        private void btnFind_Click(object sender, EventArgs e)
+        private void btnFindClient_Click(object sender, EventArgs e)
         {
-            if(radBtnID.Checked)
+            if(radBtnClientID.Checked)
             {
                 foreach(DataGridViewRow row in clientsDataGrid.Rows)
                 {
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == txtSearch.Text)
+                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == txtSearchClient.Text)
                     {
                         clientsDataGrid.ClearSelection();
                         clientsDataGrid.Rows[row.Index].Selected = true;
@@ -48,11 +50,11 @@ namespace BusinessManager
                 }
             }
 
-            if(radBtnName.Checked)
+            if(radBtnClientName.Checked)
             {
                 foreach (DataGridViewRow row in clientsDataGrid.Rows)
                 {
-                    if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().StartsWith(txtSearch.Text.ToLower()))
+                    if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().StartsWith(txtSearchClient.Text.ToLower()))
                     {
                         clientsDataGrid.ClearSelection();
                         clientsDataGrid.Rows[row.Index].Selected = true;
@@ -61,11 +63,11 @@ namespace BusinessManager
                 }
             }
 
-            if (radBtnEmail.Checked)
+            if (radBtnClientEmail.Checked)
             {
                 foreach (DataGridViewRow row in clientsDataGrid.Rows)
                 {
-                    if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().StartsWith(txtSearch.Text.ToLower()))
+                    if (row.Cells[3].Value != null && row.Cells[3].Value.ToString().ToLower().StartsWith(txtSearchClient.Text.ToLower()))
                     {
                         clientsDataGrid.ClearSelection();
                         clientsDataGrid.Rows[row.Index].Selected = true;
@@ -75,19 +77,28 @@ namespace BusinessManager
             }
         }
 
-        private void SelectedCell(object sender, DataGridViewCellEventArgs e)
+        private void btnClientDetails_Click(object sender, EventArgs e)
         {
             if (clientsDataGrid.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
 
-                // Assuming your DataGridView has columns named "NameColumn" and "AgeColumn"
                 string name = selectedRow.Cells["Name"].Value.ToString();
+                int id = (int)selectedRow.Cells["Id"].Value;
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
 
-                // Display the selected row's data in a label
-                lblClientDetails.Text = $"Name: {name}";
+                ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
+                clientDetails.ShowDialog();
+                RefreshDataGrid();
             }
         }
 
+        public void RefreshDataGrid()
+        {
+            clientsDataGrid.DataSource = null;
+            clientsDataGrid.DataSource = ClientViewModel.Clients;
+        }
     }
 }

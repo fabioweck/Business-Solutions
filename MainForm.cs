@@ -1,5 +1,6 @@
 ﻿using BusinessManager.Properties;
 using BusinessManager.ViewModels;
+using BusinessManager.Views;
 using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
@@ -8,49 +9,47 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.Design;
 using System.Windows.Forms;
 
 namespace BusinessManager
 {
     partial class MainForm : Form
     {
-        ClientViewModel ListOfClients { get; set; }
+        ClientViewModel ListOfClients = new ClientViewModel();
         ServicesViewModel ListOfServices { get; set; }
         EmployeeViewModel ListOfEmployees { get; set; }
         InvoiceViewModel ListOfInvoices { get; set; }
-
-        //SYNCFUSION TEST
-        private Button btnCreate;
-        System.Windows.Forms.Label label;
 
         public MainForm()
         {
             InitializeComponent();
 
             ListOfServices = new ServicesViewModel();
-            ListOfClients = new ClientViewModel();
             ListOfEmployees = new EmployeeViewModel();
             ListOfInvoices = new InvoiceViewModel();
 
             //Assigns collections to data grids
-            clientsDataGrid.DataSource = ListOfClients.Clients;
+            clientsDataGrid.DataSource = ClientViewModel.Clients;
             servicesDataGrid.DataSource = ListOfServices.Services;
-            employeesDataGrid.DataSource = ListOfEmployees.Employees;
+            invoicesDataGrid.DataSource = ListOfEmployees.Employees;
             invoicesDataGrid.DataSource = ListOfInvoices.Invoices;
 
-            tabAdmin.Enabled = false;
+            string currentDirectory = Directory.GetCurrentDirectory();
+            int index = currentDirectory.LastIndexOf("bin");
+            string path = currentDirectory.Substring(0, index);
+
+            this.BackgroundImage = Image.FromFile(path + "\\Assets\\backgroundImage.jpg");
           
         }
 
-        private void btnAdmin_Click_1(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(tabAdmin.Enabled) tabAdmin.Enabled = false;
-            else tabAdmin.Enabled = true;
-
-            groupBox1.Text = "Changed text";
+            Application.Exit();
         }
     }
 }

@@ -36,30 +36,24 @@ namespace BusinessManager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.btnAddService = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFindService = new System.Windows.Forms.Button();
+            this.txtSearchService = new System.Windows.Forms.TextBox();
+            this.radBtnDescription = new System.Windows.Forms.RadioButton();
+            this.radBtnServiceID = new System.Windows.Forms.RadioButton();
             this.servicesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnClientDetails = new System.Windows.Forms.Button();
             this.lblClientDetails = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.radBtnEmail = new System.Windows.Forms.RadioButton();
-            this.radBtnName = new System.Windows.Forms.RadioButton();
-            this.radBtnID = new System.Windows.Forms.RadioButton();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnFindClient = new System.Windows.Forms.Button();
+            this.txtSearchClient = new System.Windows.Forms.TextBox();
+            this.radBtnClientEmail = new System.Windows.Forms.RadioButton();
+            this.radBtnClientName = new System.Windows.Forms.RadioButton();
+            this.radBtnClientID = new System.Windows.Forms.RadioButton();
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblFile = new System.Windows.Forms.Label();
-            this.btnInvoice = new System.Windows.Forms.Button();
-            this.invoicesDataGrid = new System.Windows.Forms.DataGridView();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.txtPhoneWorksheet = new System.Windows.Forms.TextBox();
             this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
             this.txtNameWorksheet = new System.Windows.Forms.TextBox();
@@ -68,27 +62,32 @@ namespace BusinessManager
             this.txtQtyWorksheet = new System.Windows.Forms.TextBox();
             this.txtIdWorksheet = new System.Windows.Forms.TextBox();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.tabAdmin = new System.Windows.Forms.TabPage();
-            this.employeesDataGrid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabRegistry = new System.Windows.Forms.TabPage();
+            this.lblSelectInvoice = new System.Windows.Forms.Label();
+            this.btnViewInvoice = new System.Windows.Forms.Button();
+            this.invoicesDataGrid = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
             this.tabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
-            this.tabAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lblPrice);
-            this.tabPage2.Controls.Add(this.txtPrice);
-            this.tabPage2.Controls.Add(this.txtDescription);
-            this.tabPage2.Controls.Add(this.btnAddService);
+            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.servicesDataGrid);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -96,41 +95,61 @@ namespace BusinessManager
             this.tabPage2.Size = new System.Drawing.Size(1203, 686);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblPrice
+            // groupBox2
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(40, 95);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(0, 16);
-            this.lblPrice.TabIndex = 8;
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.btnFindService);
+            this.groupBox2.Controls.Add(this.txtSearchService);
+            this.groupBox2.Controls.Add(this.radBtnDescription);
+            this.groupBox2.Controls.Add(this.radBtnServiceID);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(341, 29);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(520, 72);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search";
             // 
-            // txtPrice
+            // btnFindService
             // 
-            this.txtPrice.Location = new System.Drawing.Point(43, 70);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(219, 22);
-            this.txtPrice.TabIndex = 7;
-            this.txtPrice.Text = "Price";
+            this.btnFindService.Location = new System.Drawing.Point(428, 25);
+            this.btnFindService.Name = "btnFindService";
+            this.btnFindService.Size = new System.Drawing.Size(75, 26);
+            this.btnFindService.TabIndex = 4;
+            this.btnFindService.Text = "Find";
+            this.btnFindService.UseVisualStyleBackColor = true;
+            this.btnFindService.Click += new System.EventHandler(this.btnFindService_Click);
             // 
-            // txtDescription
+            // txtSearchService
             // 
-            this.txtDescription.Location = new System.Drawing.Point(43, 42);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(219, 22);
-            this.txtDescription.TabIndex = 6;
-            this.txtDescription.Text = "Description";
+            this.txtSearchService.Location = new System.Drawing.Point(18, 27);
+            this.txtSearchService.Name = "txtSearchService";
+            this.txtSearchService.Size = new System.Drawing.Size(143, 22);
+            this.txtSearchService.TabIndex = 3;
             // 
-            // btnAddService
+            // radBtnDescription
             // 
-            this.btnAddService.Location = new System.Drawing.Point(343, 70);
-            this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(91, 23);
-            this.btnAddService.TabIndex = 5;
-            this.btnAddService.Text = "Add Service";
-            this.btnAddService.UseVisualStyleBackColor = true;
-            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            this.radBtnDescription.AutoSize = true;
+            this.radBtnDescription.Location = new System.Drawing.Point(287, 27);
+            this.radBtnDescription.Name = "radBtnDescription";
+            this.radBtnDescription.Size = new System.Drawing.Size(114, 20);
+            this.radBtnDescription.TabIndex = 1;
+            this.radBtnDescription.TabStop = true;
+            this.radBtnDescription.Text = "by Description";
+            this.radBtnDescription.UseVisualStyleBackColor = true;
+            // 
+            // radBtnServiceID
+            // 
+            this.radBtnServiceID.AutoSize = true;
+            this.radBtnServiceID.Location = new System.Drawing.Point(198, 27);
+            this.radBtnServiceID.Name = "radBtnServiceID";
+            this.radBtnServiceID.Size = new System.Drawing.Size(59, 20);
+            this.radBtnServiceID.TabIndex = 0;
+            this.radBtnServiceID.TabStop = true;
+            this.radBtnServiceID.Text = "by ID";
+            this.radBtnServiceID.UseVisualStyleBackColor = true;
             // 
             // servicesDataGrid
             // 
@@ -145,13 +164,10 @@ namespace BusinessManager
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.Controls.Add(this.btnClientDetails);
             this.tabPage1.Controls.Add(this.lblClientDetails);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.txtEmail);
-            this.tabPage1.Controls.Add(this.txtAddress);
-            this.tabPage1.Controls.Add(this.txtName);
-            this.tabPage1.Controls.Add(this.btnAddClient);
             this.tabPage1.Controls.Add(this.clientsDataGrid);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -159,6 +175,17 @@ namespace BusinessManager
             this.tabPage1.Size = new System.Drawing.Size(1203, 686);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
+            // 
+            // btnClientDetails
+            // 
+            this.btnClientDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientDetails.Location = new System.Drawing.Point(426, 596);
+            this.btnClientDetails.Name = "btnClientDetails";
+            this.btnClientDetails.Size = new System.Drawing.Size(75, 39);
+            this.btnClientDetails.TabIndex = 7;
+            this.btnClientDetails.Text = "Details";
+            this.btnClientDetails.UseVisualStyleBackColor = true;
+            this.btnClientDetails.Click += new System.EventHandler(this.btnClientDetails_Click);
             // 
             // lblClientDetails
             // 
@@ -170,101 +197,70 @@ namespace BusinessManager
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnFind);
-            this.groupBox1.Controls.Add(this.txtSearch);
-            this.groupBox1.Controls.Add(this.radBtnEmail);
-            this.groupBox1.Controls.Add(this.radBtnName);
-            this.groupBox1.Controls.Add(this.radBtnID);
-            this.groupBox1.Location = new System.Drawing.Point(744, 55);
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.btnFindClient);
+            this.groupBox1.Controls.Add(this.txtSearchClient);
+            this.groupBox1.Controls.Add(this.radBtnClientEmail);
+            this.groupBox1.Controls.Add(this.radBtnClientName);
+            this.groupBox1.Controls.Add(this.radBtnClientID);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(294, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(321, 121);
+            this.groupBox1.Size = new System.Drawing.Size(614, 72);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
-            // btnFind
+            // btnFindClient
             // 
-            this.btnFind.Location = new System.Drawing.Point(123, 76);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 26);
-            this.btnFind.TabIndex = 4;
-            this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.btnFindClient.Location = new System.Drawing.Point(505, 25);
+            this.btnFindClient.Name = "btnFindClient";
+            this.btnFindClient.Size = new System.Drawing.Size(75, 26);
+            this.btnFindClient.TabIndex = 4;
+            this.btnFindClient.Text = "Find";
+            this.btnFindClient.UseVisualStyleBackColor = true;
+            this.btnFindClient.Click += new System.EventHandler(this.btnFindClient_Click);
             // 
-            // txtSearch
+            // txtSearchClient
             // 
-            this.txtSearch.Location = new System.Drawing.Point(110, 19);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 22);
-            this.txtSearch.TabIndex = 3;
+            this.txtSearchClient.Location = new System.Drawing.Point(18, 27);
+            this.txtSearchClient.Name = "txtSearchClient";
+            this.txtSearchClient.Size = new System.Drawing.Size(143, 22);
+            this.txtSearchClient.TabIndex = 3;
             // 
-            // radBtnEmail
+            // radBtnClientEmail
             // 
-            this.radBtnEmail.AutoSize = true;
-            this.radBtnEmail.Location = new System.Drawing.Point(235, 50);
-            this.radBtnEmail.Name = "radBtnEmail";
-            this.radBtnEmail.Size = new System.Drawing.Size(80, 20);
-            this.radBtnEmail.TabIndex = 2;
-            this.radBtnEmail.TabStop = true;
-            this.radBtnEmail.Text = "by Email";
-            this.radBtnEmail.UseVisualStyleBackColor = true;
+            this.radBtnClientEmail.AutoSize = true;
+            this.radBtnClientEmail.Location = new System.Drawing.Point(395, 27);
+            this.radBtnClientEmail.Name = "radBtnClientEmail";
+            this.radBtnClientEmail.Size = new System.Drawing.Size(80, 20);
+            this.radBtnClientEmail.TabIndex = 2;
+            this.radBtnClientEmail.TabStop = true;
+            this.radBtnClientEmail.Text = "by Email";
+            this.radBtnClientEmail.UseVisualStyleBackColor = true;
             // 
-            // radBtnName
+            // radBtnClientName
             // 
-            this.radBtnName.AutoSize = true;
-            this.radBtnName.Location = new System.Drawing.Point(119, 48);
-            this.radBtnName.Name = "radBtnName";
-            this.radBtnName.Size = new System.Drawing.Size(83, 20);
-            this.radBtnName.TabIndex = 1;
-            this.radBtnName.TabStop = true;
-            this.radBtnName.Text = "by Name";
-            this.radBtnName.UseVisualStyleBackColor = true;
+            this.radBtnClientName.AutoSize = true;
+            this.radBtnClientName.Location = new System.Drawing.Point(287, 27);
+            this.radBtnClientName.Name = "radBtnClientName";
+            this.radBtnClientName.Size = new System.Drawing.Size(83, 20);
+            this.radBtnClientName.TabIndex = 1;
+            this.radBtnClientName.TabStop = true;
+            this.radBtnClientName.Text = "by Name";
+            this.radBtnClientName.UseVisualStyleBackColor = true;
             // 
-            // radBtnID
+            // radBtnClientID
             // 
-            this.radBtnID.AutoSize = true;
-            this.radBtnID.Location = new System.Drawing.Point(6, 48);
-            this.radBtnID.Name = "radBtnID";
-            this.radBtnID.Size = new System.Drawing.Size(59, 20);
-            this.radBtnID.TabIndex = 0;
-            this.radBtnID.TabStop = true;
-            this.radBtnID.Text = "by ID";
-            this.radBtnID.UseVisualStyleBackColor = true;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(99, 138);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 22);
-            this.txtEmail.TabIndex = 4;
-            this.txtEmail.Text = "Email";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(99, 110);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(219, 22);
-            this.txtAddress.TabIndex = 3;
-            this.txtAddress.Text = "Address";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(99, 82);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(219, 22);
-            this.txtName.TabIndex = 2;
-            this.txtName.Text = "Name";
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.Location = new System.Drawing.Point(324, 96);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(57, 51);
-            this.btnAddClient.TabIndex = 1;
-            this.btnAddClient.Text = "Add Client";
-            this.btnAddClient.UseVisualStyleBackColor = true;
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            this.radBtnClientID.AutoSize = true;
+            this.radBtnClientID.Location = new System.Drawing.Point(198, 27);
+            this.radBtnClientID.Name = "radBtnClientID";
+            this.radBtnClientID.Size = new System.Drawing.Size(59, 20);
+            this.radBtnClientID.TabIndex = 0;
+            this.radBtnClientID.TabStop = true;
+            this.radBtnClientID.Text = "by ID";
+            this.radBtnClientID.UseVisualStyleBackColor = true;
             // 
             // clientsDataGrid
             // 
@@ -281,15 +277,14 @@ namespace BusinessManager
             this.clientsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientsDataGrid.Size = new System.Drawing.Size(1150, 350);
             this.clientsDataGrid.TabIndex = 0;
-            this.clientsDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCell);
             // 
             // tabs
             // 
             this.tabs.Controls.Add(this.tabPage1);
             this.tabs.Controls.Add(this.tabPage2);
             this.tabs.Controls.Add(this.tabPage3);
-            this.tabs.Controls.Add(this.tabAdmin);
-            this.tabs.Location = new System.Drawing.Point(26, 19);
+            this.tabs.Controls.Add(this.tabRegistry);
+            this.tabs.Location = new System.Drawing.Point(26, 43);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
             this.tabs.Size = new System.Drawing.Size(1211, 715);
@@ -297,10 +292,7 @@ namespace BusinessManager
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.lblFile);
-            this.tabPage3.Controls.Add(this.btnInvoice);
-            this.tabPage3.Controls.Add(this.invoicesDataGrid);
-            this.tabPage3.Controls.Add(this.btnAdmin);
+            this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPage3.Controls.Add(this.txtPhoneWorksheet);
             this.tabPage3.Controls.Add(this.txtEmailWorksheet);
             this.tabPage3.Controls.Add(this.txtNameWorksheet);
@@ -314,55 +306,11 @@ namespace BusinessManager
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1203, 686);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Excel test";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lblFile
-            // 
-            this.lblFile.AutoSize = true;
-            this.lblFile.Location = new System.Drawing.Point(96, 558);
-            this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(44, 16);
-            this.lblFile.TabIndex = 13;
-            this.lblFile.Text = "label1";
-            // 
-            // btnInvoice
-            // 
-            this.btnInvoice.Location = new System.Drawing.Point(577, 624);
-            this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(76, 46);
-            this.btnInvoice.TabIndex = 12;
-            this.btnInvoice.Text = "Visualize Invoice";
-            this.btnInvoice.UseVisualStyleBackColor = true;
-            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
-            // 
-            // invoicesDataGrid
-            // 
-            this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.invoicesDataGrid.Location = new System.Drawing.Point(41, 150);
-            this.invoicesDataGrid.Name = "invoicesDataGrid";
-            this.invoicesDataGrid.RowHeadersWidth = 51;
-            this.invoicesDataGrid.RowTemplate.Height = 24;
-            this.invoicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.invoicesDataGrid.Size = new System.Drawing.Size(1148, 385);
-            this.invoicesDataGrid.TabIndex = 11;
-            this.invoicesDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCellInvoice);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(1014, 40);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(117, 23);
-            this.btnAdmin.TabIndex = 10;
-            this.btnAdmin.Text = "Unlock tab";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
+            this.tabPage3.Text = "Admin";
             // 
             // txtPhoneWorksheet
             // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(359, 40);
+            this.txtPhoneWorksheet.Location = new System.Drawing.Point(624, 55);
             this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
             this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPhoneWorksheet.TabIndex = 8;
@@ -370,7 +318,7 @@ namespace BusinessManager
             // 
             // txtEmailWorksheet
             // 
-            this.txtEmailWorksheet.Location = new System.Drawing.Point(199, 40);
+            this.txtEmailWorksheet.Location = new System.Drawing.Point(464, 55);
             this.txtEmailWorksheet.Name = "txtEmailWorksheet";
             this.txtEmailWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtEmailWorksheet.TabIndex = 7;
@@ -378,7 +326,7 @@ namespace BusinessManager
             // 
             // txtNameWorksheet
             // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(40, 40);
+            this.txtNameWorksheet.Location = new System.Drawing.Point(305, 55);
             this.txtNameWorksheet.Name = "txtNameWorksheet";
             this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtNameWorksheet.TabIndex = 6;
@@ -386,7 +334,7 @@ namespace BusinessManager
             // 
             // txtPriceWorksheet
             // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(359, 76);
+            this.txtPriceWorksheet.Location = new System.Drawing.Point(624, 91);
             this.txtPriceWorksheet.Name = "txtPriceWorksheet";
             this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPriceWorksheet.TabIndex = 4;
@@ -394,7 +342,7 @@ namespace BusinessManager
             // 
             // txtDescriptionWorksheet
             // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(253, 76);
+            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(518, 91);
             this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
             this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtDescriptionWorksheet.TabIndex = 3;
@@ -402,7 +350,7 @@ namespace BusinessManager
             // 
             // txtQtyWorksheet
             // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(146, 76);
+            this.txtQtyWorksheet.Location = new System.Drawing.Point(411, 91);
             this.txtQtyWorksheet.Name = "txtQtyWorksheet";
             this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtQtyWorksheet.TabIndex = 2;
@@ -410,7 +358,7 @@ namespace BusinessManager
             // 
             // txtIdWorksheet
             // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(40, 76);
+            this.txtIdWorksheet.Location = new System.Drawing.Point(305, 91);
             this.txtIdWorksheet.Name = "txtIdWorksheet";
             this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtIdWorksheet.TabIndex = 1;
@@ -418,61 +366,119 @@ namespace BusinessManager
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(493, 51);
+            this.btnGenerate.Location = new System.Drawing.Point(758, 66);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(139, 47);
             this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "Generate my template";
+            this.btnGenerate.Text = "Generate invoice";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnLoadTemplate);
             // 
-            // tabAdmin
+            // tabRegistry
             // 
-            this.tabAdmin.Controls.Add(this.button1);
-            this.tabAdmin.Controls.Add(this.employeesDataGrid);
-            this.tabAdmin.Location = new System.Drawing.Point(4, 25);
-            this.tabAdmin.Name = "tabAdmin";
-            this.tabAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdmin.Size = new System.Drawing.Size(1203, 686);
-            this.tabAdmin.TabIndex = 3;
-            this.tabAdmin.Text = "Admin";
-            this.tabAdmin.UseVisualStyleBackColor = true;
+            this.tabRegistry.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabRegistry.Controls.Add(this.lblSelectInvoice);
+            this.tabRegistry.Controls.Add(this.btnViewInvoice);
+            this.tabRegistry.Controls.Add(this.invoicesDataGrid);
+            this.tabRegistry.Location = new System.Drawing.Point(4, 25);
+            this.tabRegistry.Name = "tabRegistry";
+            this.tabRegistry.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRegistry.Size = new System.Drawing.Size(1203, 686);
+            this.tabRegistry.TabIndex = 3;
+            this.tabRegistry.Text = "Registry";
             // 
-            // employeesDataGrid
+            // lblSelectInvoice
             // 
-            this.employeesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.employeesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGrid.Location = new System.Drawing.Point(40, 129);
-            this.employeesDataGrid.Name = "employeesDataGrid";
-            this.employeesDataGrid.RowHeadersWidth = 51;
-            this.employeesDataGrid.RowTemplate.Height = 24;
-            this.employeesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeesDataGrid.Size = new System.Drawing.Size(1150, 375);
-            this.employeesDataGrid.TabIndex = 0;
+            this.lblSelectInvoice.AutoSize = true;
+            this.lblSelectInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectInvoice.Location = new System.Drawing.Point(90, 526);
+            this.lblSelectInvoice.Name = "lblSelectInvoice";
+            this.lblSelectInvoice.Size = new System.Drawing.Size(134, 20);
+            this.lblSelectInvoice.TabIndex = 9;
+            this.lblSelectInvoice.Text = "Invoice selected:";
             // 
-            // button1
+            // btnViewInvoice
             // 
-            this.button1.Location = new System.Drawing.Point(607, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewInvoice.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnViewInvoice.Enabled = false;
+            this.btnViewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewInvoice.Location = new System.Drawing.Point(548, 573);
+            this.btnViewInvoice.Name = "btnViewInvoice";
+            this.btnViewInvoice.Size = new System.Drawing.Size(106, 39);
+            this.btnViewInvoice.TabIndex = 8;
+            this.btnViewInvoice.Text = "Visualize";
+            this.btnViewInvoice.UseVisualStyleBackColor = false;
+            this.btnViewInvoice.Click += new System.EventHandler(this.btnViewInvoice_Click);
+            // 
+            // invoicesDataGrid
+            // 
+            this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invoicesDataGrid.Location = new System.Drawing.Point(26, 129);
+            this.invoicesDataGrid.Name = "invoicesDataGrid";
+            this.invoicesDataGrid.RowHeadersWidth = 51;
+            this.invoicesDataGrid.RowTemplate.Height = 24;
+            this.invoicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.invoicesDataGrid.Size = new System.Drawing.Size(1150, 375);
+            this.invoicesDataGrid.TabIndex = 0;
+            this.invoicesDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCellInvoice);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loginToolStripMenuItem.Text = "Login...";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BusinessManager.Properties.Resources.backgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1262, 753);
+            this.ClientSize = new System.Drawing.Size(1262, 801);
             this.Controls.Add(this.tabs);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Business Manager 1.0";
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -482,31 +488,26 @@ namespace BusinessManager
             this.tabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabRegistry.ResumeLayout(false);
+            this.tabRegistry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
-            this.tabAdmin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.DataGridView servicesDataGrid;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.RadioButton radBtnEmail;
-        private System.Windows.Forms.RadioButton radBtnName;
-        private System.Windows.Forms.RadioButton radBtnID;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnAddClient;
+        private System.Windows.Forms.Button btnFindClient;
+        private System.Windows.Forms.TextBox txtSearchClient;
+        private System.Windows.Forms.RadioButton radBtnClientEmail;
+        private System.Windows.Forms.RadioButton radBtnClientName;
+        private System.Windows.Forms.RadioButton radBtnClientID;
         private System.Windows.Forms.DataGridView clientsDataGrid;
         private System.Windows.Forms.TabControl tabs;
         private TabPage tabPage3;
@@ -518,14 +519,22 @@ namespace BusinessManager
         private TextBox txtPhoneWorksheet;
         private TextBox txtEmailWorksheet;
         private TextBox txtNameWorksheet;
-        private Button btnAdmin;
         private Label lblClientDetails;
-        private DataGridView employeesDataGrid;
         private DataGridView invoicesDataGrid;
-        private Button btnInvoice;
-        private Label lblFile;
-        public TabPage tabAdmin;
-        private Button button1;
+        public TabPage tabRegistry;
+        private Button btnClientDetails;
+        private GroupBox groupBox2;
+        private Button btnFindService;
+        private TextBox txtSearchService;
+        private RadioButton radBtnDescription;
+        private RadioButton radBtnServiceID;
+        private Button btnViewInvoice;
+        private Label lblSelectInvoice;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem loginToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
