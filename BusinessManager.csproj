@@ -67,6 +67,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomComponents\AddButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponents\DeleteButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomComponents\UpdateButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,9 +164,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Assets\addIcon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Assets\backgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\deleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\updateIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

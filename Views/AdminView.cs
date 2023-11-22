@@ -21,7 +21,6 @@ namespace BusinessManager
 {
     public partial class MainForm
     {
-        string path;
 
         private void btnLoadTemplate(object sender, EventArgs e)
         {
@@ -49,7 +48,6 @@ namespace BusinessManager
                 worksheet.Range["B11"].Text = txtEmailWorksheet.Text;
                 worksheet.Range["B12"].Text = txtPhoneWorksheet.Text;
 
-
                 //Adds services
                 worksheet.Range["B18"].Number = Convert.ToDouble(txtIdWorksheet.Text);
                 worksheet.Range["C18"].Number = Convert.ToDouble(txtQtyWorksheet.Text);
@@ -65,9 +63,6 @@ namespace BusinessManager
 
                 //Convert Excel document into PDF document
                 pdfDocument = converter.Convert();
-
-                //Save the converted PDF document
-
 
                 //Opens the save dialog to allow user selecting the folder and file name to be saved
                 using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "PDF Document | *.pdf", ValidateNames = true })
