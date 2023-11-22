@@ -11,7 +11,7 @@ namespace BusinessManager.ViewModels
     public class ServicesViewModel
     {
 
-        public List<ServiceModel> Services { get; set; }
+        public static List<ServiceModel> Services { get; set; }
 
         public ServicesViewModel() 
         {

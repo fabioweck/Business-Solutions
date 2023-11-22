@@ -11,7 +11,7 @@ namespace BusinessManager.ViewModels
 {
     public class EmployeeViewModel
     {
-        public BindingList<EmployeeModel> Employees { get; set; }
+        public static BindingList<EmployeeModel> Employees { get; set; }
 
         public EmployeeViewModel()
         {

@@ -18,22 +18,22 @@ namespace BusinessManager
     //Extension of main form to handle Client Tab
     public partial class MainForm
     {
-        private void btnAddClient_Click(object sender, EventArgs e)
-        {
-            //ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
+        //private void btnAddClient_Click(object sender, EventArgs e)
+        //{
+        //    //ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
 
-            //Change data source to null to clear the grid view, then set data source again with new list
+        //    //Change data source to null to clear the grid view, then set data source again with new list
 
-            clientsDataGrid.DataSource = null;
-            clientsDataGrid.DataSource = ClientViewModel.Clients;
+        //    clientsDataGrid.DataSource = null;
+        //    clientsDataGrid.DataSource = ClientViewModel.Clients;
 
-            if (clientsDataGrid.Rows.Count > 0)
-            {
-                int lastIndex = clientsDataGrid.Rows.Count - 1;
-                clientsDataGrid.FirstDisplayedScrollingRowIndex = lastIndex;
-                clientsDataGrid.Rows[lastIndex].Selected = true; // Optionally select the last row
-            }
-        }
+        //    if (clientsDataGrid.Rows.Count > 0)
+        //    {
+        //        int lastIndex = clientsDataGrid.Rows.Count - 1;
+        //        clientsDataGrid.FirstDisplayedScrollingRowIndex = lastIndex;
+        //        clientsDataGrid.Rows[lastIndex].Selected = true; // Optionally select the last row
+        //    }
+        //}
 
         private void btnFindClient_Click(object sender, EventArgs e)
         {
@@ -91,14 +91,8 @@ namespace BusinessManager
 
                 ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
                 clientDetails.ShowDialog();
-                RefreshDataGrid();
+                clientsDataGrid.Refresh();
             }
-        }
-
-        public void RefreshDataGrid()
-        {
-            clientsDataGrid.DataSource = null;
-            clientsDataGrid.DataSource = ClientViewModel.Clients;
         }
     }
 }
