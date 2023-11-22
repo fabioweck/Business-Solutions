@@ -68,9 +68,40 @@ namespace BusinessManager
             this.invoicesDataGrid = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.addButton4 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
+            this.updateButton3 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton3 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton3 = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton2 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton2 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton2 = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton1 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton1 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton1 = new BusinessManager.CustomComponents.DeleteButton();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
@@ -82,6 +113,11 @@ namespace BusinessManager
             this.tabRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -105,7 +141,7 @@ namespace BusinessManager
             this.groupBox2.Controls.Add(this.radBtnServiceID);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(341, 29);
+            this.groupBox2.Location = new System.Drawing.Point(341, 73);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(520, 72);
             this.groupBox2.TabIndex = 9;
@@ -155,11 +191,12 @@ namespace BusinessManager
             // 
             this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.servicesDataGrid.Location = new System.Drawing.Point(33, 127);
+            this.servicesDataGrid.Location = new System.Drawing.Point(51, 227);
             this.servicesDataGrid.Name = "servicesDataGrid";
             this.servicesDataGrid.RowHeadersWidth = 51;
             this.servicesDataGrid.RowTemplate.Height = 24;
-            this.servicesDataGrid.Size = new System.Drawing.Size(1150, 500);
+            this.servicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.servicesDataGrid.Size = new System.Drawing.Size(1100, 350);
             this.servicesDataGrid.TabIndex = 0;
             // 
             // tabPage1
@@ -269,13 +306,13 @@ namespace BusinessManager
             this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDataGrid.Location = new System.Drawing.Point(26, 206);
+            this.clientsDataGrid.Location = new System.Drawing.Point(51, 206);
             this.clientsDataGrid.Name = "clientsDataGrid";
             this.clientsDataGrid.ReadOnly = true;
             this.clientsDataGrid.RowHeadersWidth = 51;
             this.clientsDataGrid.RowTemplate.Height = 24;
             this.clientsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clientsDataGrid.Size = new System.Drawing.Size(1150, 350);
+            this.clientsDataGrid.Size = new System.Drawing.Size(1100, 350);
             this.clientsDataGrid.TabIndex = 0;
             // 
             // tabs
@@ -292,7 +329,11 @@ namespace BusinessManager
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.txtPhoneWorksheet);
             this.tabPage3.Controls.Add(this.txtEmailWorksheet);
             this.tabPage3.Controls.Add(this.txtNameWorksheet);
@@ -310,7 +351,7 @@ namespace BusinessManager
             // 
             // txtPhoneWorksheet
             // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(624, 55);
+            this.txtPhoneWorksheet.Location = new System.Drawing.Point(651, 6);
             this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
             this.txtPhoneWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPhoneWorksheet.TabIndex = 8;
@@ -318,7 +359,7 @@ namespace BusinessManager
             // 
             // txtEmailWorksheet
             // 
-            this.txtEmailWorksheet.Location = new System.Drawing.Point(464, 55);
+            this.txtEmailWorksheet.Location = new System.Drawing.Point(491, 6);
             this.txtEmailWorksheet.Name = "txtEmailWorksheet";
             this.txtEmailWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtEmailWorksheet.TabIndex = 7;
@@ -326,7 +367,7 @@ namespace BusinessManager
             // 
             // txtNameWorksheet
             // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(305, 55);
+            this.txtNameWorksheet.Location = new System.Drawing.Point(332, 6);
             this.txtNameWorksheet.Name = "txtNameWorksheet";
             this.txtNameWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtNameWorksheet.TabIndex = 6;
@@ -334,7 +375,7 @@ namespace BusinessManager
             // 
             // txtPriceWorksheet
             // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(624, 91);
+            this.txtPriceWorksheet.Location = new System.Drawing.Point(651, 42);
             this.txtPriceWorksheet.Name = "txtPriceWorksheet";
             this.txtPriceWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtPriceWorksheet.TabIndex = 4;
@@ -342,7 +383,7 @@ namespace BusinessManager
             // 
             // txtDescriptionWorksheet
             // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(518, 91);
+            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(545, 42);
             this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
             this.txtDescriptionWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtDescriptionWorksheet.TabIndex = 3;
@@ -350,7 +391,7 @@ namespace BusinessManager
             // 
             // txtQtyWorksheet
             // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(411, 91);
+            this.txtQtyWorksheet.Location = new System.Drawing.Point(438, 42);
             this.txtQtyWorksheet.Name = "txtQtyWorksheet";
             this.txtQtyWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtQtyWorksheet.TabIndex = 2;
@@ -358,7 +399,7 @@ namespace BusinessManager
             // 
             // txtIdWorksheet
             // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(305, 91);
+            this.txtIdWorksheet.Location = new System.Drawing.Point(332, 42);
             this.txtIdWorksheet.Name = "txtIdWorksheet";
             this.txtIdWorksheet.Size = new System.Drawing.Size(100, 22);
             this.txtIdWorksheet.TabIndex = 1;
@@ -366,7 +407,7 @@ namespace BusinessManager
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(758, 66);
+            this.btnGenerate.Location = new System.Drawing.Point(785, 17);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(139, 47);
             this.btnGenerate.TabIndex = 0;
@@ -445,12 +486,6 @@ namespace BusinessManager
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
@@ -463,6 +498,360 @@ namespace BusinessManager
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.aboutToolStripMenuItem.Text = "Help";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.updateButton1);
+            this.groupBox3.Controls.Add(this.addButton1);
+            this.groupBox3.Controls.Add(this.deleteButton1);
+            this.groupBox3.Enabled = false;
+            this.groupBox3.Location = new System.Drawing.Point(154, 67);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(210, 244);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Clients data";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Add client";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(84, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Update client";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Remove client";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.updateButton2);
+            this.groupBox4.Controls.Add(this.addButton2);
+            this.groupBox4.Controls.Add(this.deleteButton2);
+            this.groupBox4.Enabled = false;
+            this.groupBox4.Location = new System.Drawing.Point(488, 67);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(210, 244);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Services data";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(84, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Remove service";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(84, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 18);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Update service";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(84, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 18);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Add service";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.updateButton3);
+            this.groupBox5.Controls.Add(this.addButton3);
+            this.groupBox5.Controls.Add(this.deleteButton3);
+            this.groupBox5.Enabled = false;
+            this.groupBox5.Location = new System.Drawing.Point(838, 67);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(210, 244);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Invoices data";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(81, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Remove invoice";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(81, 122);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 18);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Update invoice";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(81, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 18);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Add invoice";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(10, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(894, 150);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(701, 232);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 18);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Remove employee";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(428, 232);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 18);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Update employee";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(175, 232);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 18);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Add employee";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.dataGridView1);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Controls.Add(this.addButton4);
+            this.groupBox6.Controls.Add(this.deleteButton4);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.updateButton4);
+            this.groupBox6.Location = new System.Drawing.Point(144, 361);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(915, 277);
+            this.groupBox6.TabIndex = 24;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Employees";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(184, 186);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 20);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Text";
+            // 
+            // addButton4
+            // 
+            this.addButton4.BackColor = System.Drawing.Color.Transparent;
+            this.addButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton4.BackgroundImage")));
+            this.addButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton4.Location = new System.Drawing.Point(115, 217);
+            this.addButton4.Name = "addButton4";
+            this.addButton4.Size = new System.Drawing.Size(50, 50);
+            this.addButton4.TabIndex = 18;
+            this.addButton4.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton4
+            // 
+            this.deleteButton4.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton4.BackgroundImage")));
+            this.deleteButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton4.Location = new System.Drawing.Point(641, 217);
+            this.deleteButton4.Name = "deleteButton4";
+            this.deleteButton4.Size = new System.Drawing.Size(50, 50);
+            this.deleteButton4.TabIndex = 19;
+            this.deleteButton4.UseVisualStyleBackColor = false;
+            // 
+            // updateButton4
+            // 
+            this.updateButton4.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton4.BackgroundImage")));
+            this.updateButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton4.Location = new System.Drawing.Point(368, 217);
+            this.updateButton4.Name = "updateButton4";
+            this.updateButton4.Size = new System.Drawing.Size(50, 50);
+            this.updateButton4.TabIndex = 20;
+            this.updateButton4.UseVisualStyleBackColor = false;
+            // 
+            // updateButton3
+            // 
+            this.updateButton3.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton3.BackgroundImage")));
+            this.updateButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton3.Location = new System.Drawing.Point(21, 107);
+            this.updateButton3.Name = "updateButton3";
+            this.updateButton3.Size = new System.Drawing.Size(50, 50);
+            this.updateButton3.TabIndex = 11;
+            this.updateButton3.UseVisualStyleBackColor = false;
+            // 
+            // addButton3
+            // 
+            this.addButton3.BackColor = System.Drawing.Color.Transparent;
+            this.addButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton3.BackgroundImage")));
+            this.addButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton3.Location = new System.Drawing.Point(21, 51);
+            this.addButton3.Name = "addButton3";
+            this.addButton3.Size = new System.Drawing.Size(50, 50);
+            this.addButton3.TabIndex = 9;
+            this.addButton3.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton3
+            // 
+            this.deleteButton3.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton3.BackgroundImage")));
+            this.deleteButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton3.Location = new System.Drawing.Point(21, 163);
+            this.deleteButton3.Name = "deleteButton3";
+            this.deleteButton3.Size = new System.Drawing.Size(50, 50);
+            this.deleteButton3.TabIndex = 10;
+            this.deleteButton3.UseVisualStyleBackColor = false;
+            // 
+            // updateButton2
+            // 
+            this.updateButton2.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton2.BackgroundImage")));
+            this.updateButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton2.Location = new System.Drawing.Point(24, 107);
+            this.updateButton2.Name = "updateButton2";
+            this.updateButton2.Size = new System.Drawing.Size(50, 50);
+            this.updateButton2.TabIndex = 11;
+            this.updateButton2.UseVisualStyleBackColor = false;
+            // 
+            // addButton2
+            // 
+            this.addButton2.BackColor = System.Drawing.Color.Transparent;
+            this.addButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton2.BackgroundImage")));
+            this.addButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton2.Location = new System.Drawing.Point(24, 51);
+            this.addButton2.Name = "addButton2";
+            this.addButton2.Size = new System.Drawing.Size(50, 50);
+            this.addButton2.TabIndex = 9;
+            this.addButton2.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton2
+            // 
+            this.deleteButton2.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton2.BackgroundImage")));
+            this.deleteButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton2.Location = new System.Drawing.Point(24, 163);
+            this.deleteButton2.Name = "deleteButton2";
+            this.deleteButton2.Size = new System.Drawing.Size(50, 50);
+            this.deleteButton2.TabIndex = 10;
+            this.deleteButton2.UseVisualStyleBackColor = false;
+            // 
+            // updateButton1
+            // 
+            this.updateButton1.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton1.BackgroundImage")));
+            this.updateButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton1.Location = new System.Drawing.Point(24, 107);
+            this.updateButton1.Name = "updateButton1";
+            this.updateButton1.Size = new System.Drawing.Size(50, 50);
+            this.updateButton1.TabIndex = 11;
+            this.updateButton1.UseVisualStyleBackColor = false;
+            // 
+            // addButton1
+            // 
+            this.addButton1.BackColor = System.Drawing.Color.Transparent;
+            this.addButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton1.BackgroundImage")));
+            this.addButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton1.Location = new System.Drawing.Point(24, 51);
+            this.addButton1.Name = "addButton1";
+            this.addButton1.Size = new System.Drawing.Size(50, 50);
+            this.addButton1.TabIndex = 9;
+            this.addButton1.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton1
+            // 
+            this.deleteButton1.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton1.BackgroundImage")));
+            this.deleteButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton1.Location = new System.Drawing.Point(24, 163);
+            this.deleteButton1.Name = "deleteButton1";
+            this.deleteButton1.Size = new System.Drawing.Size(50, 50);
+            this.deleteButton1.TabIndex = 10;
+            this.deleteButton1.UseVisualStyleBackColor = false;
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem1.Text = "About...";
             // 
             // MainForm
             // 
@@ -493,6 +882,15 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,6 +933,37 @@ namespace BusinessManager
         private ToolStripMenuItem loginToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private CustomComponents.AddButton addButton1;
+        private GroupBox groupBox3;
+        private CustomComponents.DeleteButton deleteButton1;
+        private CustomComponents.UpdateButton updateButton1;
+        private Label label1;
+        private Label label3;
+        private Label label2;
+        private GroupBox groupBox6;
+        private DataGridView dataGridView1;
+        private Label label10;
+        private CustomComponents.AddButton addButton4;
+        private CustomComponents.DeleteButton deleteButton4;
+        private Label label11;
+        private Label label12;
+        private CustomComponents.UpdateButton updateButton4;
+        private GroupBox groupBox5;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private CustomComponents.UpdateButton updateButton3;
+        private CustomComponents.AddButton addButton3;
+        private CustomComponents.DeleteButton deleteButton3;
+        private GroupBox groupBox4;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private CustomComponents.UpdateButton updateButton2;
+        private CustomComponents.AddButton addButton2;
+        private CustomComponents.DeleteButton deleteButton2;
+        private Label label13;
+        private ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }
 
