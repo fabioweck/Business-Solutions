@@ -35,9 +35,9 @@ namespace BusinessManager
 
             //Assigns collections to data grids
             clientsDataGrid.DataSource = ClientViewModel.Clients;
-            servicesDataGrid.DataSource = ListOfServices.Services;
-            invoicesDataGrid.DataSource = ListOfEmployees.Employees;
-            invoicesDataGrid.DataSource = ListOfInvoices.Invoices;
+            servicesDataGrid.DataSource = ServicesViewModel.Services;
+            employeesDataGrid.DataSource = EmployeeViewModel.Employees;
+            invoicesDataGrid.DataSource = InvoiceViewModel.Invoices;
 
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
