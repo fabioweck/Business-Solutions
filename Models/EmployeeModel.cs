@@ -13,16 +13,19 @@ namespace BusinessManager.Models
         public string Address { get; private set; }
         public string Phone { get; private set; }
         public string Email { get; private set; }
-        public string Contract { get; private set; }
+        public string Password { get; private set; }
+        public bool IsAdmin { get; private set; }
 
-        public EmployeeModel(int id, string name, string address, string phone, string email, string date)
-        { 
+        public EmployeeModel(int id, string name, string address, string email,
+            string phone, bool isAdmin, string password)
+        {
             Id = id;
             Name = name;
             Address = address;
             Phone = phone;
             Email = email;
-            Contract = date;
+            Password = password;
+            IsAdmin = isAdmin;
         }
     }
 }

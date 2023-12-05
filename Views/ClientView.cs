@@ -18,23 +18,6 @@ namespace BusinessManager
     //Extension of main form to handle Client Tab
     public partial class MainForm
     {
-        //private void btnAddClient_Click(object sender, EventArgs e)
-        //{
-        //    //ListOfClients.AddClient(txtName.Text, txtAddress.Text, txtEmail.Text, "999-888-7777");
-
-        //    //Change data source to null to clear the grid view, then set data source again with new list
-
-        //    clientsDataGrid.DataSource = null;
-        //    clientsDataGrid.DataSource = ClientViewModel.Clients;
-
-        //    if (clientsDataGrid.Rows.Count > 0)
-        //    {
-        //        int lastIndex = clientsDataGrid.Rows.Count - 1;
-        //        clientsDataGrid.FirstDisplayedScrollingRowIndex = lastIndex;
-        //        clientsDataGrid.Rows[lastIndex].Selected = true; // Optionally select the last row
-        //    }
-        //}
-
         private void btnFindClient_Click(object sender, EventArgs e)
         {
             if(radBtnClientID.Checked)
@@ -77,22 +60,22 @@ namespace BusinessManager
             }
         }
 
-        private void btnClientDetails_Click(object sender, EventArgs e)
-        {
-            if (clientsDataGrid.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+        //private void btnClientDetails_Click(object sender, EventArgs e)
+        //{
+        //    if (clientsDataGrid.SelectedRows.Count > 0)
+        //    {
+        //        DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
 
-                string name = selectedRow.Cells["Name"].Value.ToString();
-                int id = (int)selectedRow.Cells["Id"].Value;
-                string address = selectedRow.Cells["Address"].Value.ToString();
-                string email = selectedRow.Cells["Email"].Value.ToString();
-                string phone = selectedRow.Cells["Phone"].Value.ToString();
+        //        string name = selectedRow.Cells["Name"].Value.ToString();
+        //        int id = (int)selectedRow.Cells["Id"].Value;
+        //        string address = selectedRow.Cells["Address"].Value.ToString();
+        //        string email = selectedRow.Cells["Email"].Value.ToString();
+        //        string phone = selectedRow.Cells["Phone"].Value.ToString();
 
-                ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
-                clientDetails.ShowDialog();
-                clientsDataGrid.Refresh();
-            }
-        }
+        //        ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
+        //        clientDetails.ShowDialog();
+        //        clientsDataGrid.Refresh();
+        //    }
+        //}
     }
 }

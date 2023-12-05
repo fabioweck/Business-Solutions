@@ -1,4 +1,5 @@
-﻿using BusinessManager.Properties;
+﻿using BusinessManager.Models;
+using BusinessManager.Properties;
 using BusinessManager.ViewModels;
 using BusinessManager.Views;
 using Syncfusion.XlsIO;
@@ -24,13 +25,19 @@ namespace BusinessManager
         ServicesViewModel ListOfServices { get; set; }
         EmployeeViewModel ListOfEmployees { get; set; }
         InvoiceViewModel ListOfInvoices { get; set; }
+        EmployeeModel LoggerUser { get; }
+        public bool isAdmin { get; }
 
-        public MainForm()
+
+        public MainForm(EmployeeViewModel listOfEmployees, Models.EmployeeModel loggedUser)
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            isAdmin = loggedUser.IsAdmin;
+                 
+            MessageBox.Show(loggedUser.IsAdmin.ToString());
             ListOfServices = new ServicesViewModel();
-            ListOfEmployees = new EmployeeViewModel();
+            ListOfEmployees = listOfEmployees;
             ListOfInvoices = new InvoiceViewModel();
 
             //Assigns collections to data grids
@@ -44,12 +51,48 @@ namespace BusinessManager
             string path = currentDirectory.Substring(0, index);
 
             this.BackgroundImage = Image.FromFile(path + "\\Assets\\backgroundImage.jpg");
-          
+            this.LoggerUser = loggedUser;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void addButton1_Click(object sender, EventArgs e)
+        { 
+            ClientProfileView addNewClientView2 = new ClientProfileView();
+            addNewClientView2.ShowDialog();
+        }
+
+        private void btnClientDetails_Click_1(object sender, EventArgs e)
+        {
+            if (clientsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+
+                int id = (int)selectedRow.Cells["Id"].Value;
+                string name = selectedRow.Cells["Name"].Value.ToString();
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+
+               ClientProfileView clientProfileView = new ClientProfileView(id,name,address,email,phone,isAdmin);
+               clientProfileView.ShowDialog();
+               
+              //  ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
+               // clientDetails.ShowDialog();
+
+
+
+                clientsDataGrid.Refresh();
+            }
+        }
+
+        private void btn_addNewClient_Click(object sender, EventArgs e)
+        {
+            ClientProfileView addNewClientView2 = new ClientProfileView();
+            addNewClientView2.ShowDialog();
         }
     }
 }

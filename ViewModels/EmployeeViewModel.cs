@@ -33,8 +33,9 @@ namespace BusinessManager.ViewModels
                     string line = sr.ReadLine();
                     if (line != null)
                     {
-                        string[] splitted = line.Split(';');
-                        Employees.Add(new EmployeeModel(Employees.Count, splitted[0], splitted[1], splitted[2], splitted[3], splitted[4]));
+                        string[] splitted = line.Split(',');
+                        Employees.Add(new EmployeeModel(Int32.Parse(splitted[0]), splitted[1], splitted[2], splitted[3],
+                            splitted[4], Boolean.Parse(splitted[5]), splitted[6]));
                     }
                 }
             }
