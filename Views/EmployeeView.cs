@@ -36,9 +36,9 @@ namespace BusinessManager.Views
             lbl_Id_label.Visible = false;
             lbl_id.Text = "";
         }
-       
 
-      
+
+
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -46,13 +46,11 @@ namespace BusinessManager.Views
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-
             EmployeeViewModel.AddEmployee(lbl_id.Text, txt_box_name.Text,
-                txt_box_address.Text, txt_box_email.Text, txt_box_phone.Text,
-                checkBox_admin.Checked, txtBox_password.Text);
+    txt_box_address.Text, txt_box_email.Text, txt_box_phone.Text,
+    checkBox_admin.Checked, txtBox_password.Text);
 
             MessageBox.Show("Employee saved successfully");
-
 
             this.Close();
         }
