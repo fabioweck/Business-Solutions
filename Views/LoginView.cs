@@ -17,11 +17,13 @@ namespace BusinessManager.Views
         public LoginView()
         {
             InitializeComponent();
-            employeeViewModel = new EmployeeViewModel();
+            employeeViewModel = new EmployeeViewModel();  
+            textBox_password.PasswordChar = '*';
         }
 
         private void LoginView_Load(object sender, EventArgs e)
         {
+  
 
         }
 
@@ -41,9 +43,9 @@ namespace BusinessManager.Views
                 MessageBox.Show("Invalid user");
                 return;
             }
-
+            this.Visible = false;
             new MainForm(employeeViewModel, employeeModel).ShowDialog();
-            this.Close();
+           this.Close();
 
         }
     }

@@ -32,6 +32,8 @@ namespace BusinessManager.Views
             if (!isAdmin)
             {
                 btn_delete.Enabled = false;
+                btn_delete.BackColor = Color.IndianRed;
+
                 txt_box_name.Enabled = false;
             }
 

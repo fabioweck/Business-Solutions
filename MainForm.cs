@@ -28,15 +28,37 @@ namespace BusinessManager
         EmployeeModel LoggerUser { get; }
         public bool isAdmin { get; }
 
+        public MainForm()
+        {
 
+            InitializeComponent();
+            isAdmin = true;
+
+            ListOfServices = new ServicesViewModel();
+            ListOfServices.PopulateServices();
+            ListOfInvoices = new InvoiceViewModel();
+
+            //Assigns collections to data grids
+            clientsDataGrid.DataSource = ClientViewModel.Clients;
+            servicesDataGrid.DataSource = ServicesViewModel.Services;
+            employeesDataGrid.DataSource = EmployeeViewModel.Employees;
+            invoicesDataGrid.DataSource = InvoiceViewModel.Invoices;
+
+            string currentDirectory = Directory.GetCurrentDirectory();
+            int index = currentDirectory.LastIndexOf("bin");
+            string path = currentDirectory.Substring(0, index);
+
+            this.BackgroundImage = Image.FromFile(path + "\\Assets\\backgroundImage.jpg");
+          
+        }
         public MainForm(EmployeeViewModel listOfEmployees, Models.EmployeeModel loggedUser)
         {
 
             InitializeComponent();
             isAdmin = loggedUser.IsAdmin;
                  
-            MessageBox.Show(loggedUser.IsAdmin.ToString());
             ListOfServices = new ServicesViewModel();
+            ListOfServices.PopulateServices();
             ListOfEmployees = listOfEmployees;
             ListOfInvoices = new InvoiceViewModel();
 
@@ -79,13 +101,8 @@ namespace BusinessManager
 
                ClientProfileView clientProfileView = new ClientProfileView(id,name,address,email,phone,isAdmin);
                clientProfileView.ShowDialog();
-               
-              //  ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
-               // clientDetails.ShowDialog();
-
-
-
-                clientsDataGrid.Refresh();
+              
+               clientsDataGrid.Refresh();
             }
         }
 
@@ -93,6 +110,32 @@ namespace BusinessManager
         {
             ClientProfileView addNewClientView2 = new ClientProfileView();
             addNewClientView2.ShowDialog();
+        }
+
+        private void btn_newOrder_Click(object sender, EventArgs e)
+        {
+
+            if (clientsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+
+                int id = (int)selectedRow.Cells["Id"].Value;
+                string name = selectedRow.Cells["Name"].Value.ToString();
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+
+                // ClientProfileView clientProfileView = new ClientProfileView(id, name, address, email, phone, isAdmin);
+                // clientProfileView.ShowDialog();
+
+                OrderView orderView = new OrderView(id, name, address, email, phone);
+                orderView.ShowDialog();
+                           
+
+
+
+               // clientsDataGrid.Refresh();
+            }
         }
     }
 }

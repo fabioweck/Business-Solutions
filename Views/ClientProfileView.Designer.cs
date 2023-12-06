@@ -113,7 +113,7 @@
             // 
             // btnAddClient
             // 
-            this.btnAddClient.BackColor = System.Drawing.Color.LightGreen;
+            this.btnAddClient.BackColor = System.Drawing.Color.Lime;
             this.btnAddClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddClient.Location = new System.Drawing.Point(308, 285);
             this.btnAddClient.Margin = new System.Windows.Forms.Padding(2);
@@ -176,7 +176,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_delete.BackColor = System.Drawing.Color.Red;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(205, 285);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(2);

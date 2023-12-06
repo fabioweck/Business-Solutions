@@ -20,4 +20,14 @@ namespace BusinessManager.Models
             Price = price;
         }
     }
+
+    public class ServiceCartModel : ServiceModel
+    {
+        public int Quantity { get; private set; }
+        public ServiceCartModel(int quantity, int id, string description, double price) : base(id, description, price)
+        {
+            Quantity = quantity;   
+        }
+    }
+
 }

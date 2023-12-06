@@ -69,20 +69,32 @@ namespace BusinessManager
             this.label13 = new System.Windows.Forms.Label();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.addButton4 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.updateButton3 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton3 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton3 = new BusinessManager.CustomComponents.DeleteButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.updateButton2 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton2 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton2 = new BusinessManager.CustomComponents.DeleteButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.updateButton1 = new BusinessManager.CustomComponents.UpdateButton();
+            this.addButton1 = new BusinessManager.CustomComponents.AddButton();
+            this.deleteButton1 = new BusinessManager.CustomComponents.DeleteButton();
             this.tabRegistry = new System.Windows.Forms.TabPage();
             this.lblSelectInvoice = new System.Windows.Forms.Label();
             this.btnViewInvoice = new System.Windows.Forms.Button();
@@ -93,18 +105,6 @@ namespace BusinessManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addButton4 = new BusinessManager.CustomComponents.AddButton();
-            this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
-            this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
-            this.updateButton3 = new BusinessManager.CustomComponents.UpdateButton();
-            this.addButton3 = new BusinessManager.CustomComponents.AddButton();
-            this.deleteButton3 = new BusinessManager.CustomComponents.DeleteButton();
-            this.updateButton2 = new BusinessManager.CustomComponents.UpdateButton();
-            this.addButton2 = new BusinessManager.CustomComponents.AddButton();
-            this.deleteButton2 = new BusinessManager.CustomComponents.DeleteButton();
-            this.updateButton1 = new BusinessManager.CustomComponents.UpdateButton();
-            this.addButton1 = new BusinessManager.CustomComponents.AddButton();
-            this.deleteButton1 = new BusinessManager.CustomComponents.DeleteButton();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.servicesDataGrid)).BeginInit();
@@ -238,6 +238,7 @@ namespace BusinessManager
             this.btn_newOrder.TabIndex = 8;
             this.btn_newOrder.Text = "New Order";
             this.btn_newOrder.UseVisualStyleBackColor = true;
+            this.btn_newOrder.Click += new System.EventHandler(this.btn_newOrder_Click);
             // 
             // btn_addNewClient
             // 
@@ -493,11 +494,11 @@ namespace BusinessManager
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.employeesDataGrid);
             this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.addButton4);
-            this.groupBox6.Controls.Add(this.deleteButton4);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.updateButton4);
+          //  this.groupBox6.Controls.Add(this.addButton4);
+          //  this.groupBox6.Controls.Add(this.deleteButton4);
+          //  this.groupBox6.Controls.Add(this.label11);
+         //   this.groupBox6.Controls.Add(this.label12);
+          //  this.groupBox6.Controls.Add(this.updateButton4);
             this.groupBox6.Enabled = false;
             this.groupBox6.Location = new System.Drawing.Point(108, 293);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
@@ -543,6 +544,30 @@ namespace BusinessManager
             this.label10.TabIndex = 23;
             this.label10.Text = "Remove employee";
             // 
+            // addButton4
+            // 
+            this.addButton4.BackColor = System.Drawing.Color.Transparent;
+            this.addButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton4.BackgroundImage")));
+            this.addButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton4.Location = new System.Drawing.Point(86, 176);
+            this.addButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton4.Name = "addButton4";
+            this.addButton4.Size = new System.Drawing.Size(38, 41);
+            this.addButton4.TabIndex = 18;
+            this.addButton4.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton4
+            // 
+            this.deleteButton4.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton4.BackgroundImage")));
+            this.deleteButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton4.Location = new System.Drawing.Point(481, 176);
+            this.deleteButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteButton4.Name = "deleteButton4";
+            this.deleteButton4.Size = new System.Drawing.Size(38, 41);
+            this.deleteButton4.TabIndex = 19;
+            this.deleteButton4.UseVisualStyleBackColor = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -565,15 +590,27 @@ namespace BusinessManager
             this.label12.TabIndex = 21;
             this.label12.Text = "Add employee";
             // 
+            // updateButton4
+            // 
+            this.updateButton4.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton4.BackgroundImage")));
+            this.updateButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton4.Location = new System.Drawing.Point(276, 176);
+            this.updateButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.updateButton4.Name = "updateButton4";
+            this.updateButton4.Size = new System.Drawing.Size(38, 41);
+            this.updateButton4.TabIndex = 20;
+            this.updateButton4.UseVisualStyleBackColor = false;
+            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.updateButton3);
-            this.groupBox5.Controls.Add(this.addButton3);
-            this.groupBox5.Controls.Add(this.deleteButton3);
+        //    this.groupBox5.Controls.Add(this.updateButton3);
+         //   this.groupBox5.Controls.Add(this.addButton3);
+         //   this.groupBox5.Controls.Add(this.deleteButton3);
             this.groupBox5.Enabled = false;
             this.groupBox5.Location = new System.Drawing.Point(628, 80);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
@@ -617,15 +654,51 @@ namespace BusinessManager
             this.label9.TabIndex = 12;
             this.label9.Text = "Add invoice";
             // 
+            // updateButton3
+            // 
+            this.updateButton3.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton3.BackgroundImage")));
+            this.updateButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton3.Location = new System.Drawing.Point(16, 87);
+            this.updateButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.updateButton3.Name = "updateButton3";
+            this.updateButton3.Size = new System.Drawing.Size(38, 41);
+            this.updateButton3.TabIndex = 11;
+            this.updateButton3.UseVisualStyleBackColor = false;
+            // 
+            // addButton3
+            // 
+            this.addButton3.BackColor = System.Drawing.Color.Transparent;
+            this.addButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton3.BackgroundImage")));
+            this.addButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton3.Location = new System.Drawing.Point(16, 41);
+            this.addButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton3.Name = "addButton3";
+            this.addButton3.Size = new System.Drawing.Size(38, 41);
+            this.addButton3.TabIndex = 9;
+            this.addButton3.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton3
+            // 
+            this.deleteButton3.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton3.BackgroundImage")));
+            this.deleteButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton3.Location = new System.Drawing.Point(16, 132);
+            this.deleteButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteButton3.Name = "deleteButton3";
+            this.deleteButton3.Size = new System.Drawing.Size(38, 41);
+            this.deleteButton3.TabIndex = 10;
+            this.deleteButton3.UseVisualStyleBackColor = false;
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.updateButton2);
-            this.groupBox4.Controls.Add(this.addButton2);
-            this.groupBox4.Controls.Add(this.deleteButton2);
+           // this.groupBox4.Controls.Add(this.updateButton2);
+         //   this.groupBox4.Controls.Add(this.addButton2);
+           // this.groupBox4.Controls.Add(this.deleteButton2);
             this.groupBox4.Enabled = false;
             this.groupBox4.Location = new System.Drawing.Point(366, 80);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -669,15 +742,52 @@ namespace BusinessManager
             this.label6.TabIndex = 12;
             this.label6.Text = "Add service";
             // 
+            // updateButton2
+            // 
+            this.updateButton2.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton2.BackgroundImage")));
+            this.updateButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton2.Location = new System.Drawing.Point(18, 87);
+            this.updateButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.updateButton2.Name = "updateButton2";
+            this.updateButton2.Size = new System.Drawing.Size(38, 41);
+            this.updateButton2.TabIndex = 11;
+            this.updateButton2.UseVisualStyleBackColor = false;
+            // 
+            // addButton2
+            // 
+            this.addButton2.BackColor = System.Drawing.Color.Transparent;
+            this.addButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton2.BackgroundImage")));
+            this.addButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton2.Location = new System.Drawing.Point(18, 41);
+            this.addButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton2.Name = "addButton2";
+            this.addButton2.Size = new System.Drawing.Size(38, 41);
+            this.addButton2.TabIndex = 9;
+            this.addButton2.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton2
+            // 
+            this.deleteButton2.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton2.BackgroundImage")));
+            this.deleteButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton2.Location = new System.Drawing.Point(18, 132);
+            this.deleteButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteButton2.Name = "deleteButton2";
+            this.deleteButton2.Size = new System.Drawing.Size(38, 41);
+            this.deleteButton2.TabIndex = 10;
+            this.deleteButton2.UseVisualStyleBackColor = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.updateButton1);
-            this.groupBox3.Controls.Add(this.addButton1);
-            this.groupBox3.Controls.Add(this.deleteButton1);
+         //   this.groupBox3.Controls.Add(this.updateButton1);
+          //  this.groupBox3.Controls.Add(this.addButton1);
+          //  this.groupBox3.Controls.Add(this.deleteButton1);
+            this.groupBox3.Enabled = false;
             this.groupBox3.Location = new System.Drawing.Point(116, 80);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
@@ -720,6 +830,43 @@ namespace BusinessManager
             this.label1.TabIndex = 12;
             this.label1.Text = "Add client";
             this.label1.Click += new System.EventHandler(this.addButton1_Click);
+            // 
+            // updateButton1
+            // 
+            this.updateButton1.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton1.BackgroundImage")));
+            this.updateButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton1.Location = new System.Drawing.Point(18, 87);
+            this.updateButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.updateButton1.Name = "updateButton1";
+            this.updateButton1.Size = new System.Drawing.Size(38, 41);
+            this.updateButton1.TabIndex = 11;
+            this.updateButton1.UseVisualStyleBackColor = false;
+            // 
+            // addButton1
+            // 
+            this.addButton1.BackColor = System.Drawing.Color.Transparent;
+            this.addButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton1.BackgroundImage")));
+            this.addButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton1.Location = new System.Drawing.Point(18, 28);
+            this.addButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton1.Name = "addButton1";
+            this.addButton1.Size = new System.Drawing.Size(38, 41);
+            this.addButton1.TabIndex = 9;
+            this.addButton1.UseVisualStyleBackColor = true;
+            this.addButton1.Click += new System.EventHandler(this.addButton1_Click);
+            // 
+            // deleteButton1
+            // 
+            this.deleteButton1.BackColor = System.Drawing.Color.Transparent;
+            this.deleteButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton1.BackgroundImage")));
+            this.deleteButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteButton1.Location = new System.Drawing.Point(18, 132);
+            this.deleteButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteButton1.Name = "deleteButton1";
+            this.deleteButton1.Size = new System.Drawing.Size(38, 41);
+            this.deleteButton1.TabIndex = 10;
+            this.deleteButton1.UseVisualStyleBackColor = false;
             // 
             // tabRegistry
             // 
@@ -823,151 +970,6 @@ namespace BusinessManager
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem1.Text = "About...";
-            // 
-            // addButton4
-            // 
-            this.addButton4.BackColor = System.Drawing.Color.Transparent;
-            this.addButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton4.BackgroundImage")));
-            this.addButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addButton4.Location = new System.Drawing.Point(86, 176);
-            this.addButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.addButton4.Name = "addButton4";
-            this.addButton4.Size = new System.Drawing.Size(38, 41);
-            this.addButton4.TabIndex = 18;
-            this.addButton4.UseVisualStyleBackColor = true;
-            // 
-            // deleteButton4
-            // 
-            this.deleteButton4.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton4.BackgroundImage")));
-            this.deleteButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deleteButton4.Location = new System.Drawing.Point(481, 176);
-            this.deleteButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteButton4.Name = "deleteButton4";
-            this.deleteButton4.Size = new System.Drawing.Size(38, 41);
-            this.deleteButton4.TabIndex = 19;
-            this.deleteButton4.UseVisualStyleBackColor = false;
-            // 
-            // updateButton4
-            // 
-            this.updateButton4.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton4.BackgroundImage")));
-            this.updateButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton4.Location = new System.Drawing.Point(276, 176);
-            this.updateButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.updateButton4.Name = "updateButton4";
-            this.updateButton4.Size = new System.Drawing.Size(38, 41);
-            this.updateButton4.TabIndex = 20;
-            this.updateButton4.UseVisualStyleBackColor = false;
-            // 
-            // updateButton3
-            // 
-            this.updateButton3.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton3.BackgroundImage")));
-            this.updateButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton3.Location = new System.Drawing.Point(16, 87);
-            this.updateButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.updateButton3.Name = "updateButton3";
-            this.updateButton3.Size = new System.Drawing.Size(38, 41);
-            this.updateButton3.TabIndex = 11;
-            this.updateButton3.UseVisualStyleBackColor = false;
-            // 
-            // addButton3
-            // 
-            this.addButton3.BackColor = System.Drawing.Color.Transparent;
-            this.addButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton3.BackgroundImage")));
-            this.addButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addButton3.Location = new System.Drawing.Point(16, 41);
-            this.addButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.addButton3.Name = "addButton3";
-            this.addButton3.Size = new System.Drawing.Size(38, 41);
-            this.addButton3.TabIndex = 9;
-            this.addButton3.UseVisualStyleBackColor = true;
-            // 
-            // deleteButton3
-            // 
-            this.deleteButton3.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton3.BackgroundImage")));
-            this.deleteButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deleteButton3.Location = new System.Drawing.Point(16, 132);
-            this.deleteButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteButton3.Name = "deleteButton3";
-            this.deleteButton3.Size = new System.Drawing.Size(38, 41);
-            this.deleteButton3.TabIndex = 10;
-            this.deleteButton3.UseVisualStyleBackColor = false;
-            // 
-            // updateButton2
-            // 
-            this.updateButton2.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton2.BackgroundImage")));
-            this.updateButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton2.Location = new System.Drawing.Point(18, 87);
-            this.updateButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.updateButton2.Name = "updateButton2";
-            this.updateButton2.Size = new System.Drawing.Size(38, 41);
-            this.updateButton2.TabIndex = 11;
-            this.updateButton2.UseVisualStyleBackColor = false;
-            // 
-            // addButton2
-            // 
-            this.addButton2.BackColor = System.Drawing.Color.Transparent;
-            this.addButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton2.BackgroundImage")));
-            this.addButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addButton2.Location = new System.Drawing.Point(18, 41);
-            this.addButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.addButton2.Name = "addButton2";
-            this.addButton2.Size = new System.Drawing.Size(38, 41);
-            this.addButton2.TabIndex = 9;
-            this.addButton2.UseVisualStyleBackColor = true;
-            // 
-            // deleteButton2
-            // 
-            this.deleteButton2.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton2.BackgroundImage")));
-            this.deleteButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deleteButton2.Location = new System.Drawing.Point(18, 132);
-            this.deleteButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteButton2.Name = "deleteButton2";
-            this.deleteButton2.Size = new System.Drawing.Size(38, 41);
-            this.deleteButton2.TabIndex = 10;
-            this.deleteButton2.UseVisualStyleBackColor = false;
-            // 
-            // updateButton1
-            // 
-            this.updateButton1.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton1.BackgroundImage")));
-            this.updateButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton1.Location = new System.Drawing.Point(18, 87);
-            this.updateButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.updateButton1.Name = "updateButton1";
-            this.updateButton1.Size = new System.Drawing.Size(38, 41);
-            this.updateButton1.TabIndex = 11;
-            this.updateButton1.UseVisualStyleBackColor = false;
-            // 
-            // addButton1
-            // 
-            this.addButton1.BackColor = System.Drawing.Color.Transparent;
-            this.addButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addButton1.BackgroundImage")));
-            this.addButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addButton1.Location = new System.Drawing.Point(18, 28);
-            this.addButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.addButton1.Name = "addButton1";
-            this.addButton1.Size = new System.Drawing.Size(38, 41);
-            this.addButton1.TabIndex = 9;
-            this.addButton1.UseVisualStyleBackColor = true;
-            this.addButton1.Click += new System.EventHandler(this.addButton1_Click);
-            // 
-            // deleteButton1
-            // 
-            this.deleteButton1.BackColor = System.Drawing.Color.Transparent;
-            this.deleteButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton1.BackgroundImage")));
-            this.deleteButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deleteButton1.Location = new System.Drawing.Point(18, 132);
-            this.deleteButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteButton1.Name = "deleteButton1";
-            this.deleteButton1.Size = new System.Drawing.Size(38, 41);
-            this.deleteButton1.TabIndex = 10;
-            this.deleteButton1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
