@@ -77,6 +77,7 @@ namespace BusinessManager.Views
                 int qtd = int.Parse(tB_quantity.Text);
 
                 serviceCartViewModel.AddToCart(qtd, id, description, price);
+                lbl_totalSum.Text = "$" + serviceCartViewModel.SumTotalCart().ToString();
             }
         }
 
@@ -89,6 +90,7 @@ namespace BusinessManager.Views
                 int index = selectedRow.Index;
 
                 serviceCartViewModel.RemoveFromCart(index);
+                lbl_totalSum.Text = "$" + serviceCartViewModel.SumTotalCart().ToString();
             }
         }
 
@@ -98,6 +100,11 @@ namespace BusinessManager.Views
             {
                 serviceCartViewModel.GenerateInvoice(serviceCartViewModel,int.Parse(lbl_IdData.Text), lbl_nameData.Text, lbl_phoneData.Text, Email);
             }
+        }
+
+        private void updateTotalCart()
+        {
+
         }
     }
 }

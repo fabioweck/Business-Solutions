@@ -67,6 +67,22 @@ namespace BusinessManager.ViewModels
             ServicesCart.RemoveAt(index);
         }
 
+
+        public decimal SumTotalCart()
+        {
+            double sum = 0;
+
+            foreach(ServiceCartModel model in ServicesCart)
+            {
+                sum += model.Quantity * model.Price; 
+            }
+            
+            return ((decimal)sum);
+        }
+
+
+
+
         public void GenerateInvoice(ServiceCartViewModel serviceCartViewModel, int clientId, string clientName, string clientPhone, string clientEmail)
         {
             StringBuilder invoiceDetails = new StringBuilder();

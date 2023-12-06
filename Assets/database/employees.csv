@@ -1,5 +1,6 @@
-1,Fabio Augusto Weck,0908 15st,fabio@rad.com,9999-999999,TRUE,123
-2,Uyara Martins,1112 Oak Ave,uyara@rad.com,2222-222222,FALSE,123
-3,Leandro Evaristo,85 Orange Blossom,leandro@rad.com,1111-111111,FALSE,123
-4,admin,calgary,adm@adm.com,1111-111,TRUE,123
-5,user,calgary,user@user.com,1111-111,FALSE,123
+1,Fabio Augusto Weck,0908 15st,fabio@rad.com,9999-999999,True,123
+2,Uyara Martins,1112 Oak Ave,uyara@rad.com,2222-222222,False,123
+4,admin,calgary,adm@adm.com,1111-111,True,123
+5,user,calgary,user@user.com,1111-111,False,123
+6,gunga,airdrie,gunga@,11111,False,1
+7,zyon,airdrie,,,False,
