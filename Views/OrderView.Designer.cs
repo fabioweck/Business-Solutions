@@ -35,7 +35,6 @@
             this.lbl_IdData = new System.Windows.Forms.Label();
             this.lbl_phoneLabel = new System.Windows.Forms.Label();
             this.lbl_phoneData = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.OrderGridView = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.gb_Order = new System.Windows.Forms.GroupBox();
@@ -49,6 +48,8 @@
             this.lbl_quantityLabel = new System.Windows.Forms.Label();
             this.btn_removeItem = new System.Windows.Forms.Button();
             this.btn_createInvoice = new System.Windows.Forms.Button();
+            this.lbl_totalLabel = new System.Windows.Forms.Label();
+            this.lbl_totalSum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGridView)).BeginInit();
             this.gb_Order.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CartGridView)).BeginInit();
@@ -119,17 +120,6 @@
             this.lbl_phoneData.TabIndex = 3;
             this.lbl_phoneData.Text = "tmpPhone";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Services",
-            "Products"});
-            this.comboBox1.Location = new System.Drawing.Point(559, 149);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
             // OrderGridView
             // 
             this.OrderGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -145,10 +135,10 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(488, 526);
+            this.btnClose.Location = new System.Drawing.Point(406, 526);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 28);
+            this.btnClose.Size = new System.Drawing.Size(98, 28);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -259,7 +249,7 @@
             // btn_removeItem
             // 
             this.btn_removeItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_removeItem.Location = new System.Drawing.Point(656, 471);
+            this.btn_removeItem.Location = new System.Drawing.Point(406, 471);
             this.btn_removeItem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_removeItem.Name = "btn_removeItem";
             this.btn_removeItem.Size = new System.Drawing.Size(100, 28);
@@ -271,7 +261,7 @@
             // btn_createInvoice
             // 
             this.btn_createInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_createInvoice.Location = new System.Drawing.Point(355, 526);
+            this.btn_createInvoice.Location = new System.Drawing.Point(300, 526);
             this.btn_createInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.btn_createInvoice.Name = "btn_createInvoice";
             this.btn_createInvoice.Size = new System.Drawing.Size(100, 28);
@@ -280,11 +270,33 @@
             this.btn_createInvoice.UseVisualStyleBackColor = true;
             this.btn_createInvoice.Click += new System.EventHandler(this.btn_createInvoice_Click);
             // 
+            // lbl_totalLabel
+            // 
+            this.lbl_totalLabel.AutoSize = true;
+            this.lbl_totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalLabel.Location = new System.Drawing.Point(586, 476);
+            this.lbl_totalLabel.Name = "lbl_totalLabel";
+            this.lbl_totalLabel.Size = new System.Drawing.Size(54, 20);
+            this.lbl_totalLabel.TabIndex = 14;
+            this.lbl_totalLabel.Text = "Total:";
+            // 
+            // lbl_totalSum
+            // 
+            this.lbl_totalSum.AutoSize = true;
+            this.lbl_totalSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalSum.Location = new System.Drawing.Point(642, 476);
+            this.lbl_totalSum.Name = "lbl_totalSum";
+            this.lbl_totalSum.Size = new System.Drawing.Size(54, 20);
+            this.lbl_totalSum.TabIndex = 14;
+            this.lbl_totalSum.Text = "$0.00";
+            // 
             // OrderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 565);
+            this.Controls.Add(this.lbl_totalSum);
+            this.Controls.Add(this.lbl_totalLabel);
             this.Controls.Add(this.gb_Order);
             this.Controls.Add(this.tB_quantity);
             this.Controls.Add(this.btn_removeItem);
@@ -293,7 +305,6 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.CartGridView);
             this.Controls.Add(this.OrderGridView);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lbl_IdData);
             this.Controls.Add(this.lbl_nameData);
             this.Controls.Add(this.lbl_quantityLabel);
@@ -323,7 +334,6 @@
         private System.Windows.Forms.Label lbl_IdData;
         private System.Windows.Forms.Label lbl_phoneLabel;
         private System.Windows.Forms.Label lbl_phoneData;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView OrderGridView;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox gb_Order;
@@ -337,5 +347,7 @@
         private System.Windows.Forms.Label lbl_quantityLabel;
         private System.Windows.Forms.Button btn_removeItem;
         private System.Windows.Forms.Button btn_createInvoice;
+        private System.Windows.Forms.Label lbl_totalLabel;
+        private System.Windows.Forms.Label lbl_totalSum;
     }
 }

@@ -98,20 +98,23 @@
     <Compile Include="Views\ClientProfileView.Designer.cs">
       <DependentUpon>ClientProfileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ClientDetailsView.cs">
+    <Compile Include="Views\ClientView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ClientDetailsView.Designer.cs">
-      <DependentUpon>ClientDetailsView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ClientView.cs">
+    <Compile Include="Views\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EmployeeView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AdminView.cs">
+    <Compile Include="Views\EmployeeView.Designer.cs">
+      <DependentUpon>EmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemProfileView.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ItemProfileView.Designer.cs">
+      <DependentUpon>ItemProfileView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\OrderView.cs">
       <SubType>Form</SubType>
@@ -137,12 +140,6 @@
     <Compile Include="Views\ServiceView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\UpdateClientView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UpdateClientView.Designer.cs">
-      <DependentUpon>UpdateClientView.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,8 +156,8 @@
     <EmbeddedResource Include="Views\ClientProfileView.resx">
       <DependentUpon>ClientProfileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ClientDetailsView.resx">
-      <DependentUpon>ClientDetailsView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\EmployeeView.resx">
+      <DependentUpon>EmployeeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderView.resx">
       <DependentUpon>OrderView.cs</DependentUpon>
@@ -170,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UpdateClientView.resx">
-      <DependentUpon>UpdateClientView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />

@@ -36,6 +36,8 @@ namespace BusinessManager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_addItem = new System.Windows.Forms.Button();
+            this.btn_itemDetail = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnFindService = new System.Windows.Forms.Button();
             this.txtSearchService = new System.Windows.Forms.TextBox();
@@ -56,31 +58,11 @@ namespace BusinessManager
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtIdWorksheet = new System.Windows.Forms.TextBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.txtQtyWorksheet = new System.Windows.Forms.TextBox();
-            this.txtDescriptionWorksheet = new System.Windows.Forms.TextBox();
-            this.txtPriceWorksheet = new System.Windows.Forms.TextBox();
-            this.txtPhoneWorksheet = new System.Windows.Forms.TextBox();
-            this.txtNameWorksheet = new System.Windows.Forms.TextBox();
-            this.txtEmailWorksheet = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabRegistry = new System.Windows.Forms.TabPage();
             this.lblSelectInvoice = new System.Windows.Forms.Label();
             this.btnViewInvoice = new System.Windows.Forms.Button();
@@ -93,6 +75,14 @@ namespace BusinessManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_findEmployee = new System.Windows.Forms.Button();
+            this.txtBox_search = new System.Windows.Forms.TextBox();
+            this.radioBtn_byName = new System.Windows.Forms.RadioButton();
+            this.radioBtn_byId = new System.Windows.Forms.RadioButton();
+            this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
+            this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
             this.addButton4 = new BusinessManager.CustomComponents.AddButton();
             this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
             this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
@@ -113,20 +103,19 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
             this.tabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.tabRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.Controls.Add(this.btn_addItem);
+            this.tabPage2.Controls.Add(this.btn_itemDetail);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.servicesDataGrid);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -135,7 +124,27 @@ namespace BusinessManager
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(900, 555);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Services";
+            this.tabPage2.Text = "Items";
+            // 
+            // btn_addItem
+            // 
+            this.btn_addItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addItem.Location = new System.Drawing.Point(144, 483);
+            this.btn_addItem.Name = "btn_addItem";
+            this.btn_addItem.Size = new System.Drawing.Size(100, 30);
+            this.btn_addItem.TabIndex = 10;
+            this.btn_addItem.Text = "+ Add Item";
+            this.btn_addItem.UseVisualStyleBackColor = true;
+            // 
+            // btn_itemDetail
+            // 
+            this.btn_itemDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_itemDetail.Location = new System.Drawing.Point(38, 483);
+            this.btn_itemDetail.Name = "btn_itemDetail";
+            this.btn_itemDetail.Size = new System.Drawing.Size(100, 30);
+            this.btn_itemDetail.TabIndex = 10;
+            this.btn_itemDetail.Text = "Item Detail";
+            this.btn_itemDetail.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -164,7 +173,6 @@ namespace BusinessManager
             this.btnFindService.TabIndex = 4;
             this.btnFindService.Text = "Find";
             this.btnFindService.UseVisualStyleBackColor = true;
-            this.btnFindService.Click += new System.EventHandler(this.btnFindService_Click);
             // 
             // txtSearchService
             // 
@@ -380,312 +388,82 @@ namespace BusinessManager
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
-            this.tabPage3.Controls.Add(this.groupBox7);
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(900, 555);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Admin";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.txtIdWorksheet);
-            this.groupBox7.Controls.Add(this.btnGenerate);
-            this.groupBox7.Controls.Add(this.txtQtyWorksheet);
-            this.groupBox7.Controls.Add(this.txtDescriptionWorksheet);
-            this.groupBox7.Controls.Add(this.txtPriceWorksheet);
-            this.groupBox7.Controls.Add(this.txtPhoneWorksheet);
-            this.groupBox7.Controls.Add(this.txtNameWorksheet);
-            this.groupBox7.Controls.Add(this.txtEmailWorksheet);
-            this.groupBox7.Location = new System.Drawing.Point(67, 13);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(768, 63);
-            this.groupBox7.TabIndex = 25;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Invoice tester";
-            // 
-            // txtIdWorksheet
-            // 
-            this.txtIdWorksheet.Location = new System.Drawing.Point(273, 24);
-            this.txtIdWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdWorksheet.Name = "txtIdWorksheet";
-            this.txtIdWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtIdWorksheet.TabIndex = 1;
-            this.txtIdWorksheet.Text = "ID";
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.BackColor = System.Drawing.Color.Brown;
-            this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGenerate.Location = new System.Drawing.Point(625, 20);
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(120, 27);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "Generate invoice";
-            this.btnGenerate.UseVisualStyleBackColor = false;
-            this.btnGenerate.Click += new System.EventHandler(this.btnLoadTemplate);
-            // 
-            // txtQtyWorksheet
-            // 
-            this.txtQtyWorksheet.Location = new System.Drawing.Point(352, 24);
-            this.txtQtyWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtQtyWorksheet.Name = "txtQtyWorksheet";
-            this.txtQtyWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtQtyWorksheet.TabIndex = 2;
-            this.txtQtyWorksheet.Text = "Quantity";
-            // 
-            // txtDescriptionWorksheet
-            // 
-            this.txtDescriptionWorksheet.Location = new System.Drawing.Point(433, 24);
-            this.txtDescriptionWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescriptionWorksheet.Name = "txtDescriptionWorksheet";
-            this.txtDescriptionWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtDescriptionWorksheet.TabIndex = 3;
-            this.txtDescriptionWorksheet.Text = "Description";
-            // 
-            // txtPriceWorksheet
-            // 
-            this.txtPriceWorksheet.Location = new System.Drawing.Point(512, 24);
-            this.txtPriceWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPriceWorksheet.Name = "txtPriceWorksheet";
-            this.txtPriceWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtPriceWorksheet.TabIndex = 4;
-            this.txtPriceWorksheet.Text = "Price";
-            // 
-            // txtPhoneWorksheet
-            // 
-            this.txtPhoneWorksheet.Location = new System.Drawing.Point(194, 24);
-            this.txtPhoneWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhoneWorksheet.Name = "txtPhoneWorksheet";
-            this.txtPhoneWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtPhoneWorksheet.TabIndex = 8;
-            this.txtPhoneWorksheet.Text = "Phone";
-            // 
-            // txtNameWorksheet
-            // 
-            this.txtNameWorksheet.Location = new System.Drawing.Point(34, 24);
-            this.txtNameWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNameWorksheet.Name = "txtNameWorksheet";
-            this.txtNameWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtNameWorksheet.TabIndex = 6;
-            this.txtNameWorksheet.Text = "Name";
-            // 
-            // txtEmailWorksheet
-            // 
-            this.txtEmailWorksheet.Location = new System.Drawing.Point(114, 24);
-            this.txtEmailWorksheet.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmailWorksheet.Name = "txtEmailWorksheet";
-            this.txtEmailWorksheet.Size = new System.Drawing.Size(76, 20);
-            this.txtEmailWorksheet.TabIndex = 7;
-            this.txtEmailWorksheet.Text = "Email";
+            this.tabPage3.Text = "Profile";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.btn_deleteEmployee);
+            this.groupBox6.Controls.Add(this.updateButton5);
+            this.groupBox6.Controls.Add(this.btn_addEmployee);
             this.groupBox6.Controls.Add(this.employeesDataGrid);
+            this.groupBox6.Controls.Add(this.label2);
+            this.groupBox6.Controls.Add(this.label1);
             this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Enabled = false;
-            this.groupBox6.Location = new System.Drawing.Point(108, 293);
+            this.groupBox6.Location = new System.Drawing.Point(107, 106);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(686, 225);
+            this.groupBox6.Size = new System.Drawing.Size(686, 336);
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employees";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(138, 151);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 17);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Text";
             // 
             // employeesDataGrid
             // 
             this.employeesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.employeesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.employeesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesDataGrid.Location = new System.Drawing.Point(8, 17);
             this.employeesDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.employeesDataGrid.Name = "employeesDataGrid";
+            this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 24;
-            this.employeesDataGrid.Size = new System.Drawing.Size(670, 122);
+            this.employeesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.employeesDataGrid.Size = new System.Drawing.Size(670, 223);
             this.employeesDataGrid.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(526, 188);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 15);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Remove employee";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Enabled = false;
-            this.groupBox5.Location = new System.Drawing.Point(628, 80);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(158, 198);
-            this.groupBox5.TabIndex = 16;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Invoices data";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(61, 145);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Remove invoice";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 99);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 15);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Update invoice";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(61, 54);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 15);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Add invoice";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Enabled = false;
-            this.groupBox4.Location = new System.Drawing.Point(366, 80);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(158, 198);
-            this.groupBox4.TabIndex = 15;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Services data";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(63, 145);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 15);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Remove service";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(63, 99);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 15);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Update service";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(63, 54);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Add service";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(116, 80);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(158, 198);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Clients data";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 145);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Remove client";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 99);
+            this.label2.Location = new System.Drawing.Point(103, 277);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Update client";
+            this.label2.Size = new System.Drawing.Size(85, 15);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Add employee";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 54);
+            this.label1.Location = new System.Drawing.Point(326, 276);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Add client";
-            this.label1.Click += new System.EventHandler(this.addButton1_Click);
+            this.label1.Size = new System.Drawing.Size(104, 15);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Update employee";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(540, 276);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(110, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Remove employee";
             // 
             // tabRegistry
             // 
@@ -699,7 +477,7 @@ namespace BusinessManager
             this.tabRegistry.Padding = new System.Windows.Forms.Padding(2);
             this.tabRegistry.Size = new System.Drawing.Size(900, 555);
             this.tabRegistry.TabIndex = 3;
-            this.tabRegistry.Text = "Registry";
+            this.tabRegistry.Text = "Invoices";
             // 
             // lblSelectInvoice
             // 
@@ -811,6 +589,102 @@ namespace BusinessManager
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem1.Text = "About...";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.btn_findEmployee);
+            this.groupBox3.Controls.Add(this.txtBox_search);
+            this.groupBox3.Controls.Add(this.radioBtn_byName);
+            this.groupBox3.Controls.Add(this.radioBtn_byId);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.Location = new System.Drawing.Point(253, 24);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(390, 58);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Search";
+            // 
+            // btn_findEmployee
+            // 
+            this.btn_findEmployee.Location = new System.Drawing.Point(321, 20);
+            this.btn_findEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_findEmployee.Name = "btn_findEmployee";
+            this.btn_findEmployee.Size = new System.Drawing.Size(56, 21);
+            this.btn_findEmployee.TabIndex = 4;
+            this.btn_findEmployee.Text = "Find";
+            this.btn_findEmployee.UseVisualStyleBackColor = true;
+            // 
+            // txtBox_search
+            // 
+            this.txtBox_search.Location = new System.Drawing.Point(14, 22);
+            this.txtBox_search.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_search.Name = "txtBox_search";
+            this.txtBox_search.Size = new System.Drawing.Size(108, 20);
+            this.txtBox_search.TabIndex = 3;
+            // 
+            // radioBtn_byName
+            // 
+            this.radioBtn_byName.AutoSize = true;
+            this.radioBtn_byName.Location = new System.Drawing.Point(215, 22);
+            this.radioBtn_byName.Margin = new System.Windows.Forms.Padding(2);
+            this.radioBtn_byName.Name = "radioBtn_byName";
+            this.radioBtn_byName.Size = new System.Drawing.Size(67, 17);
+            this.radioBtn_byName.TabIndex = 1;
+            this.radioBtn_byName.TabStop = true;
+            this.radioBtn_byName.Text = "by Name";
+            this.radioBtn_byName.UseVisualStyleBackColor = true;
+            // 
+            // radioBtn_byId
+            // 
+            this.radioBtn_byId.AutoSize = true;
+            this.radioBtn_byId.Location = new System.Drawing.Point(148, 22);
+            this.radioBtn_byId.Margin = new System.Windows.Forms.Padding(2);
+            this.radioBtn_byId.Name = "radioBtn_byId";
+            this.radioBtn_byId.Size = new System.Drawing.Size(50, 17);
+            this.radioBtn_byId.TabIndex = 0;
+            this.radioBtn_byId.TabStop = true;
+            this.radioBtn_byId.Text = "by ID";
+            this.radioBtn_byId.UseVisualStyleBackColor = true;
+            // 
+            // btn_deleteEmployee
+            // 
+            this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
+            this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_deleteEmployee.Location = new System.Drawing.Point(485, 259);
+            this.btn_deleteEmployee.Name = "btn_deleteEmployee";
+            this.btn_deleteEmployee.Size = new System.Drawing.Size(50, 50);
+            this.btn_deleteEmployee.TabIndex = 26;
+            this.btn_deleteEmployee.UseVisualStyleBackColor = false;
+            this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
+            // 
+            // updateButton5
+            // 
+            this.updateButton5.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
+            this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton5.Location = new System.Drawing.Point(258, 260);
+            this.updateButton5.Name = "updateButton5";
+            this.updateButton5.Size = new System.Drawing.Size(50, 50);
+            this.updateButton5.TabIndex = 25;
+            this.updateButton5.UseVisualStyleBackColor = false;
+            this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
+            // 
+            // btn_addEmployee
+            // 
+            this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
+            this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_addEmployee.Location = new System.Drawing.Point(48, 259);
+            this.btn_addEmployee.Name = "btn_addEmployee";
+            this.btn_addEmployee.Size = new System.Drawing.Size(50, 50);
+            this.btn_addEmployee.TabIndex = 24;
+            this.btn_addEmployee.UseVisualStyleBackColor = false;
+            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
             // 
             // addButton4
             // 
@@ -981,22 +855,16 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
             this.tabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.tabRegistry.ResumeLayout(false);
             this.tabRegistry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1015,14 +883,6 @@ namespace BusinessManager
         private System.Windows.Forms.DataGridView clientsDataGrid;
         private System.Windows.Forms.TabControl tabs;
         private TabPage tabPage3;
-        private Button btnGenerate;
-        private TextBox txtPriceWorksheet;
-        private TextBox txtDescriptionWorksheet;
-        private TextBox txtQtyWorksheet;
-        private TextBox txtIdWorksheet;
-        private TextBox txtPhoneWorksheet;
-        private TextBox txtEmailWorksheet;
-        private TextBox txtNameWorksheet;
         private Label lblClientDetails;
         private DataGridView invoicesDataGrid;
         public TabPage tabRegistry;
@@ -1040,12 +900,8 @@ namespace BusinessManager
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private CustomComponents.AddButton addButton1;
-        private GroupBox groupBox3;
         private CustomComponents.DeleteButton deleteButton1;
         private CustomComponents.UpdateButton updateButton1;
-        private Label label1;
-        private Label label3;
-        private Label label2;
         private GroupBox groupBox6;
         private DataGridView employeesDataGrid;
         private Label label10;
@@ -1054,25 +910,27 @@ namespace BusinessManager
         private Label label11;
         private Label label12;
         private CustomComponents.UpdateButton updateButton4;
-        private GroupBox groupBox5;
-        private Label label7;
-        private Label label8;
-        private Label label9;
         private CustomComponents.UpdateButton updateButton3;
         private CustomComponents.AddButton addButton3;
         private CustomComponents.DeleteButton deleteButton3;
-        private GroupBox groupBox4;
-        private Label label4;
-        private Label label5;
-        private Label label6;
         private CustomComponents.UpdateButton updateButton2;
         private CustomComponents.AddButton addButton2;
         private CustomComponents.DeleteButton deleteButton2;
-        private Label label13;
         private ToolStripMenuItem aboutToolStripMenuItem1;
         private Button btn_newOrder;
-        private GroupBox groupBox7;
         private Button btn_addNewClient;
+        private CustomComponents.DeleteButton btn_deleteEmployee;
+        private CustomComponents.UpdateButton updateButton5;
+        private CustomComponents.AddButton btn_addEmployee;
+        private Label label2;
+        private Label label1;
+        private Button btn_itemDetail;
+        private Button btn_addItem;
+        private GroupBox groupBox3;
+        private Button btn_findEmployee;
+        private TextBox txtBox_search;
+        private RadioButton radioBtn_byName;
+        private RadioButton radioBtn_byId;
     }
 }
 

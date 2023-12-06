@@ -46,16 +46,7 @@ namespace BusinessManager
                     worksheet.IsGridLinesVisible = false;
 
                     //Collects client's details
-                    worksheet.Range["B10"].Text = txtNameWorksheet.Text;
-                    worksheet.Range["B11"].Text = txtEmailWorksheet.Text;
-                    worksheet.Range["B12"].Text = txtPhoneWorksheet.Text;
-
-                    //Adds services
-                    worksheet.Range["B18"].Number = Convert.ToDouble(txtIdWorksheet.Text);
-                    worksheet.Range["C18"].Number = Convert.ToDouble(txtQtyWorksheet.Text);
-                    worksheet.Range["D18"].Text = txtDescriptionWorksheet.Text;
-                    worksheet.Range["F18"].Number = Convert.ToDouble(txtPriceWorksheet.Text);
-                    worksheet.Range["G18"].Formula = "=C18*F18";
+                   
 
                     //Initialize ExcelToPdfConverter
                     ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);

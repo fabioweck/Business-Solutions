@@ -8,13 +8,13 @@ namespace BusinessManager.Models
 {
     public class EmployeeModel
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string Address { get; private set; }
-        public string Phone { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public bool IsAdmin { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public bool IsAdmin { get; set; }
 
         public EmployeeModel(int id, string name, string address, string email,
             string phone, bool isAdmin, string password)
@@ -24,8 +24,8 @@ namespace BusinessManager.Models
             Address = address;
             Phone = phone;
             Email = email;
-            Password = password;
             IsAdmin = isAdmin;
+            Password = password;
         }
     }
 }
