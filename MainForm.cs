@@ -28,7 +28,7 @@ namespace BusinessManager
         EmployeeModel LoggerUser { get; }
         public bool isAdmin { get; }
 
-        public MainForm()
+        public MainForm() // bypass - 
         {
 
             InitializeComponent();

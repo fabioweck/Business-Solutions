@@ -67,7 +67,7 @@ namespace BusinessManager.Views
 
         private void btn_addItem_Click(object sender, EventArgs e)
         {
-            if (OrderGridView.SelectedRows.Count > 0  && tB_quantity.Text != "" && int.Parse(tB_quantity.Text) != 0)
+            if (OrderGridView.SelectedRows.Count > 0 && CartGridView.Rows.Count < 14 && tB_quantity.Text != "" && int.Parse(tB_quantity.Text) != 0)
             {
                 DataGridViewRow selectedRow = OrderGridView.SelectedRows[0];
 

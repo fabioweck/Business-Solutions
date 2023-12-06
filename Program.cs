@@ -19,7 +19,7 @@ namespace BusinessManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-          //  Application.Run(new LoginView());
+          // Application.Run(new LoginView());
         }
     }
 }
