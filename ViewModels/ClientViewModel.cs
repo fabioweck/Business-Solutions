@@ -162,23 +162,6 @@ namespace BusinessManager.ViewModels
             }
         }
 
-
-
-
-
-
-        public static void UpdateClient(int id, string address, string email, string phone)
-        {
-            foreach(ClientModel client in Clients)
-            {
-                if(client.Id == id)
-                {
-                    if(address != string.Empty) client.Address = address;
-                    if(email != string.Empty) client.Email = email;
-                    if(phone != string.Empty) client.Phone = phone;
-                }
-            }
-        }
         private static string ConvertToCsv(BindingList<ClientModel> csv)
         {
             // Assuming ClientModel has properties like Id, Name, etc.

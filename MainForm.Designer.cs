@@ -58,6 +58,11 @@ namespace BusinessManager
             this.clientsDataGrid = new System.Windows.Forms.DataGridView();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_findEmployee = new System.Windows.Forms.Button();
+            this.txtBox_search = new System.Windows.Forms.TextBox();
+            this.radioBtn_byName = new System.Windows.Forms.RadioButton();
+            this.radioBtn_byId = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,11 +80,6 @@ namespace BusinessManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_findEmployee = new System.Windows.Forms.Button();
-            this.txtBox_search = new System.Windows.Forms.TextBox();
-            this.radioBtn_byName = new System.Windows.Forms.RadioButton();
-            this.radioBtn_byId = new System.Windows.Forms.RadioButton();
             this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
             this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
             this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
@@ -103,12 +103,12 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).BeginInit();
             this.tabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
             this.tabRegistry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -135,6 +135,7 @@ namespace BusinessManager
             this.btn_addItem.TabIndex = 10;
             this.btn_addItem.Text = "+ Add Item";
             this.btn_addItem.UseVisualStyleBackColor = true;
+            this.btn_addItem.Click += new System.EventHandler(this.btn_addItem_Click);
             // 
             // btn_itemDetail
             // 
@@ -145,6 +146,7 @@ namespace BusinessManager
             this.btn_itemDetail.TabIndex = 10;
             this.btn_itemDetail.Text = "Item Detail";
             this.btn_itemDetail.UseVisualStyleBackColor = true;
+            this.btn_itemDetail.Click += new System.EventHandler(this.btn_itemDetail_Click);
             // 
             // groupBox2
             // 
@@ -173,6 +175,7 @@ namespace BusinessManager
             this.btnFindService.TabIndex = 4;
             this.btnFindService.Text = "Find";
             this.btnFindService.UseVisualStyleBackColor = true;
+            this.btnFindService.Click += new System.EventHandler(this.btnFindService_Click);
             // 
             // txtSearchService
             // 
@@ -209,6 +212,7 @@ namespace BusinessManager
             // servicesDataGrid
             // 
             this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.servicesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.servicesDataGrid.Location = new System.Drawing.Point(38, 184);
             this.servicesDataGrid.Margin = new System.Windows.Forms.Padding(2);
@@ -361,6 +365,7 @@ namespace BusinessManager
             this.clientsDataGrid.AllowUserToDeleteRows = false;
             this.clientsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.clientsDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientsDataGrid.Location = new System.Drawing.Point(38, 167);
             this.clientsDataGrid.Margin = new System.Windows.Forms.Padding(2);
@@ -397,6 +402,66 @@ namespace BusinessManager
             this.tabPage3.Size = new System.Drawing.Size(900, 555);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Profile";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.btn_findEmployee);
+            this.groupBox3.Controls.Add(this.txtBox_search);
+            this.groupBox3.Controls.Add(this.radioBtn_byName);
+            this.groupBox3.Controls.Add(this.radioBtn_byId);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.Location = new System.Drawing.Point(253, 24);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(390, 58);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Search";
+            // 
+            // btn_findEmployee
+            // 
+            this.btn_findEmployee.Location = new System.Drawing.Point(321, 20);
+            this.btn_findEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_findEmployee.Name = "btn_findEmployee";
+            this.btn_findEmployee.Size = new System.Drawing.Size(56, 21);
+            this.btn_findEmployee.TabIndex = 4;
+            this.btn_findEmployee.Text = "Find";
+            this.btn_findEmployee.UseVisualStyleBackColor = true;
+            // 
+            // txtBox_search
+            // 
+            this.txtBox_search.Location = new System.Drawing.Point(14, 22);
+            this.txtBox_search.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_search.Name = "txtBox_search";
+            this.txtBox_search.Size = new System.Drawing.Size(108, 20);
+            this.txtBox_search.TabIndex = 3;
+            // 
+            // radioBtn_byName
+            // 
+            this.radioBtn_byName.AutoSize = true;
+            this.radioBtn_byName.Location = new System.Drawing.Point(215, 22);
+            this.radioBtn_byName.Margin = new System.Windows.Forms.Padding(2);
+            this.radioBtn_byName.Name = "radioBtn_byName";
+            this.radioBtn_byName.Size = new System.Drawing.Size(67, 17);
+            this.radioBtn_byName.TabIndex = 1;
+            this.radioBtn_byName.TabStop = true;
+            this.radioBtn_byName.Text = "by Name";
+            this.radioBtn_byName.UseVisualStyleBackColor = true;
+            // 
+            // radioBtn_byId
+            // 
+            this.radioBtn_byId.AutoSize = true;
+            this.radioBtn_byId.Location = new System.Drawing.Point(148, 22);
+            this.radioBtn_byId.Margin = new System.Windows.Forms.Padding(2);
+            this.radioBtn_byId.Name = "radioBtn_byId";
+            this.radioBtn_byId.Size = new System.Drawing.Size(50, 17);
+            this.radioBtn_byId.TabIndex = 0;
+            this.radioBtn_byId.TabStop = true;
+            this.radioBtn_byId.Text = "by ID";
+            this.radioBtn_byId.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -508,6 +573,7 @@ namespace BusinessManager
             // 
             this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.invoicesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoicesDataGrid.Location = new System.Drawing.Point(20, 105);
             this.invoicesDataGrid.Margin = new System.Windows.Forms.Padding(2);
@@ -589,66 +655,6 @@ namespace BusinessManager
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem1.Text = "About...";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox3.Controls.Add(this.btn_findEmployee);
-            this.groupBox3.Controls.Add(this.txtBox_search);
-            this.groupBox3.Controls.Add(this.radioBtn_byName);
-            this.groupBox3.Controls.Add(this.radioBtn_byId);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(253, 24);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(390, 58);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Search";
-            // 
-            // btn_findEmployee
-            // 
-            this.btn_findEmployee.Location = new System.Drawing.Point(321, 20);
-            this.btn_findEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_findEmployee.Name = "btn_findEmployee";
-            this.btn_findEmployee.Size = new System.Drawing.Size(56, 21);
-            this.btn_findEmployee.TabIndex = 4;
-            this.btn_findEmployee.Text = "Find";
-            this.btn_findEmployee.UseVisualStyleBackColor = true;
-            // 
-            // txtBox_search
-            // 
-            this.txtBox_search.Location = new System.Drawing.Point(14, 22);
-            this.txtBox_search.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBox_search.Name = "txtBox_search";
-            this.txtBox_search.Size = new System.Drawing.Size(108, 20);
-            this.txtBox_search.TabIndex = 3;
-            // 
-            // radioBtn_byName
-            // 
-            this.radioBtn_byName.AutoSize = true;
-            this.radioBtn_byName.Location = new System.Drawing.Point(215, 22);
-            this.radioBtn_byName.Margin = new System.Windows.Forms.Padding(2);
-            this.radioBtn_byName.Name = "radioBtn_byName";
-            this.radioBtn_byName.Size = new System.Drawing.Size(67, 17);
-            this.radioBtn_byName.TabIndex = 1;
-            this.radioBtn_byName.TabStop = true;
-            this.radioBtn_byName.Text = "by Name";
-            this.radioBtn_byName.UseVisualStyleBackColor = true;
-            // 
-            // radioBtn_byId
-            // 
-            this.radioBtn_byId.AutoSize = true;
-            this.radioBtn_byId.Location = new System.Drawing.Point(148, 22);
-            this.radioBtn_byId.Margin = new System.Windows.Forms.Padding(2);
-            this.radioBtn_byId.Name = "radioBtn_byId";
-            this.radioBtn_byId.Size = new System.Drawing.Size(50, 17);
-            this.radioBtn_byId.TabIndex = 0;
-            this.radioBtn_byId.TabStop = true;
-            this.radioBtn_byId.Text = "by ID";
-            this.radioBtn_byId.UseVisualStyleBackColor = true;
             // 
             // btn_deleteEmployee
             // 
@@ -855,6 +861,8 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGrid)).EndInit();
             this.tabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
@@ -863,8 +871,6 @@ namespace BusinessManager
             ((System.ComponentModel.ISupportInitialize)(this.invoicesDataGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

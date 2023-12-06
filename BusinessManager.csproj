@@ -159,6 +159,9 @@
     <EmbeddedResource Include="Views\EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemProfileView.resx">
+      <DependentUpon>ItemProfileView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderView.resx">
       <DependentUpon>OrderView.cs</DependentUpon>
     </EmbeddedResource>
