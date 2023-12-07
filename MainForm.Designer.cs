@@ -64,10 +64,13 @@ namespace BusinessManager
             this.radioBtn_byName = new System.Windows.Forms.RadioButton();
             this.radioBtn_byId = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
+            this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_addEmployee = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_deleteEmployee = new System.Windows.Forms.Label();
             this.tabRegistry = new System.Windows.Forms.TabPage();
             this.lblSelectInvoice = new System.Windows.Forms.Label();
             this.btnViewInvoice = new System.Windows.Forms.Button();
@@ -80,9 +83,6 @@ namespace BusinessManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
-            this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
-            this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
             this.addButton4 = new BusinessManager.CustomComponents.AddButton();
             this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
             this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
@@ -313,7 +313,7 @@ namespace BusinessManager
             this.btnFindClient.TabIndex = 4;
             this.btnFindClient.Text = "Find";
             this.btnFindClient.UseVisualStyleBackColor = true;
-            this.btnFindClient.Click += new System.EventHandler(this.btnFindClient_Click);
+            this.btnFindClient.Click += new System.EventHandler(this.btnFindClient_Click_1);
             // 
             // txtSearchClient
             // 
@@ -469,9 +469,9 @@ namespace BusinessManager
             this.groupBox6.Controls.Add(this.updateButton5);
             this.groupBox6.Controls.Add(this.btn_addEmployee);
             this.groupBox6.Controls.Add(this.employeesDataGrid);
-            this.groupBox6.Controls.Add(this.label2);
+            this.groupBox6.Controls.Add(this.lbl_addEmployee);
             this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Controls.Add(this.lbl_deleteEmployee);
             this.groupBox6.Location = new System.Drawing.Point(107, 106);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
@@ -480,6 +480,42 @@ namespace BusinessManager
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employees";
+            // 
+            // btn_deleteEmployee
+            // 
+            this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
+            this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_deleteEmployee.Location = new System.Drawing.Point(485, 259);
+            this.btn_deleteEmployee.Name = "btn_deleteEmployee";
+            this.btn_deleteEmployee.Size = new System.Drawing.Size(50, 50);
+            this.btn_deleteEmployee.TabIndex = 26;
+            this.btn_deleteEmployee.UseVisualStyleBackColor = false;
+            this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
+            // 
+            // updateButton5
+            // 
+            this.updateButton5.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
+            this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton5.Location = new System.Drawing.Point(258, 260);
+            this.updateButton5.Name = "updateButton5";
+            this.updateButton5.Size = new System.Drawing.Size(50, 50);
+            this.updateButton5.TabIndex = 25;
+            this.updateButton5.UseVisualStyleBackColor = false;
+            this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
+            // 
+            // btn_addEmployee
+            // 
+            this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
+            this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_addEmployee.Location = new System.Drawing.Point(48, 259);
+            this.btn_addEmployee.Name = "btn_addEmployee";
+            this.btn_addEmployee.Size = new System.Drawing.Size(50, 50);
+            this.btn_addEmployee.TabIndex = 24;
+            this.btn_addEmployee.UseVisualStyleBackColor = false;
+            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
             // 
             // employeesDataGrid
             // 
@@ -497,16 +533,16 @@ namespace BusinessManager
             this.employeesDataGrid.Size = new System.Drawing.Size(670, 223);
             this.employeesDataGrid.TabIndex = 17;
             // 
-            // label2
+            // lbl_addEmployee
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 277);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 15);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Add employee";
+            this.lbl_addEmployee.AutoSize = true;
+            this.lbl_addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_addEmployee.Location = new System.Drawing.Point(103, 277);
+            this.lbl_addEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_addEmployee.Name = "lbl_addEmployee";
+            this.lbl_addEmployee.Size = new System.Drawing.Size(85, 15);
+            this.lbl_addEmployee.TabIndex = 23;
+            this.lbl_addEmployee.Text = "Add employee";
             // 
             // label1
             // 
@@ -519,16 +555,16 @@ namespace BusinessManager
             this.label1.TabIndex = 23;
             this.label1.Text = "Update employee";
             // 
-            // label10
+            // lbl_deleteEmployee
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(540, 276);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 15);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Remove employee";
+            this.lbl_deleteEmployee.AutoSize = true;
+            this.lbl_deleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_deleteEmployee.Location = new System.Drawing.Point(540, 276);
+            this.lbl_deleteEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_deleteEmployee.Name = "lbl_deleteEmployee";
+            this.lbl_deleteEmployee.Size = new System.Drawing.Size(110, 15);
+            this.lbl_deleteEmployee.TabIndex = 23;
+            this.lbl_deleteEmployee.Text = "Remove employee";
             // 
             // tabRegistry
             // 
@@ -655,42 +691,6 @@ namespace BusinessManager
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem1.Text = "About...";
-            // 
-            // btn_deleteEmployee
-            // 
-            this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
-            this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_deleteEmployee.Location = new System.Drawing.Point(485, 259);
-            this.btn_deleteEmployee.Name = "btn_deleteEmployee";
-            this.btn_deleteEmployee.Size = new System.Drawing.Size(50, 50);
-            this.btn_deleteEmployee.TabIndex = 26;
-            this.btn_deleteEmployee.UseVisualStyleBackColor = false;
-            this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
-            // 
-            // updateButton5
-            // 
-            this.updateButton5.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
-            this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton5.Location = new System.Drawing.Point(258, 260);
-            this.updateButton5.Name = "updateButton5";
-            this.updateButton5.Size = new System.Drawing.Size(50, 50);
-            this.updateButton5.TabIndex = 25;
-            this.updateButton5.UseVisualStyleBackColor = false;
-            this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
-            // 
-            // btn_addEmployee
-            // 
-            this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
-            this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_addEmployee.Location = new System.Drawing.Point(48, 259);
-            this.btn_addEmployee.Name = "btn_addEmployee";
-            this.btn_addEmployee.Size = new System.Drawing.Size(50, 50);
-            this.btn_addEmployee.TabIndex = 24;
-            this.btn_addEmployee.UseVisualStyleBackColor = false;
-            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
             // 
             // addButton4
             // 
@@ -910,7 +910,7 @@ namespace BusinessManager
         private CustomComponents.UpdateButton updateButton1;
         private GroupBox groupBox6;
         private DataGridView employeesDataGrid;
-        private Label label10;
+        private Label lbl_deleteEmployee;
         private CustomComponents.AddButton addButton4;
         private CustomComponents.DeleteButton deleteButton4;
         private Label label11;
@@ -928,7 +928,7 @@ namespace BusinessManager
         private CustomComponents.DeleteButton btn_deleteEmployee;
         private CustomComponents.UpdateButton updateButton5;
         private CustomComponents.AddButton btn_addEmployee;
-        private Label label2;
+        private Label lbl_addEmployee;
         private Label label1;
         private Button btn_itemDetail;
         private Button btn_addItem;

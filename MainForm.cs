@@ -59,11 +59,22 @@ namespace BusinessManager
 
             InitializeComponent();
             isAdmin = loggedUser.IsAdmin;
-            userID = loggedUser.Id;////////////------------------here-------------
+            userID = loggedUser.Id;
                  
             ListOfServices = new ServicesViewModel();
             ListOfServices.PopulateServices();
-            ListOfEmployees = listOfEmployees; //---------------------------------------
+            ListOfEmployees = listOfEmployees;
+            if (!isAdmin)
+            {
+                EmployeeViewModel.Employees = new BindingList<EmployeeModel>
+                {
+                    loggedUser
+                };
+                btn_addEmployee.Visible = false;
+                lbl_addEmployee.Visible = false;
+                btn_deleteEmployee.Visible = false;
+                lbl_deleteEmployee.Visible = false;
+            }
             ListOfInvoices = new InvoiceViewModel();
 
             //Assigns collections to data grids
@@ -78,6 +89,14 @@ namespace BusinessManager
 
             this.BackgroundImage = Image.FromFile(path + "\\Assets\\backgroundImage.jpg");
             this.LoggerUser = loggedUser;
+
+
+            this.employeesDataGrid.Columns["Password"].Visible = false;
+            this.employeesDataGrid.Columns["ConfirmPassword"].Visible = false;
+            if (!isAdmin)
+            {
+                this.employeesDataGrid.Columns["IsAdmin"].Visible = false;
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,10 +177,13 @@ namespace BusinessManager
             string address = selectedRow.Cells["Address"].Value.ToString();
             string email = selectedRow.Cells["Email"].Value.ToString();
             string phone = selectedRow.Cells["Phone"].Value.ToString();
-            bool isAdmin = (Boolean)selectedRow.Cells["IsAdmin"].Value;
             string password = selectedRow.Cells["Password"].Value.ToString();
+            string confirmPassword = selectedRow.Cells["ConfirmPassword"].Value.ToString();
+            bool isAdmin = (Boolean)selectedRow.Cells["IsAdmin"].Value;
 
-            EmployeeView employeeProfileView = new EmployeeView(id, name, address, email, phone, password, isAdmin);
+            EmployeeView employeeProfileView = new EmployeeView(id, name, address, email,
+                phone, password, confirmPassword, isAdmin);
+
             employeeProfileView.ShowDialog();
             employeesDataGrid.Refresh();
         }
@@ -174,8 +196,9 @@ namespace BusinessManager
             string address = selectedRow.Cells["Address"].Value.ToString();
             string email = selectedRow.Cells["Email"].Value.ToString();
             string phone = selectedRow.Cells["Phone"].Value.ToString();
-            bool isAdmin = (Boolean)selectedRow.Cells["IsAdmin"].Value;
             string password = selectedRow.Cells["Password"].Value.ToString();
+            string confirmPassword = selectedRow.Cells["confirmPassword"].Value.ToString();
+            bool isAdmin = (Boolean)selectedRow.Cells["IsAdmin"].Value;
 
             DialogResult result = MessageBox.Show("Are you sure you want to delete this employee?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -188,6 +211,7 @@ namespace BusinessManager
                 employeesDataGrid.Refresh();
             }
         }
+        
 
         private void btn_itemDetail_Click(object sender, EventArgs e)
         {
@@ -213,5 +237,33 @@ namespace BusinessManager
             servicesDataGrid.Refresh();
         }
 
+        private void btnFindClient_Click_1(object sender, EventArgs e)
+        {
+            if (radioBtn_byId.Checked)
+            {
+                foreach (DataGridViewRow row in employeesDataGrid.Rows)
+                {
+                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == txtBox_search.Text)
+                    {
+                        employeesDataGrid.ClearSelection();
+                        employeesDataGrid.Rows[row.Index].Selected = true;
+                        employeesDataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+
+            if (radioBtn_byName.Checked)
+            {
+                foreach (DataGridViewRow row in employeesDataGrid.Rows)
+                {
+                    if (row.Cells[1].Value != null && row.Cells[1].Value.ToString().ToLower().Contains(txtBox_search.Text.ToLower()))
+                    {
+                        employeesDataGrid.ClearSelection();
+                        employeesDataGrid.Rows[row.Index].Selected = true;
+                        employeesDataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    }
+                }
+            }
+        }
     }
 }
