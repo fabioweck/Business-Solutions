@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessManager.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ namespace BusinessManager
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjc2MTM0OUAzMjMzMmUzMDJlMzBLYnRmRWVsUDlMcXpYYlNrc3hVNC9jNHM5c2hCTWVEWGgxT2oyUnM2Qm9BPQ==");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+          //  Application.Run(new MainForm()); // --- this is a bypass as Admin
+           Application.Run(new LoginView());
         }
     }
 }

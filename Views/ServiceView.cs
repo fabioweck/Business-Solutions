@@ -11,6 +11,7 @@ namespace BusinessManager
     {
         private void btnFindService_Click(object sender, EventArgs e)
         {
+        
             if (radBtnServiceID.Checked)
             {
                 foreach (DataGridViewRow row in servicesDataGrid.Rows)

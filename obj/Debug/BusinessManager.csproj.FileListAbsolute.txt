@@ -25,3 +25,29 @@ C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application 
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.InvoiceView.resources
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.ClientDetailsView.resources
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\BusinessManager\obj\Debug\BusinessManager.Views.UpdateClientView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\BusinessManager.exe.config
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\BusinessManager.exe
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\BusinessManager.pdb
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.ExcelToPdfConverter.Base.dll
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.Pdf.Base.dll
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.XlsIO.Base.dll
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.ExcelToPdfConverter.Base.xml
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.Pdf.Base.xml
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\bin\Debug\Syncfusion.XlsIO.Base.xml
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.csproj.AssemblyReference.cache
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.MainForm.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Properties.Resources.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.ClientProfileView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.EmployeeView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.ItemProfileView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.OrderView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.InvoiceView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.Views.LoginView.resources
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.csproj.GenerateResource.cache
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.csproj.CoreCompileInputs.cache
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.csproj.CopyComplete
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.exe
+C:\Users\Lreva\Documents\Code\RAD\business_final_project\obj\Debug\BusinessManager.pdb

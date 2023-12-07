@@ -1,3 +1,3 @@
-Fabio Augusto Weck;0908 15st, Beltline, Calgary;587-892-3124;fabio@rad.com;2023-07-11
-Uyara Martins;1112 Oak Ave., North, Calgary;981-282-3461;uyara@rad.com;2023-08-01
-Leandro Evaristo;85 Orange Blossom, Calgary;354-654-1916;leandro@rad.com;2023-08-03
+1,Admin,Calgary,adm@adm.com,456-456-456,123,123,TRUE
+2,User Less Permission,Calgary,user@user.com,123-456-789,123,123,FALSE
+3,ana,there,ana@ana.com,456-456-456,123,123,FALSE
