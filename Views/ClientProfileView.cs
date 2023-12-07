@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,10 +34,8 @@ namespace BusinessManager.Views
             {
                 btn_delete.Enabled = false;
                 btn_delete.BackColor = Color.IndianRed;
-
                 txt_box_name.Enabled = false;
             }
-
 
             this.StartPosition = FormStartPosition.CenterParent;
 
@@ -51,17 +50,27 @@ namespace BusinessManager.Views
         {
             this.Close();
         }
-
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(email);
+        }
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
+            if (IsValidEmail(txt_box_email.Text))
+            {
+                ClientViewModel.AddClient(lbl_id.Text, txt_box_name.Text, txt_box_address.Text, txt_box_email.Text, txt_box_phone.Text);
 
-            ClientViewModel.AddClient(lbl_id.Text,txt_box_name.Text, txt_box_address.Text, txt_box_email.Text, txt_box_phone.Text);
+                MessageBox.Show("Client saved successfully");
 
-            MessageBox.Show("Client saved successfully");
-
-            this.Close();
-          
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Email invalid");
+            }
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -71,7 +80,6 @@ namespace BusinessManager.Views
             MessageBox.Show("Client removed successfully");
 
             this.Close();
-
         }
     }
 }

@@ -101,10 +101,5 @@ namespace BusinessManager.Views
                 serviceCartViewModel.GenerateInvoice(serviceCartViewModel,int.Parse(lbl_IdData.Text), lbl_nameData.Text, lbl_phoneData.Text, Email);
             }
         }
-
-        private void updateTotalCart()
-        {
-
-        }
     }
 }

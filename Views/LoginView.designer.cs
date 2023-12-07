@@ -108,7 +108,6 @@
             this.Controls.Add(this.labelTitle);
             this.Name = "LoginView";
             this.Text = "LoginView";
-            this.Load += new System.EventHandler(this.LoginView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

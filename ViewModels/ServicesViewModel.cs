@@ -14,15 +14,12 @@ namespace BusinessManager.ViewModels
 {
     public class ServicesViewModel
     {
-
         public static BindingList<ServiceModel> Services { get; set; }
-
 
         public ServicesViewModel()
         {
             Services = new BindingList<ServiceModel>();
         }
-
 
         public void PopulateServices()
         {
@@ -86,9 +83,7 @@ namespace BusinessManager.ViewModels
                     Console.WriteLine("Invalid id format");
                 }
             }
-
             UpdateCSV(CsvFilePath, Services);
-
         }
 
         public static void RemoveItem(string id)
@@ -193,7 +188,6 @@ namespace BusinessManager.ViewModels
         }
     }
 
-
     public class ServiceCartViewModel
     {
         public BindingList<ServiceCartModel> ServicesCart { get; set; }
@@ -213,7 +207,6 @@ namespace BusinessManager.ViewModels
             ServicesCart.RemoveAt(index);
         }
 
-
         public decimal SumTotalCart()
         {
             double sum = 0;
@@ -225,9 +218,6 @@ namespace BusinessManager.ViewModels
             
             return ((decimal)sum);
         }
-
-
-
 
         public void GenerateInvoice(ServiceCartViewModel serviceCartViewModel, int clientId, string clientName, string clientPhone, string clientEmail)
         {
@@ -250,10 +240,5 @@ namespace BusinessManager.ViewModels
             // Display the MessageBox
             MessageBox.Show(invoiceDetails.ToString(), "Invoice Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
     }
-
-
-
 }

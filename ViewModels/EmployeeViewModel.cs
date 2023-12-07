@@ -39,7 +39,7 @@ namespace BusinessManager.ViewModels
 
                             ///-------------//------------------////-------------
                             Employees.Add(new EmployeeModel(Int32.Parse(splitted[0]), splitted[1], splitted[2], splitted[3],
-                                splitted[4], Boolean.Parse(splitted[5]), splitted[6]));
+                                splitted[4], (splitted[5]), splitted[6], Boolean.Parse(splitted[7])));
                         }
                     }
                 }
@@ -93,7 +93,7 @@ namespace BusinessManager.ViewModels
         {
             // Convert each EmployeeModel object to CSV row
             string rows = string.Join("\n", csv.Select(employee =>
-               $"{employee.Id},{employee.Name},{employee.Address},{employee.Email},{employee.Phone},{employee.IsAdmin},{employee.Password}"));
+               $"{employee.Id},{employee.Name},{employee.Address},{employee.Email},{employee.Phone},{employee.Password},{employee.ConfirmPassword},{employee.IsAdmin}"));
 
 
             // Combine header and rows
@@ -121,7 +121,7 @@ namespace BusinessManager.ViewModels
         }
 
         public static void AddEmployee(string id, string name, string address,
-        string email, string phone, bool isAdmin, string password)
+        string email, string phone, string password, string confirmPassword, bool isAdmin)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
@@ -133,7 +133,7 @@ namespace BusinessManager.ViewModels
             {
                 // If id is not provided, get the next available id
                 employeeId = GetNextAvailableId();
-                Employees.Add(new EmployeeModel(employeeId, name, address, email, phone, isAdmin, password));
+                Employees.Add(new EmployeeModel(employeeId, name, address, email, phone, password, confirmPassword, isAdmin));
             }
             else
             {
@@ -150,13 +150,14 @@ namespace BusinessManager.ViewModels
                         existingEmployee.Address = address;
                         existingEmployee.Email = email;
                         existingEmployee.Phone = phone;
-                        existingEmployee.IsAdmin = isAdmin;
                         existingEmployee.Password = password;
+                        existingEmployee.ConfirmPassword = confirmPassword;
+                        existingEmployee.IsAdmin = isAdmin;
                     }
                     else
                     {
                         // If the employee doesn't exist, add a new entry to the employee list
-                        Employees.Add(new EmployeeModel(employeeId, name, address, email, phone, isAdmin, password
+                        Employees.Add(new EmployeeModel(employeeId, name, address, email, phone, password, confirmPassword, isAdmin
                         ));
                     }
                 }
@@ -196,7 +197,4 @@ namespace BusinessManager.ViewModels
             }
         }
     }
-
-
-
 }

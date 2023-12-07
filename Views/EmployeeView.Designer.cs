@@ -44,6 +44,8 @@
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_Id_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBox_confirmPassword = new System.Windows.Forms.TextBox();
+            this.lbl_confirmPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -70,16 +72,17 @@
             // 
             // txtBox_password
             // 
-            this.txtBox_password.Location = new System.Drawing.Point(112, 243);
+            this.txtBox_password.Location = new System.Drawing.Point(165, 227);
             this.txtBox_password.Name = "txtBox_password";
-            this.txtBox_password.Size = new System.Drawing.Size(334, 20);
+            this.txtBox_password.Size = new System.Drawing.Size(281, 20);
             this.txtBox_password.TabIndex = 44;
+            this.txtBox_password.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 242);
+            this.label2.Location = new System.Drawing.Point(34, 226);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -88,28 +91,28 @@
             // 
             // txt_box_phone
             // 
-            this.txt_box_phone.Location = new System.Drawing.Point(112, 208);
+            this.txt_box_phone.Location = new System.Drawing.Point(112, 195);
             this.txt_box_phone.Name = "txt_box_phone";
             this.txt_box_phone.Size = new System.Drawing.Size(334, 20);
             this.txt_box_phone.TabIndex = 39;
             // 
             // txt_box_email
             // 
-            this.txt_box_email.Location = new System.Drawing.Point(112, 176);
+            this.txt_box_email.Location = new System.Drawing.Point(112, 163);
             this.txt_box_email.Name = "txt_box_email";
             this.txt_box_email.Size = new System.Drawing.Size(334, 20);
             this.txt_box_email.TabIndex = 40;
             // 
             // txt_box_address
             // 
-            this.txt_box_address.Location = new System.Drawing.Point(112, 140);
+            this.txt_box_address.Location = new System.Drawing.Point(112, 131);
             this.txt_box_address.Name = "txt_box_address";
             this.txt_box_address.Size = new System.Drawing.Size(334, 20);
             this.txt_box_address.TabIndex = 41;
             // 
             // txt_box_name
             // 
-            this.txt_box_name.Location = new System.Drawing.Point(112, 104);
+            this.txt_box_name.Location = new System.Drawing.Point(112, 101);
             this.txt_box_name.Name = "txt_box_name";
             this.txt_box_name.Size = new System.Drawing.Size(334, 20);
             this.txt_box_name.TabIndex = 42;
@@ -143,7 +146,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 211);
+            this.label5.Location = new System.Drawing.Point(34, 198);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
@@ -154,7 +157,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 179);
+            this.label4.Location = new System.Drawing.Point(34, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
@@ -165,7 +168,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 142);
+            this.label3.Location = new System.Drawing.Point(34, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -198,12 +201,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 104);
+            this.label1.Location = new System.Drawing.Point(34, 101);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 33;
             this.label1.Text = "Name:";
+            // 
+            // txtBox_confirmPassword
+            // 
+            this.txtBox_confirmPassword.Location = new System.Drawing.Point(165, 253);
+            this.txtBox_confirmPassword.Name = "txtBox_confirmPassword";
+            this.txtBox_confirmPassword.Size = new System.Drawing.Size(282, 20);
+            this.txtBox_confirmPassword.TabIndex = 44;
+            this.txtBox_confirmPassword.UseSystemPasswordChar = true;
+            // 
+            // lbl_confirmPassword
+            // 
+            this.lbl_confirmPassword.AutoSize = true;
+            this.lbl_confirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confirmPassword.Location = new System.Drawing.Point(35, 253);
+            this.lbl_confirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_confirmPassword.Name = "lbl_confirmPassword";
+            this.lbl_confirmPassword.Size = new System.Drawing.Size(125, 17);
+            this.lbl_confirmPassword.TabIndex = 43;
+            this.lbl_confirmPassword.Text = "Confirm Password:";
             // 
             // EmployeeView
             // 
@@ -211,7 +233,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 368);
             this.Controls.Add(this.checkBox_admin);
+            this.Controls.Add(this.txtBox_confirmPassword);
             this.Controls.Add(this.txtBox_password);
+            this.Controls.Add(this.lbl_confirmPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_box_phone);
             this.Controls.Add(this.txt_box_email);
@@ -252,5 +276,7 @@
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label lbl_Id_label;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBox_confirmPassword;
+        private System.Windows.Forms.Label lbl_confirmPassword;
     }
 }

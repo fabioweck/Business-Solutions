@@ -21,12 +21,6 @@ namespace BusinessManager.Views
             textBox_password.PasswordChar = '*';
         }
 
-        private void LoginView_Load(object sender, EventArgs e)
-        {
-  
-
-        }
-
         private void btn_SignIn_Click(object sender, EventArgs e)
         {
             BindingList<Models.EmployeeModel> employees = EmployeeViewModel.Employees;
@@ -45,7 +39,7 @@ namespace BusinessManager.Views
             }
             this.Visible = false;
             new MainForm(employeeViewModel, employeeModel).ShowDialog();
-           this.Close();
+            this.Close();
 
         }
     }

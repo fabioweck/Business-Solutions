@@ -18,7 +18,7 @@ namespace BusinessManager
     //Extension of main form to handle Client Tab
     public partial class MainForm
     {
-        private void btnFindClient_Click(object sender, EventArgs e)
+        private void BtnFindClient_Click(object sender, EventArgs e)
         {
             if(radBtnClientID.Checked)
             {
@@ -59,23 +59,5 @@ namespace BusinessManager
                 }
             }
         }
-
-        //private void btnClientDetails_Click(object sender, EventArgs e)
-        //{
-        //    if (clientsDataGrid.SelectedRows.Count > 0)
-        //    {
-        //        DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
-
-        //        string name = selectedRow.Cells["Name"].Value.ToString();
-        //        int id = (int)selectedRow.Cells["Id"].Value;
-        //        string address = selectedRow.Cells["Address"].Value.ToString();
-        //        string email = selectedRow.Cells["Email"].Value.ToString();
-        //        string phone = selectedRow.Cells["Phone"].Value.ToString();
-
-        //        ClientDetailsView clientDetails = new ClientDetailsView(name, id, address, email, phone);
-        //        clientDetails.ShowDialog();
-        //        clientsDataGrid.Refresh();
-        //    }
-        //}
     }
 }

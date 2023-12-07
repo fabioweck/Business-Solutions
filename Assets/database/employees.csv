@@ -1,6 +1,3 @@
-1,Fabio Augusto Weck,0908 15st,fabio@rad.com,9999-999999,True,123
-2,Uyara Martins,1112 Oak Ave,uyara@rad.com,2222-222222,False,123
-4,admin,calgary,adm@adm.com,1111-111,True,123
-5,user3131,calgary,user@user.com,1111-111,False,123
-6,gungaoipoipoi,airdrie,gunga@,11111,False,1
-7,131lklklklklk,3131,1,13131,False,31
+1,Admin,Calgary,adm@adm.com,456-456-456,123,123,TRUE
+2,User Less Permission,Calgary,user@user.com,123-456-789,123,123,FALSE
+3,ana,there,ana@ana.com,456-456-456,123,123,FALSE

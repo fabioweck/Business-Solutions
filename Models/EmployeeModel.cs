@@ -14,18 +14,20 @@ namespace BusinessManager.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
         public bool IsAdmin { get; set; }
 
         public EmployeeModel(int id, string name, string address, string email,
-            string phone, bool isAdmin, string password)
+            string phone, string password, string confirmPassword, bool isAdmin)
         {
             Id = id;
             Name = name;
             Address = address;
             Phone = phone;
             Email = email;
-            IsAdmin = isAdmin;
             Password = password;
+            ConfirmPassword = confirmPassword;
+            IsAdmin = isAdmin;
         }
     }
 }
