@@ -2,6 +2,7 @@
 using BusinessManager.Properties;
 using BusinessManager.ViewModels;
 using BusinessManager.Views;
+using MimeKit;
 using Syncfusion.XlsIO;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,16 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.Design;
 using System.Windows.Forms;
+//using MailKit.Net.Smtp;
+//using MailKit.Security;
+//using MimeKit;
+using System.Net.Mail;
+using System.Net;
 
 namespace BusinessManager
 {
