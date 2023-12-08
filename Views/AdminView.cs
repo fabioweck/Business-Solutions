@@ -75,7 +75,7 @@ namespace BusinessManager
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Verify all fields before proceeding", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Verify all fields before proceeding.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }      
             }     
