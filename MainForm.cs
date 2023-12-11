@@ -157,12 +157,9 @@ namespace BusinessManager
                 // ClientProfileView clientProfileView = new ClientProfileView(id, name, address, email, phone, isAdmin);
                 // clientProfileView.ShowDialog();
 
-                OrderView orderView = new OrderView(id, name, address, email, phone);
+                OrderView orderView = new OrderView(id, name, address, email, phone, invoicesDataGrid.Refresh);
                 orderView.ShowDialog();
                            
-
-
-
                // clientsDataGrid.Refresh();
             }
         }

@@ -6,9 +6,14 @@ namespace BusinessManager.Views
 {
     public partial class OrderView : Form
     { 
+        public delegate void RefreshInvoicesDataGrid();
+
         public string Email {  get; set; }
         ServiceCartViewModel serviceCartViewModel = new ServiceCartViewModel();
-        public OrderView(int id, string name, string address, string email, string phone)
+        RefreshInvoicesDataGrid InvoicesDataGrid;
+
+
+        public OrderView(int id, string name, string address, string email, string phone, RefreshInvoicesDataGrid invoicesDataGrid)
         {
             InitializeComponent();
             InitializeOrderGridView();
@@ -17,6 +22,7 @@ namespace BusinessManager.Views
             lbl_IdData.Text = id.ToString();
             lbl_nameData.Text = name;
             lbl_phoneData.Text = phone;
+            InvoicesDataGrid = invoicesDataGrid;
         }
         private void InitializeOrderGridView()
         {
@@ -96,10 +102,12 @@ namespace BusinessManager.Views
 
         private void btn_createInvoice_Click(object sender, EventArgs e)
         {
-            if (CartGridView.SelectedRows.Count > 0)
+            if (CartGridView.RowCount > 0)
             {
-                serviceCartViewModel.GenerateInvoice(serviceCartViewModel,int.Parse(lbl_IdData.Text), lbl_nameData.Text, lbl_phoneData.Text, Email);
+                serviceCartViewModel.GenerateInvoice(int.Parse(lbl_IdData.Text), lbl_nameData.Text, lbl_phoneData.Text, Email);
             }
+
+            InvoicesDataGrid.Invoke();
         }
     }
 }

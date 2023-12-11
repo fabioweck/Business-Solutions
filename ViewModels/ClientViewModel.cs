@@ -42,7 +42,6 @@ namespace BusinessManager.ViewModels
                 }
             }
         }
-
     
 
         public static int GetNextAvailableId()
