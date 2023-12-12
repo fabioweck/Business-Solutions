@@ -112,7 +112,7 @@ namespace BusinessManager.ViewModels
                             pdfDocument.Save(saveFile.FileName);
                             InvoiceViewModel.PopulateInvoicesList();
 
-                            DialogResult res = MessageBox.Show($"Invoice succesfully created. Client {clientName}, invoice {invoiceID}. Would you like to send invoice to {clientEmail}?", "Invoice created", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            DialogResult res = MessageBox.Show($"Invoice succesfully created.\nClient {clientName}, invoice {invoiceID}.\nWould you like to send invoice to {clientEmail}?", "Invoice created", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                             
                             if (res == DialogResult.Yes)
                             {
