@@ -1,18 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\",
+  "WorkspaceRootPath": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|c:\\users\\lreva\\documents\\code\\rad\\business_final_project\\views\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\viewmodels\\servicecartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:viewmodels\\servicecartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|c:\\users\\lreva\\documents\\code\\rad\\business_final_project\\views\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|c:\\users\\lreva\\documents\\code\\rad\\business_final_project\\views\\clientprofileview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\clientprofileview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\views\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|c:\\users\\lreva\\source\\repos\\business-solutionsend\\views\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\loginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6B15F0E4-EB2B-4A64-91B3-176F8C587E95}|BusinessManager.csproj|solutionrelative:views\\orderview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +42,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeView.cs",
-              "DocumentMoniker": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\EmployeeView.cs",
-              "RelativeDocumentMoniker": "Views\\EmployeeView.cs",
-              "ToolTip": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\EmployeeView.cs*",
-              "RelativeToolTip": "Views\\EmployeeView.cs*",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAABgAAAAgAAAA",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA7wDkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-07T17:39:18.155Z",
+              "WhenOpened": "2023-12-12T16:50:03.491Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginView.cs",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\LoginView.cs",
+              "RelativeDocumentMoniker": "Views\\LoginView.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\LoginView.cs",
+              "RelativeToolTip": "Views\\LoginView.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T17:53:46.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\EmployeeView.cs",
-              "RelativeDocumentMoniker": "Views\\EmployeeView.cs",
-              "ToolTip": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\EmployeeView.cs [Design]*",
-              "RelativeToolTip": "Views\\EmployeeView.cs [Design]*",
+              "DocumentIndex": 3,
+              "Title": "LoginView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\LoginView.cs",
+              "RelativeDocumentMoniker": "Views\\LoginView.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\LoginView.cs [Design]",
+              "RelativeToolTip": "Views\\LoginView.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-07T17:39:16.486Z",
+              "WhenOpened": "2023-12-12T17:59:36.538Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClientProfileView.cs",
-              "DocumentMoniker": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\ClientProfileView.cs",
-              "RelativeDocumentMoniker": "Views\\ClientProfileView.cs",
-              "ToolTip": "C:\\Users\\Lreva\\Documents\\Code\\RAD\\business_final_project\\Views\\ClientProfileView.cs",
-              "RelativeToolTip": "Views\\ClientProfileView.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAowDQAAAAvAAAA",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-07T17:38:23.647Z",
+              "WhenOpened": "2023-12-12T17:49:36.972Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCartViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\ViewModels\\ServiceCartViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ServiceCartViewModel.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\ViewModels\\ServiceCartViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ServiceCartViewModel.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAnwGYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T17:21:21.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderView.cs",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\OrderView.cs",
+              "RelativeDocumentMoniker": "Views\\OrderView.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\OrderView.cs",
+              "RelativeToolTip": "Views\\OrderView.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAGsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T17:21:04.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\OrderView.cs",
+              "RelativeDocumentMoniker": "Views\\OrderView.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\OrderView.cs [Design]",
+              "RelativeToolTip": "Views\\OrderView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T17:20:57.47Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T16:49:17.059Z",
               "EditorCaption": ""
             }
           ]
