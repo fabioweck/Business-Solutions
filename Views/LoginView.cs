@@ -14,16 +14,30 @@ namespace BusinessManager.Views
     public partial class LoginView : Form
     {
         private EmployeeViewModel employeeViewModel;
+
+        public MainForm mainForm = new MainForm();
+
+        public BindingList<Models.EmployeeModel> employees;
+
         public LoginView()
         {
             InitializeComponent();
-            employeeViewModel = new EmployeeViewModel();  
+            this.StartPosition = FormStartPosition.CenterScreen;
+            mainForm.Visible = false;
+
+            employeeViewModel = new EmployeeViewModel();
             textBox_password.PasswordChar = '*';
+
+            LogoutListener logoutListener = new LogoutListener(mainForm);
+
+            // Subscribe to the LogoutRequested event
+            mainForm.LogoutRequested += MainForm_LogoutRequested;
+            employees = EmployeeViewModel.Employees;
         }
 
         private void btn_SignIn_Click(object sender, EventArgs e)
-        {
-            BindingList<Models.EmployeeModel> employees = EmployeeViewModel.Employees;
+        { 
+          
             Models.EmployeeModel employeeModel = employees.ToList().Find(emp => emp.Email == textBox_email.Text);
 
             if (employeeModel == null)
@@ -37,10 +51,47 @@ namespace BusinessManager.Views
                 MessageBox.Show("Invalid user");
                 return;
             }
-            this.Visible = false;
-            new MainForm(employeeViewModel, employeeModel).ShowDialog();
-            this.Close();
 
+            // Creating an instance of MainForm
+            mainForm.UpdateMainForm(employeeModel);
+
+            // Hide the current form
+            this.Visible = false;
+
+            // Show the MainForm
+            mainForm.ShowDialog();
+        }
+
+        // Event handler for the MainForm's LogoutRequested event
+        private void MainForm_LogoutRequested(object sender, EventArgs e)
+        {
+            this.textBox_email.Text = "";
+            this.textBox_password.Text = "";
+            this.Visible = true;
+            mainForm.Close();        
+        }
+
+        public class LogoutListener
+        {
+            private MainForm mainForm;
+
+            public LogoutListener(MainForm mainForm)
+            {
+                this.mainForm = mainForm;
+                WireUpEvents();
+            }
+
+            private void WireUpEvents()
+            {
+                if (mainForm != null)
+                {
+                    mainForm.LogoutRequested += MainForm_LogoutRequested;
+                }
+            }
+            private void MainForm_LogoutRequested(object sender, EventArgs e)
+            {
+                MessageBox.Show("Success logout");
+            }
         }
     }
 }

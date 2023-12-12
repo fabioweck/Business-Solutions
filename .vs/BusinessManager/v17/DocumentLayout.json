@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -52,15 +52,11 @@
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA7wDkAAAAJAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA7wCkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-12T16:50:03.491Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
@@ -70,7 +66,7 @@
               "RelativeDocumentMoniker": "Views\\LoginView.cs",
               "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Views\\LoginView.cs",
               "RelativeToolTip": "Views\\LoginView.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBMAAAAMAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-12T17:53:46.366Z",
               "EditorCaption": ""
@@ -107,7 +103,7 @@
               "RelativeDocumentMoniker": "ViewModels\\ServiceCartViewModel.cs",
               "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\ViewModels\\ServiceCartViewModel.cs",
               "RelativeToolTip": "ViewModels\\ServiceCartViewModel.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAnwGYAAAAVAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAnwGAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-12T17:21:21.801Z",
               "EditorCaption": ""
@@ -145,7 +141,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Lreva\\source\\repos\\Business-SolutionsEnd\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-12-12T16:49:17.059Z",
               "EditorCaption": ""

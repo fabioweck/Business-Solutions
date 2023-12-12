@@ -25,53 +25,35 @@ namespace BusinessManager
     {
         ClientViewModel ListOfClients = new ClientViewModel();
         ServicesViewModel ListOfServices { get; set; }
-        EmployeeViewModel ListOfEmployees { get; set; }
+        //  EmployeeViewModel ListOfEmployees { get; set; }
         InvoiceViewModel ListOfInvoices { get; set; }
-        EmployeeModel LoggerUser { get; }
-        public bool isAdmin { get; }
-        public int userID { get; } = 0;
+        EmployeeModel LoggerUser { get; set; }
+        public bool isAdmin { get; set; }
+        public int userID { get; set; } = 0;
         public static string ProgramPath = string.Empty;
 
-        public MainForm() // bypass - for admin
+        public event EventHandler LogoutRequested;
+
+
+        public MainForm()
         {
-
             InitializeComponent();
-            isAdmin = true;
-
-            string currentDirectory = Directory.GetCurrentDirectory();
-            int index = currentDirectory.LastIndexOf("bin");
-            ProgramPath = currentDirectory.Substring(0, index);
-
-            ListOfServices = new ServicesViewModel();
-            ListOfServices.PopulateServices();
-            ListOfInvoices = new InvoiceViewModel();
-            ListOfEmployees = new EmployeeViewModel();
-
-            //Assigns collections to data grids
-            clientsDataGrid.DataSource = ClientViewModel.Clients;
-            servicesDataGrid.DataSource = ServicesViewModel.Services;
-            employeesDataGrid.DataSource = EmployeeViewModel.Employees;
-            invoicesDataGrid.DataSource = InvoiceViewModel.Invoices;
-
-            //this.BackgroundImage = Image.FromFile(ProgramPath + "Assets\\backgroundImage.jpg");
-          
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        public MainForm(EmployeeViewModel listOfEmployees, EmployeeModel loggedUser)
+        public void UpdateMainForm(EmployeeModel loggedUser)
         {
-
-            InitializeComponent();
+            isAdmin = loggedUser.IsAdmin;
+            userID = loggedUser.Id;
 
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             ProgramPath = currentDirectory.Substring(0, index);
 
-            isAdmin = loggedUser.IsAdmin;
-            userID = loggedUser.Id;
-                 
+
             ListOfServices = new ServicesViewModel();
             ListOfServices.PopulateServices();
-            ListOfEmployees = listOfEmployees;
+          
             ListOfInvoices = new InvoiceViewModel();
 
             if (!isAdmin)
@@ -94,6 +76,7 @@ namespace BusinessManager
 
 
             //this.BackgroundImage = Image.FromFile(ProgramPath + "Assets\\backgroundImage.jpg");
+
             this.LoggerUser = loggedUser;
 
 
@@ -109,6 +92,16 @@ namespace BusinessManager
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }   
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OnLogoutRequested();
+            this.Close();
+        }
+        protected virtual void OnLogoutRequested()
+        {
+            LogoutRequested?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

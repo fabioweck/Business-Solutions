@@ -98,6 +98,10 @@ namespace BusinessManager.ViewModels
                     //Convert Excel document into PDF document
                     pdfDocument = converter.Convert();
 
+                    string pathToSave = MainForm.ProgramPath + "Assets\\invoices\\" + $"{invoiceID}.pdf";
+                    pdfDocument.Save(pathToSave);
+
+
                     //Opens the save dialog to allow user selecting the folder and file name to be saved
                     using (SaveFileDialog saveFile = new SaveFileDialog()
                     {
@@ -105,10 +109,13 @@ namespace BusinessManager.ViewModels
                         ValidateNames = true,
                         InitialDirectory = MainForm.ProgramPath + "\\invoices",
                         FileName = $"{invoiceID}.pdf"
+
                     })
+                       
                     {
                         if (saveFile.ShowDialog() == DialogResult.OK)
                         {
+                            
                             pdfDocument.Save(saveFile.FileName);
                             InvoiceViewModel.PopulateInvoicesList();
 
