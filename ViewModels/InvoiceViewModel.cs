@@ -50,6 +50,7 @@ namespace BusinessManager.ViewModels
                 }
 
                 InvoicesCounter = Invoices.Count;
+
             }
         }
 
