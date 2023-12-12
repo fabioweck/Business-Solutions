@@ -60,7 +60,7 @@ namespace BusinessManager.ViewModels
 
                     //Opens the template for modification
                     IWorkbook workbook = application.Workbooks.Open(MainForm.ProgramPath + "Assets\\templates\\work_order.xlsx");
-                    //IWorkbook workbook = application.Workbooks.Open(@"C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\Assets\templates\work_order.xlsx");
+                 
                     IWorksheet worksheet = workbook.Worksheets[0];
 
                     //Disable gridlines in the worksheet
@@ -118,7 +118,7 @@ namespace BusinessManager.ViewModels
                             {
                                 try
                                 {
-                                    await InvoiceViewModel.SendEmail(clientEmail, $"{invoiceID}.pdf");
+                                    await InvoiceViewModel.SendInvoice(clientEmail, $"{invoiceID}.pdf", clientName);
                                     MessageBox.Show($"Invoice sent to {clientEmail}.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                                 }
                                 catch

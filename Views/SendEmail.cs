@@ -28,7 +28,7 @@ namespace BusinessManager.Views
 
             try
             {
-                await InvoiceViewModel.SendEmail(email, File);
+                await InvoiceViewModel.SendInvoice(email, File);
                 MessageBox.Show($"Invoice succesfully sent to {email}", "Invoice sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
