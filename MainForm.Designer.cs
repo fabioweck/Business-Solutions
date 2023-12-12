@@ -80,6 +80,7 @@ namespace BusinessManager
             this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -118,21 +119,20 @@ namespace BusinessManager
             this.tabPage2.Controls.Add(this.btn_itemDetail);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.servicesDataGrid);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1203, 686);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(900, 555);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Items";
             // 
             // btn_addItem
             // 
             this.btn_addItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addItem.Location = new System.Drawing.Point(192, 594);
-            this.btn_addItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addItem.Location = new System.Drawing.Point(144, 483);
             this.btn_addItem.Name = "btn_addItem";
-            this.btn_addItem.Size = new System.Drawing.Size(133, 37);
+            this.btn_addItem.Size = new System.Drawing.Size(100, 30);
             this.btn_addItem.TabIndex = 10;
             this.btn_addItem.Text = "+ Add Item";
             this.btn_addItem.UseVisualStyleBackColor = true;
@@ -141,10 +141,9 @@ namespace BusinessManager
             // btn_itemDetail
             // 
             this.btn_itemDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_itemDetail.Location = new System.Drawing.Point(51, 594);
-            this.btn_itemDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_itemDetail.Location = new System.Drawing.Point(38, 483);
             this.btn_itemDetail.Name = "btn_itemDetail";
-            this.btn_itemDetail.Size = new System.Drawing.Size(133, 37);
+            this.btn_itemDetail.Size = new System.Drawing.Size(100, 30);
             this.btn_itemDetail.TabIndex = 10;
             this.btn_itemDetail.Text = "Item Detail";
             this.btn_itemDetail.UseVisualStyleBackColor = true;
@@ -159,21 +158,21 @@ namespace BusinessManager
             this.groupBox2.Controls.Add(this.radBtnServiceID);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(341, 73);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(256, 59);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(520, 71);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(390, 58);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search";
             // 
             // btnFindService
             // 
-            this.btnFindService.Location = new System.Drawing.Point(428, 25);
-            this.btnFindService.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFindService.Location = new System.Drawing.Point(321, 20);
+            this.btnFindService.Margin = new System.Windows.Forms.Padding(2);
             this.btnFindService.Name = "btnFindService";
-            this.btnFindService.Size = new System.Drawing.Size(75, 26);
+            this.btnFindService.Size = new System.Drawing.Size(56, 21);
             this.btnFindService.TabIndex = 4;
             this.btnFindService.Text = "Find";
             this.btnFindService.UseVisualStyleBackColor = true;
@@ -181,19 +180,19 @@ namespace BusinessManager
             // 
             // txtSearchService
             // 
-            this.txtSearchService.Location = new System.Drawing.Point(19, 27);
-            this.txtSearchService.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchService.Location = new System.Drawing.Point(14, 22);
+            this.txtSearchService.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchService.Name = "txtSearchService";
-            this.txtSearchService.Size = new System.Drawing.Size(143, 22);
+            this.txtSearchService.Size = new System.Drawing.Size(108, 20);
             this.txtSearchService.TabIndex = 3;
             // 
             // radBtnDescription
             // 
             this.radBtnDescription.AutoSize = true;
-            this.radBtnDescription.Location = new System.Drawing.Point(287, 27);
-            this.radBtnDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radBtnDescription.Location = new System.Drawing.Point(215, 22);
+            this.radBtnDescription.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnDescription.Name = "radBtnDescription";
-            this.radBtnDescription.Size = new System.Drawing.Size(114, 20);
+            this.radBtnDescription.Size = new System.Drawing.Size(92, 17);
             this.radBtnDescription.TabIndex = 1;
             this.radBtnDescription.TabStop = true;
             this.radBtnDescription.Text = "by Description";
@@ -202,10 +201,10 @@ namespace BusinessManager
             // radBtnServiceID
             // 
             this.radBtnServiceID.AutoSize = true;
-            this.radBtnServiceID.Location = new System.Drawing.Point(197, 27);
-            this.radBtnServiceID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radBtnServiceID.Location = new System.Drawing.Point(148, 22);
+            this.radBtnServiceID.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnServiceID.Name = "radBtnServiceID";
-            this.radBtnServiceID.Size = new System.Drawing.Size(59, 20);
+            this.radBtnServiceID.Size = new System.Drawing.Size(50, 17);
             this.radBtnServiceID.TabIndex = 0;
             this.radBtnServiceID.TabStop = true;
             this.radBtnServiceID.Text = "by ID";
@@ -216,13 +215,13 @@ namespace BusinessManager
             this.servicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.servicesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.servicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.servicesDataGrid.Location = new System.Drawing.Point(51, 226);
-            this.servicesDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.servicesDataGrid.Location = new System.Drawing.Point(38, 184);
+            this.servicesDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.servicesDataGrid.Name = "servicesDataGrid";
             this.servicesDataGrid.RowHeadersWidth = 51;
             this.servicesDataGrid.RowTemplate.Height = 24;
             this.servicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.servicesDataGrid.Size = new System.Drawing.Size(1100, 350);
+            this.servicesDataGrid.Size = new System.Drawing.Size(825, 284);
             this.servicesDataGrid.TabIndex = 0;
             // 
             // tabPage1
@@ -234,21 +233,21 @@ namespace BusinessManager
             this.tabPage1.Controls.Add(this.lblClientDetails);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.clientsDataGrid);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1203, 686);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(900, 555);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
             // 
             // btn_newOrder
             // 
             this.btn_newOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_newOrder.Location = new System.Drawing.Point(1019, 594);
-            this.btn_newOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_newOrder.Location = new System.Drawing.Point(764, 483);
+            this.btn_newOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btn_newOrder.Name = "btn_newOrder";
-            this.btn_newOrder.Size = new System.Drawing.Size(132, 39);
+            this.btn_newOrder.Size = new System.Drawing.Size(99, 32);
             this.btn_newOrder.TabIndex = 8;
             this.btn_newOrder.Text = "New Order";
             this.btn_newOrder.UseVisualStyleBackColor = true;
@@ -257,10 +256,10 @@ namespace BusinessManager
             // btn_addNewClient
             // 
             this.btn_addNewClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addNewClient.Location = new System.Drawing.Point(207, 594);
-            this.btn_addNewClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_addNewClient.Location = new System.Drawing.Point(155, 483);
+            this.btn_addNewClient.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addNewClient.Name = "btn_addNewClient";
-            this.btn_addNewClient.Size = new System.Drawing.Size(132, 39);
+            this.btn_addNewClient.Size = new System.Drawing.Size(99, 32);
             this.btn_addNewClient.TabIndex = 7;
             this.btn_addNewClient.Text = "+ New Client";
             this.btn_addNewClient.UseVisualStyleBackColor = true;
@@ -269,10 +268,10 @@ namespace BusinessManager
             // btnClientDetails
             // 
             this.btnClientDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientDetails.Location = new System.Drawing.Point(51, 594);
-            this.btnClientDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClientDetails.Location = new System.Drawing.Point(38, 483);
+            this.btnClientDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientDetails.Name = "btnClientDetails";
-            this.btnClientDetails.Size = new System.Drawing.Size(132, 39);
+            this.btnClientDetails.Size = new System.Drawing.Size(99, 32);
             this.btnClientDetails.TabIndex = 7;
             this.btnClientDetails.Text = "Client Details";
             this.btnClientDetails.UseVisualStyleBackColor = true;
@@ -281,9 +280,10 @@ namespace BusinessManager
             // lblClientDetails
             // 
             this.lblClientDetails.AutoSize = true;
-            this.lblClientDetails.Location = new System.Drawing.Point(203, 607);
+            this.lblClientDetails.Location = new System.Drawing.Point(152, 493);
+            this.lblClientDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClientDetails.Name = "lblClientDetails";
-            this.lblClientDetails.Size = new System.Drawing.Size(0, 16);
+            this.lblClientDetails.Size = new System.Drawing.Size(0, 13);
             this.lblClientDetails.TabIndex = 6;
             // 
             // groupBox1
@@ -296,21 +296,21 @@ namespace BusinessManager
             this.groupBox1.Controls.Add(this.radBtnClientID);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(293, 63);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(220, 51);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(613, 71);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(460, 58);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
             // btnFindClient
             // 
-            this.btnFindClient.Location = new System.Drawing.Point(505, 25);
-            this.btnFindClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFindClient.Location = new System.Drawing.Point(379, 20);
+            this.btnFindClient.Margin = new System.Windows.Forms.Padding(2);
             this.btnFindClient.Name = "btnFindClient";
-            this.btnFindClient.Size = new System.Drawing.Size(75, 26);
+            this.btnFindClient.Size = new System.Drawing.Size(56, 21);
             this.btnFindClient.TabIndex = 4;
             this.btnFindClient.Text = "Find";
             this.btnFindClient.UseVisualStyleBackColor = true;
@@ -318,19 +318,19 @@ namespace BusinessManager
             // 
             // txtSearchClient
             // 
-            this.txtSearchClient.Location = new System.Drawing.Point(19, 27);
-            this.txtSearchClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchClient.Location = new System.Drawing.Point(14, 22);
+            this.txtSearchClient.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchClient.Name = "txtSearchClient";
-            this.txtSearchClient.Size = new System.Drawing.Size(143, 22);
+            this.txtSearchClient.Size = new System.Drawing.Size(108, 20);
             this.txtSearchClient.TabIndex = 3;
             // 
             // radBtnClientEmail
             // 
             this.radBtnClientEmail.AutoSize = true;
-            this.radBtnClientEmail.Location = new System.Drawing.Point(395, 27);
-            this.radBtnClientEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radBtnClientEmail.Location = new System.Drawing.Point(296, 22);
+            this.radBtnClientEmail.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnClientEmail.Name = "radBtnClientEmail";
-            this.radBtnClientEmail.Size = new System.Drawing.Size(80, 20);
+            this.radBtnClientEmail.Size = new System.Drawing.Size(64, 17);
             this.radBtnClientEmail.TabIndex = 2;
             this.radBtnClientEmail.TabStop = true;
             this.radBtnClientEmail.Text = "by Email";
@@ -339,10 +339,10 @@ namespace BusinessManager
             // radBtnClientName
             // 
             this.radBtnClientName.AutoSize = true;
-            this.radBtnClientName.Location = new System.Drawing.Point(287, 27);
-            this.radBtnClientName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radBtnClientName.Location = new System.Drawing.Point(215, 22);
+            this.radBtnClientName.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnClientName.Name = "radBtnClientName";
-            this.radBtnClientName.Size = new System.Drawing.Size(83, 20);
+            this.radBtnClientName.Size = new System.Drawing.Size(67, 17);
             this.radBtnClientName.TabIndex = 1;
             this.radBtnClientName.TabStop = true;
             this.radBtnClientName.Text = "by Name";
@@ -351,10 +351,10 @@ namespace BusinessManager
             // radBtnClientID
             // 
             this.radBtnClientID.AutoSize = true;
-            this.radBtnClientID.Location = new System.Drawing.Point(197, 27);
-            this.radBtnClientID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radBtnClientID.Location = new System.Drawing.Point(148, 22);
+            this.radBtnClientID.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnClientID.Name = "radBtnClientID";
-            this.radBtnClientID.Size = new System.Drawing.Size(59, 20);
+            this.radBtnClientID.Size = new System.Drawing.Size(50, 17);
             this.radBtnClientID.TabIndex = 0;
             this.radBtnClientID.TabStop = true;
             this.radBtnClientID.Text = "by ID";
@@ -368,14 +368,14 @@ namespace BusinessManager
             this.clientsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.clientsDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.clientsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDataGrid.Location = new System.Drawing.Point(51, 206);
-            this.clientsDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clientsDataGrid.Location = new System.Drawing.Point(38, 167);
+            this.clientsDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.clientsDataGrid.Name = "clientsDataGrid";
             this.clientsDataGrid.ReadOnly = true;
             this.clientsDataGrid.RowHeadersWidth = 51;
             this.clientsDataGrid.RowTemplate.Height = 24;
             this.clientsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clientsDataGrid.Size = new System.Drawing.Size(1100, 350);
+            this.clientsDataGrid.Size = new System.Drawing.Size(825, 284);
             this.clientsDataGrid.TabIndex = 0;
             // 
             // tabs
@@ -384,11 +384,11 @@ namespace BusinessManager
             this.tabs.Controls.Add(this.tabPage2);
             this.tabs.Controls.Add(this.tabPage3);
             this.tabs.Controls.Add(this.tabRegistry);
-            this.tabs.Location = new System.Drawing.Point(27, 43);
-            this.tabs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabs.Location = new System.Drawing.Point(20, 35);
+            this.tabs.Margin = new System.Windows.Forms.Padding(2);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(1211, 715);
+            this.tabs.Size = new System.Drawing.Size(908, 581);
             this.tabs.TabIndex = 0;
             // 
             // tabPage3
@@ -396,11 +396,11 @@ namespace BusinessManager
             this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1203, 686);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(900, 555);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Staff";
             // 
@@ -413,21 +413,21 @@ namespace BusinessManager
             this.groupBox3.Controls.Add(this.radioBtn_byId);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(337, 30);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(253, 24);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(520, 71);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(390, 58);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
             // 
             // btn_findEmployee
             // 
-            this.btn_findEmployee.Location = new System.Drawing.Point(428, 25);
-            this.btn_findEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_findEmployee.Location = new System.Drawing.Point(321, 20);
+            this.btn_findEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btn_findEmployee.Name = "btn_findEmployee";
-            this.btn_findEmployee.Size = new System.Drawing.Size(75, 26);
+            this.btn_findEmployee.Size = new System.Drawing.Size(56, 21);
             this.btn_findEmployee.TabIndex = 4;
             this.btn_findEmployee.Text = "Find";
             this.btn_findEmployee.UseVisualStyleBackColor = true;
@@ -435,19 +435,19 @@ namespace BusinessManager
             // 
             // txtBox_search
             // 
-            this.txtBox_search.Location = new System.Drawing.Point(19, 27);
-            this.txtBox_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBox_search.Location = new System.Drawing.Point(14, 22);
+            this.txtBox_search.Margin = new System.Windows.Forms.Padding(2);
             this.txtBox_search.Name = "txtBox_search";
-            this.txtBox_search.Size = new System.Drawing.Size(143, 22);
+            this.txtBox_search.Size = new System.Drawing.Size(108, 20);
             this.txtBox_search.TabIndex = 3;
             // 
             // radioBtn_byName
             // 
             this.radioBtn_byName.AutoSize = true;
-            this.radioBtn_byName.Location = new System.Drawing.Point(287, 27);
-            this.radioBtn_byName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioBtn_byName.Location = new System.Drawing.Point(215, 22);
+            this.radioBtn_byName.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtn_byName.Name = "radioBtn_byName";
-            this.radioBtn_byName.Size = new System.Drawing.Size(83, 20);
+            this.radioBtn_byName.Size = new System.Drawing.Size(67, 17);
             this.radioBtn_byName.TabIndex = 1;
             this.radioBtn_byName.TabStop = true;
             this.radioBtn_byName.Text = "by Name";
@@ -456,10 +456,10 @@ namespace BusinessManager
             // radioBtn_byId
             // 
             this.radioBtn_byId.AutoSize = true;
-            this.radioBtn_byId.Location = new System.Drawing.Point(197, 27);
-            this.radioBtn_byId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioBtn_byId.Location = new System.Drawing.Point(148, 22);
+            this.radioBtn_byId.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtn_byId.Name = "radioBtn_byId";
-            this.radioBtn_byId.Size = new System.Drawing.Size(59, 20);
+            this.radioBtn_byId.Size = new System.Drawing.Size(50, 17);
             this.radioBtn_byId.TabIndex = 0;
             this.radioBtn_byId.TabStop = true;
             this.radioBtn_byId.Text = "by ID";
@@ -474,11 +474,11 @@ namespace BusinessManager
             this.groupBox6.Controls.Add(this.lbl_addEmployee);
             this.groupBox6.Controls.Add(this.label1);
             this.groupBox6.Controls.Add(this.lbl_deleteEmployee);
-            this.groupBox6.Location = new System.Drawing.Point(143, 130);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Location = new System.Drawing.Point(107, 106);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(915, 414);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(686, 336);
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employees";
@@ -488,10 +488,9 @@ namespace BusinessManager
             this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
             this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
             this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_deleteEmployee.Location = new System.Drawing.Point(647, 319);
-            this.btn_deleteEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_deleteEmployee.Location = new System.Drawing.Point(485, 259);
             this.btn_deleteEmployee.Name = "btn_deleteEmployee";
-            this.btn_deleteEmployee.Size = new System.Drawing.Size(67, 62);
+            this.btn_deleteEmployee.Size = new System.Drawing.Size(50, 50);
             this.btn_deleteEmployee.TabIndex = 26;
             this.btn_deleteEmployee.UseVisualStyleBackColor = false;
             this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
@@ -501,10 +500,9 @@ namespace BusinessManager
             this.updateButton5.BackColor = System.Drawing.Color.Transparent;
             this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
             this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton5.Location = new System.Drawing.Point(344, 320);
-            this.updateButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.updateButton5.Location = new System.Drawing.Point(258, 260);
             this.updateButton5.Name = "updateButton5";
-            this.updateButton5.Size = new System.Drawing.Size(67, 62);
+            this.updateButton5.Size = new System.Drawing.Size(50, 50);
             this.updateButton5.TabIndex = 25;
             this.updateButton5.UseVisualStyleBackColor = false;
             this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
@@ -514,10 +512,9 @@ namespace BusinessManager
             this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
             this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
             this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_addEmployee.Location = new System.Drawing.Point(64, 319);
-            this.btn_addEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addEmployee.Location = new System.Drawing.Point(48, 259);
             this.btn_addEmployee.Name = "btn_addEmployee";
-            this.btn_addEmployee.Size = new System.Drawing.Size(67, 62);
+            this.btn_addEmployee.Size = new System.Drawing.Size(50, 50);
             this.btn_addEmployee.TabIndex = 24;
             this.btn_addEmployee.UseVisualStyleBackColor = false;
             this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
@@ -528,23 +525,24 @@ namespace BusinessManager
             this.employeesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.employeesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGrid.Location = new System.Drawing.Point(11, 21);
-            this.employeesDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeesDataGrid.Location = new System.Drawing.Point(8, 17);
+            this.employeesDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.employeesDataGrid.Name = "employeesDataGrid";
             this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 24;
             this.employeesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeesDataGrid.Size = new System.Drawing.Size(893, 274);
+            this.employeesDataGrid.Size = new System.Drawing.Size(670, 223);
             this.employeesDataGrid.TabIndex = 17;
             // 
             // lbl_addEmployee
             // 
             this.lbl_addEmployee.AutoSize = true;
             this.lbl_addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_addEmployee.Location = new System.Drawing.Point(137, 341);
+            this.lbl_addEmployee.Location = new System.Drawing.Point(103, 277);
+            this.lbl_addEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_addEmployee.Name = "lbl_addEmployee";
-            this.lbl_addEmployee.Size = new System.Drawing.Size(101, 18);
+            this.lbl_addEmployee.Size = new System.Drawing.Size(85, 15);
             this.lbl_addEmployee.TabIndex = 23;
             this.lbl_addEmployee.Text = "Add employee";
             // 
@@ -552,9 +550,10 @@ namespace BusinessManager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(435, 340);
+            this.label1.Location = new System.Drawing.Point(326, 276);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.Size = new System.Drawing.Size(104, 15);
             this.label1.TabIndex = 23;
             this.label1.Text = "Update employee";
             // 
@@ -562,9 +561,10 @@ namespace BusinessManager
             // 
             this.lbl_deleteEmployee.AutoSize = true;
             this.lbl_deleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_deleteEmployee.Location = new System.Drawing.Point(720, 340);
+            this.lbl_deleteEmployee.Location = new System.Drawing.Point(540, 276);
+            this.lbl_deleteEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_deleteEmployee.Name = "lbl_deleteEmployee";
-            this.lbl_deleteEmployee.Size = new System.Drawing.Size(132, 18);
+            this.lbl_deleteEmployee.Size = new System.Drawing.Size(110, 15);
             this.lbl_deleteEmployee.TabIndex = 23;
             this.lbl_deleteEmployee.Text = "Remove employee";
             // 
@@ -575,11 +575,11 @@ namespace BusinessManager
             this.tabRegistry.Controls.Add(this.lblSelectInvoice);
             this.tabRegistry.Controls.Add(this.btnViewInvoice);
             this.tabRegistry.Controls.Add(this.invoicesDataGrid);
-            this.tabRegistry.Location = new System.Drawing.Point(4, 25);
-            this.tabRegistry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabRegistry.Location = new System.Drawing.Point(4, 22);
+            this.tabRegistry.Margin = new System.Windows.Forms.Padding(2);
             this.tabRegistry.Name = "tabRegistry";
-            this.tabRegistry.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabRegistry.Size = new System.Drawing.Size(1203, 686);
+            this.tabRegistry.Padding = new System.Windows.Forms.Padding(2);
+            this.tabRegistry.Size = new System.Drawing.Size(900, 555);
             this.tabRegistry.TabIndex = 3;
             this.tabRegistry.Text = "Invoices";
             // 
@@ -587,9 +587,10 @@ namespace BusinessManager
             // 
             this.btnSendEmail.Enabled = false;
             this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnSendEmail.Location = new System.Drawing.Point(624, 574);
+            this.btnSendEmail.Location = new System.Drawing.Point(468, 466);
+            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnSendEmail.Name = "btnSendEmail";
-            this.btnSendEmail.Size = new System.Drawing.Size(118, 39);
+            this.btnSendEmail.Size = new System.Drawing.Size(88, 32);
             this.btnSendEmail.TabIndex = 10;
             this.btnSendEmail.Text = "Send to email";
             this.btnSendEmail.UseVisualStyleBackColor = false;
@@ -599,9 +600,10 @@ namespace BusinessManager
             // 
             this.lblSelectInvoice.AutoSize = true;
             this.lblSelectInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectInvoice.Location = new System.Drawing.Point(91, 526);
+            this.lblSelectInvoice.Location = new System.Drawing.Point(68, 427);
+            this.lblSelectInvoice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelectInvoice.Name = "lblSelectInvoice";
-            this.lblSelectInvoice.Size = new System.Drawing.Size(134, 20);
+            this.lblSelectInvoice.Size = new System.Drawing.Size(113, 17);
             this.lblSelectInvoice.TabIndex = 9;
             this.lblSelectInvoice.Text = "Invoice selected:";
             // 
@@ -610,10 +612,10 @@ namespace BusinessManager
             this.btnViewInvoice.BackColor = System.Drawing.Color.Gainsboro;
             this.btnViewInvoice.Enabled = false;
             this.btnViewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewInvoice.Location = new System.Drawing.Point(460, 574);
-            this.btnViewInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewInvoice.Location = new System.Drawing.Point(345, 466);
+            this.btnViewInvoice.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewInvoice.Name = "btnViewInvoice";
-            this.btnViewInvoice.Size = new System.Drawing.Size(107, 39);
+            this.btnViewInvoice.Size = new System.Drawing.Size(80, 32);
             this.btnViewInvoice.TabIndex = 8;
             this.btnViewInvoice.Text = "Visualize";
             this.btnViewInvoice.UseVisualStyleBackColor = false;
@@ -624,13 +626,13 @@ namespace BusinessManager
             this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.invoicesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.invoicesDataGrid.Location = new System.Drawing.Point(27, 129);
-            this.invoicesDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.invoicesDataGrid.Location = new System.Drawing.Point(20, 105);
+            this.invoicesDataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.invoicesDataGrid.Name = "invoicesDataGrid";
             this.invoicesDataGrid.RowHeadersWidth = 51;
             this.invoicesDataGrid.RowTemplate.Height = 24;
             this.invoicesDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.invoicesDataGrid.Size = new System.Drawing.Size(1149, 375);
+            this.invoicesDataGrid.Size = new System.Drawing.Size(862, 305);
             this.invoicesDataGrid.TabIndex = 0;
             this.invoicesDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelectedCellInvoice);
             // 
@@ -664,23 +666,31 @@ namespace BusinessManager
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1261, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(946, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -689,13 +699,13 @@ namespace BusinessManager
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem1});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(142, 26);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem1.Text = "About...";
             // 
             // addButton4
@@ -845,16 +855,16 @@ namespace BusinessManager
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1261, 801);
+            this.ClientSize = new System.Drawing.Size(946, 651);
             this.Controls.Add(this.tabs);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Business Manager 1.0";
             this.tabPage2.ResumeLayout(false);
@@ -944,6 +954,7 @@ namespace BusinessManager
         private RadioButton radioBtn_byName;
         private RadioButton radioBtn_byId;
         private Button btnSendEmail;
+        private ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
 
