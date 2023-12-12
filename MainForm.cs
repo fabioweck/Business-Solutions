@@ -56,16 +56,23 @@ namespace BusinessManager
             //this.BackgroundImage = Image.FromFile(ProgramPath + "Assets\\backgroundImage.jpg");
           
         }
-        public MainForm(EmployeeViewModel listOfEmployees, Models.EmployeeModel loggedUser)
+
+        public MainForm(EmployeeViewModel listOfEmployees, EmployeeModel loggedUser)
         {
 
             InitializeComponent();
+
+            string currentDirectory = Directory.GetCurrentDirectory();
+            int index = currentDirectory.LastIndexOf("bin");
+            ProgramPath = currentDirectory.Substring(0, index);
+
             isAdmin = loggedUser.IsAdmin;
             userID = loggedUser.Id;
                  
             ListOfServices = new ServicesViewModel();
             ListOfServices.PopulateServices();
             ListOfEmployees = listOfEmployees;
+            ListOfInvoices = new InvoiceViewModel();
 
             if (!isAdmin)
             {
@@ -79,17 +86,12 @@ namespace BusinessManager
                 lbl_deleteEmployee.Visible = false;
             }
 
-            ListOfInvoices = new InvoiceViewModel();
-
             //Assigns collections to data grids
             clientsDataGrid.DataSource = ClientViewModel.Clients;
             servicesDataGrid.DataSource = ServicesViewModel.Services;
             employeesDataGrid.DataSource = EmployeeViewModel.Employees;
             invoicesDataGrid.DataSource = InvoiceViewModel.Invoices;
 
-            string currentDirectory = Directory.GetCurrentDirectory();
-            int index = currentDirectory.LastIndexOf("bin");
-            ProgramPath = currentDirectory.Substring(0, index);
 
             //this.BackgroundImage = Image.FromFile(ProgramPath + "Assets\\backgroundImage.jpg");
             this.LoggerUser = loggedUser;
@@ -97,6 +99,7 @@ namespace BusinessManager
 
             this.employeesDataGrid.Columns["Password"].Visible = false;
             this.employeesDataGrid.Columns["ConfirmPassword"].Visible = false;
+
             if (!isAdmin)
             {
                 this.employeesDataGrid.Columns["IsAdmin"].Visible = false;
