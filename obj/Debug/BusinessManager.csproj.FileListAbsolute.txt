@@ -159,3 +159,4 @@ C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application 
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.csproj.CopyComplete
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.exe
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.pdb
+C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.Views.SendEmail.resources
