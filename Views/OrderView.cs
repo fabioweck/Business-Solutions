@@ -31,7 +31,7 @@ namespace BusinessManager.Views
 
         private void InitializeCartGridView()
         {
-            // Use BindingSource for dynamic updates
+            //Use BindingSource for dynamic updates
             BindingSource cartBindingSource = new BindingSource();
             cartBindingSource.DataSource = serviceCartViewModel.ServicesCart;
             CartGridView.DataSource = cartBindingSource;
@@ -83,7 +83,8 @@ namespace BusinessManager.Views
                 int qtd = int.Parse(tB_quantity.Text);
 
                 serviceCartViewModel.AddToCart(qtd, id, description, price);
-                lbl_totalSum.Text = "$" + serviceCartViewModel.SumTotalCart().ToString();
+                lbl_totalSum.Text = $"${serviceCartViewModel.SumTotalCart()}";
+                lblGST.Text = $"+${Math.Round(Convert.ToDouble(serviceCartViewModel.SumTotalCart()) * 0.05, 2)} GST";
             }
         }
 
@@ -108,6 +109,7 @@ namespace BusinessManager.Views
             }
 
             InvoicesDataGrid.Invoke();
+            this.Close();
         }
     }
 }

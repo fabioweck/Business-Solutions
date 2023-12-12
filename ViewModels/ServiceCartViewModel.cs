@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessManager.Views;
 
 namespace BusinessManager.ViewModels
 {
@@ -57,13 +58,8 @@ namespace BusinessManager.ViewModels
                     IApplication application = excelEngine.Excel;
                     application.DefaultVersion = ExcelVersion.Xlsx;
 
-                    //Reads the current path and set the correct path to locate the work order template
-                    string currentDirectory = Directory.GetCurrentDirectory();
-                    int index = currentDirectory.LastIndexOf("bin");
-                    string path = currentDirectory.Substring(0, index) + "Assets";
-
                     //Opens the template for modification
-                    IWorkbook workbook = application.Workbooks.Open(path + "\\templates\\work_order.xlsx");
+                    IWorkbook workbook = application.Workbooks.Open(MainForm.ProgramPath + "Assets\\templates\\work_order.xlsx");
                     //IWorkbook workbook = application.Workbooks.Open(@"C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\Assets\templates\work_order.xlsx");
                     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -107,7 +103,7 @@ namespace BusinessManager.ViewModels
                     {
                         Filter = "PDF Document | *.pdf",
                         ValidateNames = true,
-                        InitialDirectory = path + "\\invoices",
+                        InitialDirectory = MainForm.ProgramPath + "\\invoices",
                         FileName = $"{invoiceID}.pdf"
                     })
                     {
@@ -116,17 +112,18 @@ namespace BusinessManager.ViewModels
                             pdfDocument.Save(saveFile.FileName);
                             InvoiceViewModel.PopulateInvoicesList();
 
-                            DialogResult res = MessageBox.Show($"Invoice succesfully created. Client {clientName}, invoice {invoiceID}. Would you like to send invoice to {clientEmail}?", "Invoice created", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                            DialogResult res = MessageBox.Show($"Invoice succesfully created. Client {clientName}, invoice {invoiceID}. Would you like to send invoice to {clientEmail}?", "Invoice created", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                             
                             if (res == DialogResult.Yes)
                             {
                                 try
                                 {
-                                    await InvoiceViewModel.SendEmail(clientEmail, invoiceID);
+                                    await InvoiceViewModel.SendEmail(clientEmail, $"{invoiceID}.pdf");
+                                    MessageBox.Show($"Invoice sent to {clientEmail}.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                                 }
                                 catch
                                 {
-                                    MessageBox.Show("Unable to send email...");
+                                    MessageBox.Show("Unable to send email.");
                                 }
                             }
                             else{ return; }
@@ -137,7 +134,7 @@ namespace BusinessManager.ViewModels
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Verify all fields before proceeding.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Unable to create invoice.\n" + ex, "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }

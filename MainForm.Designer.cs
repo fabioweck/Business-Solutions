@@ -80,7 +80,6 @@ namespace BusinessManager
             this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -403,7 +402,7 @@ namespace BusinessManager
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Size = new System.Drawing.Size(1203, 686);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Profile";
+            this.tabPage3.Text = "Staff";
             // 
             // groupBox3
             // 
@@ -586,12 +585,14 @@ namespace BusinessManager
             // 
             // btnSendEmail
             // 
-            this.btnSendEmail.Location = new System.Drawing.Point(629, 574);
+            this.btnSendEmail.Enabled = false;
+            this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnSendEmail.Location = new System.Drawing.Point(624, 574);
             this.btnSendEmail.Name = "btnSendEmail";
-            this.btnSendEmail.Size = new System.Drawing.Size(108, 39);
+            this.btnSendEmail.Size = new System.Drawing.Size(118, 39);
             this.btnSendEmail.TabIndex = 10;
             this.btnSendEmail.Text = "Send to email";
-            this.btnSendEmail.UseVisualStyleBackColor = true;
+            this.btnSendEmail.UseVisualStyleBackColor = false;
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // lblSelectInvoice
@@ -609,7 +610,7 @@ namespace BusinessManager
             this.btnViewInvoice.BackColor = System.Drawing.Color.Gainsboro;
             this.btnViewInvoice.Enabled = false;
             this.btnViewInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewInvoice.Location = new System.Drawing.Point(465, 574);
+            this.btnViewInvoice.Location = new System.Drawing.Point(460, 574);
             this.btnViewInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewInvoice.Name = "btnViewInvoice";
             this.btnViewInvoice.Size = new System.Drawing.Size(107, 39);
@@ -621,7 +622,6 @@ namespace BusinessManager
             // invoicesDataGrid
             // 
             this.invoicesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.invoicesDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.invoicesDataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.invoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoicesDataGrid.Location = new System.Drawing.Point(27, 129);
@@ -672,22 +672,15 @@ namespace BusinessManager
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
-            this.loginToolStripMenuItem.Text = "Login...";
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -854,6 +847,7 @@ namespace BusinessManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1261, 801);
             this.Controls.Add(this.tabs);
@@ -915,7 +909,6 @@ namespace BusinessManager
         private Label lblSelectInvoice;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem loginToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private CustomComponents.AddButton addButton1;

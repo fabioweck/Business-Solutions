@@ -59,5 +59,59 @@ namespace BusinessManager
                 }
             }
         }
+
+        private void addButton1_Click(object sender, EventArgs e)
+        {
+            ClientProfileView addNewClientView2 = new ClientProfileView();
+            addNewClientView2.ShowDialog();
+        }
+
+        private void btnClientDetails_Click_1(object sender, EventArgs e)
+        {
+            if (clientsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+
+                int id = (int)selectedRow.Cells["Id"].Value;
+                string name = selectedRow.Cells["Name"].Value.ToString();
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+
+                ClientProfileView clientProfileView = new ClientProfileView(id, name, address, email, phone, isAdmin);
+                clientProfileView.ShowDialog();
+
+                clientsDataGrid.Refresh();
+            }
+        }
+
+        private void btn_addNewClient_Click(object sender, EventArgs e)
+        {
+            ClientProfileView addNewClientView2 = new ClientProfileView();
+            addNewClientView2.ShowDialog();
+            clientsDataGrid.Refresh();
+        }
+
+        private void btn_newOrder_Click(object sender, EventArgs e)
+        {
+
+            if (clientsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = clientsDataGrid.SelectedRows[0];
+
+                int id = (int)selectedRow.Cells["Id"].Value;
+                string name = selectedRow.Cells["Name"].Value.ToString();
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string phone = selectedRow.Cells["Phone"].Value.ToString();
+
+                // ClientProfileView clientProfileView = new ClientProfileView(id, name, address, email, phone, isAdmin);
+                // clientProfileView.ShowDialog();
+
+                OrderView orderView = new OrderView(id, name, address, email, phone, invoicesDataGrid.Refresh);
+                orderView.ShowDialog();
+                // clientsDataGrid.Refresh();
+            }
+        }
     }
 }

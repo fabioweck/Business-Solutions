@@ -34,9 +34,7 @@ namespace BusinessManager.ViewModels
             }
 
             //Reads the current path and set the correct path to locate the invoice
-            string currentDirectory = Directory.GetCurrentDirectory();
-            int index = currentDirectory.LastIndexOf("bin");
-            string path = currentDirectory.Substring(0, index) + "Assets\\invoices";
+            string path = MainForm.ProgramPath + "Assets\\invoices";
 
             if (Directory.Exists(path))
             {
@@ -55,11 +53,6 @@ namespace BusinessManager.ViewModels
             }
         }
 
-        public static void PopulateInvoicesDictionary(string email)
-        {
-            
-        }
-
         public static async Task SendEmail(string clientEmail, string invoiceID)
         {
             var toAddress = clientEmail;
@@ -74,14 +67,8 @@ namespace BusinessManager.ViewModels
             email.Subject = "Testing out email sending";
             email.Body = "Hello all the way from the land of C#";
 
-            string currentDirectory = Directory.GetCurrentDirectory();
-            int index = currentDirectory.LastIndexOf("bin");
-            string path = currentDirectory.Substring(0, index) + "Assets\\invoices";
-
-            var attachment = new Attachment(path + $"\\{invoiceID}.pdf");
+            var attachment = new Attachment(MainForm.ProgramPath + $"Assets\\invoices\\{invoiceID}");
             email.Attachments.Add(attachment);
-
-            MessageBox.Show(path + $"\\{invoiceID}.pdf");
 
             SmtpClient smtp = new SmtpClient();
             smtp.Host = smtpServer;
@@ -94,7 +81,6 @@ namespace BusinessManager.ViewModels
             {
                 smtp.Send(email);
             }
-
 
             catch (SmtpException ex)
             {
