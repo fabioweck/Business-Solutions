@@ -54,22 +54,28 @@ namespace BusinessManager.ViewModels
             }
         }
 
-        public static async Task SendEmail(string clientEmail, string invoiceID)
+        public static async Task SendInvoice(string clientEmail, string invoiceID, string clientName = "")
         {
             var toAddress = clientEmail;
             var smtpServer = "smtp.gmail.com";
             var username = "radprojectgroup7@gmail.com";
             var password = "iqpvopsltwntzsqc";
 
+
             MailAddress to = new MailAddress(toAddress);
             MailAddress from = new MailAddress(username);
 
             MailMessage email = new MailMessage(from, to);
-            email.Subject = "Testing out email sending";
-            email.Body = "Hello all the way from the land of C#";
 
             var attachment = new Attachment(MainForm.ProgramPath + $"Assets\\invoices\\{invoiceID}");
             email.Attachments.Add(attachment);
+
+            invoiceID = invoiceID.Substring(0, 4);
+            email.Subject = $"Work order - Invoice {invoiceID} - Golden Strings";
+
+            email.Body = (clientName == "") ? "Hello,\n" : $"Hello {clientName},\n\n";
+            email.Body += $"Please find attached your invoice {invoiceID}.\nIn case of any inquiries, feel free to contact us.\n\nBest Regards,\n\nGolden Strings Repair Shop.";
+
 
             SmtpClient smtp = new SmtpClient();
             smtp.Host = smtpServer;
