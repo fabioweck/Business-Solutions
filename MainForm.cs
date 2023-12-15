@@ -66,6 +66,8 @@ namespace BusinessManager
                 {
                     loggedUser
                 };
+
+                //hide all forbidden buttons for employees
                 btn_addEmployee.Visible = false;
                 lbl_addEmployee.Visible = false;
                 btn_deleteEmployee.Visible = false;
@@ -100,12 +102,14 @@ namespace BusinessManager
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OnLogoutRequested();
-            this.Close();
+
+            //Re-enable all buttons in case of 'adm' login
             btn_addEmployee.Visible = true;
             lbl_addEmployee.Visible = true;
             btn_deleteEmployee.Visible = true;
             lbl_deleteEmployee.Visible = true;
             btn_addItem.Visible = true;
+            this.Close();
         }
 
         //Method to invoke logout
