@@ -1,4 +1,5 @@
-﻿using BusinessManager.ViewModels;
+﻿using BusinessManager.Models;
+using BusinessManager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,12 @@ namespace BusinessManager.Views
 {
     public partial class LoginView : Form
     {
+        //Create and instantiate classes to get info
         private EmployeeViewModel employeeViewModel;
 
         public MainForm mainForm = new MainForm();
 
-        public BindingList<Models.EmployeeModel> employees;
+        public BindingList<EmployeeModel> employees;
 
         public LoginView()
         {
@@ -28,6 +30,7 @@ namespace BusinessManager.Views
             employeeViewModel = new EmployeeViewModel();
             textBox_password.PasswordChar = '*';
 
+            //Instantiate a new logout listener
             LogoutListener logoutListener = new LogoutListener(mainForm);
 
             // Subscribe to the LogoutRequested event
@@ -35,11 +38,13 @@ namespace BusinessManager.Views
             employees = EmployeeViewModel.Employees;
         }
 
+        //Method to sign in
         private void btn_SignIn_Click(object sender, EventArgs e)
         { 
           
-            Models.EmployeeModel employeeModel = employees.ToList().Find(emp => emp.Email == textBox_email.Text);
+            EmployeeModel employeeModel = employees.ToList().Find(emp => emp.Email == textBox_email.Text);
 
+            //If can't verify credentials, then notify user
             if (employeeModel == null)
             {
                 MessageBox.Show("User not found");
@@ -52,17 +57,17 @@ namespace BusinessManager.Views
                 return;
             }
 
-            // Creating an instance of MainForm
+            //Creating an instance of MainForm
             mainForm.UpdateMainForm(employeeModel);
 
-            // Hide the current form
+            //Hide the current form
             this.Visible = false;
 
-            // Show the MainForm
+            //Show the MainForm
             mainForm.ShowDialog();
         }
 
-        // Event handler for the MainForm's LogoutRequested event
+        //Event handler for the MainForm's LogoutRequested event
         private void MainForm_LogoutRequested(object sender, EventArgs e)
         {
             this.textBox_email.Text = "";
@@ -71,6 +76,7 @@ namespace BusinessManager.Views
             mainForm.Close();        
         }
 
+        //Logout listener class
         public class LogoutListener
         {
             private MainForm mainForm;

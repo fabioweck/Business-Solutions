@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessManager.Models
 {
+
+    //Holds all information about an employee
+
     public class EmployeeModel
     {
         public int Id { get; set; }

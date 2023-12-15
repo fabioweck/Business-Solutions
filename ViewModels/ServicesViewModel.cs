@@ -12,8 +12,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BusinessManager.ViewModels
 {
+
+    //This class manipulates all the models and serves as a bridge between the model and the view
+
     public class ServicesViewModel
     {
+        //Create a list of services
         public static BindingList<ServiceModel> Services { get; set; }
 
         public ServicesViewModel()
@@ -21,26 +25,34 @@ namespace BusinessManager.ViewModels
             Services = new BindingList<ServiceModel>();
         }
 
+        //Method to populate the list of services
         public void PopulateServices()
         {
+
+            //First get the path to the csv file
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
 
+
             using (StreamReader sr = new StreamReader(path + "Assets\\database\\services.csv"))
             {
+                //Read the file until the end
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
                     if (line != null)
                     {
+                        //Split information from the file
                         string[] splitted = line.Split(',');
+                        //Pass splitted info to create a new service
                         Services.Add(new ServiceModel(Convert.ToInt16(splitted[0]), splitted[1], Convert.ToDouble(splitted[2])));
                     }
                 }
             }
         }
 
+        //Method to add a new item to the list of services
         public static void AddItem(string id, string description, double price)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
@@ -79,13 +91,13 @@ namespace BusinessManager.ViewModels
                 else
                 {
                     // Handle the case where parsing id fails
-                    // You may want to log an error or handle it according to your application's requirements
                     Console.WriteLine("Invalid id format");
                 }
             }
             UpdateCSV(CsvFilePath, Services);
         }
 
+        //Method to remove an item from the list of services
         public static void RemoveItem(string id)
         {
             // If id is provided, try to parse it
@@ -114,11 +126,11 @@ namespace BusinessManager.ViewModels
             else
             {
                 // Handle the case where parsing id fails
-                // You may want to log an error or handle it according to your application's requirements
                 Console.WriteLine("Invalid id format");
             }
         }
 
+        //Method to generate the next service id
         public static int GetNextAvailableId()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
@@ -155,10 +167,9 @@ namespace BusinessManager.ViewModels
             }
         }
 
+        //method to convert a service to csv
         private static string ConvertToCsv(BindingList<ServiceModel> csv)
         {
-            // Assuming ClientModel has properties like Id, Name, etc.
-            // Adjust the property names accordingly
 
             // Convert each ClientModel object to CSV row
             string rows = string.Join("\n", csv.Select(service =>
@@ -169,6 +180,8 @@ namespace BusinessManager.ViewModels
 
             return csvContent;
         }
+
+        //method to update the csv file
         public static void UpdateCSV(string path, BindingList<ServiceModel> csv)
         {
 

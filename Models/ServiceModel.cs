@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace BusinessManager.Models
 {
 
+    //Holds all information about services
+
     public class ServiceModel
     {
         public int Id { get; private set; }
