@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 namespace BusinessManager.Models
 {
+    //Holds all information about a client
+
     public class ClientModel
     {
         public int Id { get; private set; }

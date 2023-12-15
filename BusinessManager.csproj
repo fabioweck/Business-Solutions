@@ -168,11 +168,11 @@
     <Compile Include="Views\InvoicesView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\SendEmail.cs">
+    <Compile Include="Views\SendEmailView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\SendEmail.Designer.cs">
-      <DependentUpon>SendEmail.cs</DependentUpon>
+    <Compile Include="Views\SendEmailView.Designer.cs">
+      <DependentUpon>SendEmailView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ServiceView.cs">
       <SubType>Form</SubType>
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\SendEmail.resx">
-      <DependentUpon>SendEmail.cs</DependentUpon>
+    <EmbeddedResource Include="Views\SendEmailView.resx">
+      <DependentUpon>SendEmailView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />

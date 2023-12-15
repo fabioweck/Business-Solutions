@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessManager.Models
 {
+
+    //Holds all information about invoices
+
     public class InvoiceModel
     {
         public int Id { get; private set; }

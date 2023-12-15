@@ -43,6 +43,7 @@ namespace BusinessManager
             }
         }
 
+        //Method to open a new invoice view
         private void btnViewInvoice_Click(object sender, EventArgs e)
         {
             //Takes the assigned path and passes as argument to the viewer
@@ -51,9 +52,10 @@ namespace BusinessManager
             invoiceView.Close();
         }
 
+        //Method to open a new sendEmail view
         private void btnSendEmail_Click(object sender, EventArgs e)
         {
-            SendEmail sendEmail = new SendEmail(invoiceName);
+            SendEmailView sendEmail = new SendEmailView(invoiceName);
             sendEmail.Show();
         }
     }

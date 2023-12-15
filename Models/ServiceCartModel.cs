@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace BusinessManager.Models
 {
+    //Holds all information about services in the cart
+
     public class ServiceCartModel
     {
         public int Quantity { get; private set; }
