@@ -35,6 +35,7 @@ namespace BusinessManager.Views
             {
                 btn_delete.Enabled = false;
                 btn_delete.BackColor = Color.IndianRed;
+                btnSave.Enabled = false;
             }
 
             this.StartPosition = FormStartPosition.CenterParent;

@@ -70,6 +70,7 @@ namespace BusinessManager
                 lbl_addEmployee.Visible = false;
                 btn_deleteEmployee.Visible = false;
                 lbl_deleteEmployee.Visible = false;
+                btn_addItem.Visible = false;
             }
 
             //Assigns collections to data grids
