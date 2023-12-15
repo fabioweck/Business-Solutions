@@ -25,11 +25,12 @@ namespace BusinessManager.Views
             this.StartPosition = FormStartPosition.CenterParent;
         }
 
-
+        //Constructor overload
         public ItemProfileView(int id, string description, double price, bool isAdmin )
         {
             InitializeComponent();
 
+            //Check if is admin
             if (!isAdmin)
             {
                 btn_delete.Enabled = false;
@@ -43,13 +44,16 @@ namespace BusinessManager.Views
             this.txtBox_price.Text = price.ToString();
         }
 
+        //Method to close window
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Method to save an item
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //Add the item to the list of services calling the method from ServicesViewModel
             ServicesViewModel.AddItem(lbl_id.Text,txtBox_description.Text,double.Parse(txtBox_price.Text));
 
             MessageBox.Show("Item saved successfully");
@@ -57,8 +61,10 @@ namespace BusinessManager.Views
             this.Close();
         }
 
+        //Method to delete an item
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            //Remove the item from the list of services calling the method from ServicesViewModel
             ServicesViewModel.RemoveItem(lbl_id.Text);
 
             MessageBox.Show("Item removed successfully");

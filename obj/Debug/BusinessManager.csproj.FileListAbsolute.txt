@@ -159,7 +159,6 @@ C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application 
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.csproj.CopyComplete
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.exe
 C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.pdb
-C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.Views.SendEmail.resources
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\bin\Debug\BusinessManager.exe
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\bin\Debug\Syncfusion.Licensing.dll
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\bin\Debug\Syncfusion.Compression.Base.dll
@@ -211,3 +210,4 @@ C:\Users\Lreva\source\repos\Business-SolutionsEnd\obj\Debug\BusinessManager.cspr
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\obj\Debug\BusinessManager.exe
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\obj\Debug\BusinessManager.pdb
 C:\Users\Lreva\source\repos\Business-SolutionsEnd\bin\Debug\BusinessManager.pdb
+C:\Users\Fabio Weck\Documents\Bow Valley\Fall 2023\SODV2101 - Rapid Application Development\Business-Solutions-Clone\obj\Debug\BusinessManager.Views.SendEmailView.resources

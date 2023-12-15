@@ -12,40 +12,55 @@ using System.Threading.Tasks;
 
 namespace BusinessManager.ViewModels
 {
+
+    //This class manipulates all the models and serves as a bridge between the model and the view
+
     public class ClientViewModel
     {
+
+        //Create a list of clients
         public static BindingList<ClientModel> Clients { get; set; }
 
         public ClientViewModel() 
         {
             Clients = new BindingList<ClientModel>();
+
+            //Calls the method to populate list of clients
             PopulateClients();
         }
 
+        //Method to populate list of clients
         public void PopulateClients()
         {
+            //First find the path to the csv file
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
 
+            //Use stream reader to read the file
             using (StreamReader sr = new StreamReader(path + "Assets\\database\\clients.csv"))
             {
                 while(!sr.EndOfStream)
                 {
+                    //Read until the end of file
                     string line = sr.ReadLine();
                     if (line != null)
                     {
+                        //Split information
                         string[] splitted = line.Split(',');
                         int id = int.Parse(splitted[0]);
+
+                        //Pass info to add a new client
                         Clients.Add(new ClientModel(id, splitted[1], splitted[2], splitted[3], splitted[4]));
                     }
                 }
             }
         }
     
-
+        //Method to produce IDs
         public static int GetNextAvailableId()
         {
+            //First find the path to the csv file
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
@@ -80,8 +95,10 @@ namespace BusinessManager.ViewModels
             }
         }
 
+        //Method to add clients to the list of clients
         public static void AddClient(string id, string name, string address, string email, string phone)
         {
+            //First read the path of the csv file
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
@@ -124,10 +141,12 @@ namespace BusinessManager.ViewModels
                 }
             }
         
+        //Calls update method to update csv file
         UpdateCSV(CsvFilePath, Clients);
 
         }
 
+        //Method to update csv file
         public static void RemoveClient(string id)
         {
             // If id is provided, try to parse it
@@ -161,12 +180,9 @@ namespace BusinessManager.ViewModels
             }
         }
 
+        //method to convert client's info to csv
         private static string ConvertToCsv(BindingList<ClientModel> csv)
         {
-            // Assuming ClientModel has properties like Id, Name, etc.
-            // Adjust the property names accordingly
-
-          
 
             // Convert each ClientModel object to CSV row
             string rows = string.Join("\n", csv.Select(client =>
@@ -177,9 +193,10 @@ namespace BusinessManager.ViewModels
 
             return csvContent;
         }
+
+        //Method to update csv file
         public static void UpdateCSV(string path,  BindingList<ClientModel> csv)
         {
-
             try
             {
                 // Convert the BindingList<ClientModel> to CSV format

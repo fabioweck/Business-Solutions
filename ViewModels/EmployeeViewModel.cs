@@ -9,35 +9,45 @@ using System.Threading.Tasks;
 
 namespace BusinessManager.ViewModels
 {
+    //This class manipulates all the models and serves as a bridge between the model and the view
+
     public class EmployeeViewModel
     {
+        //Create a list of employees
         public static BindingList<EmployeeModel> Employees { get; set; }
 
         public EmployeeViewModel()
         {
             Employees = new BindingList<EmployeeModel>();
+
+            //Populate the list of employees
             PopulateEmployees();
         }
 
+        //Method to populate list of employees
         public void PopulateEmployees()
         {
 
+            //First get the path to the csv file
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
 
             try
             {
+                //Use stream reader to read the file
                 using (StreamReader sr = new StreamReader(path + "Assets\\database\\employees.csv"))
                 {
+                    //Reads the file until the end
                     while (!sr.EndOfStream)
                     {
                         string line = sr.ReadLine();
                         if (line != null)
                         {
+                            //split all information
                             string[] splitted = line.Split(',');
 
-                            ///-------------//------------------////-------------
+                            //Pass the splitted info to create a new employee
                             Employees.Add(new EmployeeModel(Int32.Parse(splitted[0]), splitted[1], splitted[2], splitted[3],
                                 splitted[4], (splitted[5]), splitted[6], Boolean.Parse(splitted[7])));
                         }
@@ -51,9 +61,10 @@ namespace BusinessManager.ViewModels
         }
 
 
-
+        //Method to produce an employee ID
         public static int GetNextAvailableId()
         {
+            //First get the csv file path
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
@@ -89,6 +100,7 @@ namespace BusinessManager.ViewModels
             }
         }
 
+        //Method to convert employee's info to csv
         private static string ConvertToCsv(BindingList<EmployeeModel> csv)
         {
             // Convert each EmployeeModel object to CSV row
@@ -102,6 +114,7 @@ namespace BusinessManager.ViewModels
             return csvContent;
         }
 
+        //Method to update csv file
         public static void UpdateCSV(string path, BindingList<EmployeeModel> employees)
         {
 
@@ -120,9 +133,11 @@ namespace BusinessManager.ViewModels
             }
         }
 
+        //Method to add a new employee
         public static void AddEmployee(string id, string name, string address,
         string email, string phone, string password, string confirmPassword, bool isAdmin)
         {
+
             string currentDirectory = Directory.GetCurrentDirectory();
             int index = currentDirectory.LastIndexOf("bin");
             string path = currentDirectory.Substring(0, index);
@@ -164,7 +179,6 @@ namespace BusinessManager.ViewModels
                 else
                 {
                     // Handle the case where parsing id fails
-                    // You may want to log an error or handle it according to your application's requirements
                     Console.WriteLine("Invalid id format");
                 }
             }
@@ -173,6 +187,7 @@ namespace BusinessManager.ViewModels
 
         }
 
+        //Method to remove an employee
         public static void RemoveEmployee(int id)
         {
             // Check if the client with the given id exists in the Clients list
@@ -192,7 +207,7 @@ namespace BusinessManager.ViewModels
             }
             else
             {
-                // If the client doesn't exist, you may want to log or handle it accordingly
+                // If the client doesn't exist
                 Console.WriteLine($"Client with id {id} not found.");
             }
         }
