@@ -101,11 +101,17 @@ namespace BusinessManager
         {
             OnLogoutRequested();
             this.Close();
+            btn_addEmployee.Visible = true;
+            lbl_addEmployee.Visible = true;
+            btn_deleteEmployee.Visible = true;
+            lbl_deleteEmployee.Visible = true;
+            btn_addItem.Visible = true;
         }
 
         //Method to invoke logout
         protected virtual void OnLogoutRequested()
         {
+            
             LogoutRequested?.Invoke(this, EventArgs.Empty);
         }
     }
