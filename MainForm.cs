@@ -41,6 +41,8 @@ namespace BusinessManager
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            this.FormClosing += MainForm_FormClosing;
         }
 
         //Method to define the program behavior based on type of user (admin or employee)
@@ -98,6 +100,28 @@ namespace BusinessManager
             Application.Exit();
         }
 
+        //Method to ask the user if the program will be closed
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Check if the close button (X button) is clicked
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Ask the user if they really want to exit (optional)
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Close the entire application
+                    Application.Exit();
+                }
+                else
+                {
+                    // Cancel the form closing event
+                    e.Cancel = true;
+                }
+            }
+        }
+
         //Method to call logout
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -117,6 +141,11 @@ namespace BusinessManager
         {
             
             LogoutRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("SODV2101: Rapid Application Development\n23SEPMNRT5\n\nBusiness Manager project\nUyara Martins - 443149\nLeandro Evaristo - 447467\nFabio Weck - 441977", "Final project - Group 7", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

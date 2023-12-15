@@ -101,5 +101,11 @@ namespace BusinessManager.Views
                 MessageBox.Show("Success logout");
             }
         }
+
+        //Closes the login page
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
