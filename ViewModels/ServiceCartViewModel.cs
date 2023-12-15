@@ -68,7 +68,7 @@ namespace BusinessManager.ViewModels
                     application.DefaultVersion = ExcelVersion.Xlsx;
 
                     //Opens the template for modification
-                    IWorkbook workbook = application.Workbooks.Open(MainForm.ProgramPath + "Assets\\templates\\work_order_wecklab.xlsx");
+                    IWorkbook workbook = application.Workbooks.Open(MainForm.ProgramPath + "Assets\\templates\\work_order.xlsx");
                  
                     IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -155,8 +155,7 @@ namespace BusinessManager.ViewModels
                             else{ return; }
                         }
                         //If the user doesn't want to save the file, then do nothing
-                        else { return; }
-                        
+                        else { return; }   
                     }
                 }
                 //If the engine fails to read/update the template, handle the error

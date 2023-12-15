@@ -17,6 +17,7 @@ namespace BusinessManager.Views
         public InvoiceView(string path)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
             pdfViewerControl.Load(path);
         }
     }

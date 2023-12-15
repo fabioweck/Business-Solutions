@@ -134,7 +134,7 @@ namespace BusinessManager.Views
                 serviceCartViewModel.GenerateInvoice(int.Parse(lbl_IdData.Text), lbl_nameData.Text, lbl_phoneData.Text, Email);
             }
 
-            //Invoke the delegate to refresh the invoices table
+            //Invoke the delegate to refresh/populate the invoices table
             InvoicesDataGrid.Invoke();
             this.Close();
         }

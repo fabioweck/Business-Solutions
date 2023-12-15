@@ -126,7 +126,7 @@ namespace BusinessManager
                 string phone = selectedRow.Cells["Phone"].Value.ToString();
 
                 //Pass all information to open an order view
-                OrderView orderView = new OrderView(id, name, address, email, phone, invoicesDataGrid.Refresh);
+                OrderView orderView = new OrderView(id, name, address, email, phone, InvoiceViewModel.PopulateInvoicesList);
                 orderView.ShowDialog();
             }
         }
