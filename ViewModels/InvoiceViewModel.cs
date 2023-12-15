@@ -82,11 +82,11 @@ namespace BusinessManager.ViewModels
 
             //Properly format the invoice number
             invoiceID = invoiceID.Substring(0, 4);
-            email.Subject = $"Work order - Invoice {invoiceID} - WeckLab";
+            email.Subject = $"Work order - Invoice {invoiceID} - Golden Strings";
 
             //Add messages to the email's body
             email.Body = (clientName == "") ? "Hello,\n" : $"Hello {clientName},\n\n";
-            email.Body += $"Please find attached your invoice {invoiceID}.\nIn case of any inquiries, feel free to contact us.\n\nBest Regards,\n\nWeckLab Repair Shop.";
+            email.Body += $"Please find attached your invoice {invoiceID}.\nIn case of any inquiries, feel free to contact us.\n\nBest Regards,\n\nGolden Strings Repair Shop.";
 
             //Instantiate the SMTP service and configure it accordingly
             SmtpClient smtp = new SmtpClient();
