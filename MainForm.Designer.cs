@@ -64,6 +64,9 @@ namespace BusinessManager
             this.radioBtn_byName = new System.Windows.Forms.RadioButton();
             this.radioBtn_byId = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
+            this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
+            this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.lbl_addEmployee = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,9 +84,6 @@ namespace BusinessManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_deleteEmployee = new BusinessManager.CustomComponents.DeleteButton();
-            this.updateButton5 = new BusinessManager.CustomComponents.UpdateButton();
-            this.btn_addEmployee = new BusinessManager.CustomComponents.AddButton();
             this.addButton4 = new BusinessManager.CustomComponents.AddButton();
             this.deleteButton4 = new BusinessManager.CustomComponents.DeleteButton();
             this.updateButton4 = new BusinessManager.CustomComponents.UpdateButton();
@@ -131,7 +131,7 @@ namespace BusinessManager
             // 
             this.btn_addItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addItem.Location = new System.Drawing.Point(192, 594);
-            this.btn_addItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addItem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addItem.Name = "btn_addItem";
             this.btn_addItem.Size = new System.Drawing.Size(133, 37);
             this.btn_addItem.TabIndex = 10;
@@ -143,7 +143,7 @@ namespace BusinessManager
             // 
             this.btn_itemDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_itemDetail.Location = new System.Drawing.Point(51, 594);
-            this.btn_itemDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_itemDetail.Margin = new System.Windows.Forms.Padding(4);
             this.btn_itemDetail.Name = "btn_itemDetail";
             this.btn_itemDetail.Size = new System.Drawing.Size(133, 37);
             this.btn_itemDetail.TabIndex = 10;
@@ -484,6 +484,45 @@ namespace BusinessManager
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employees";
             // 
+            // btn_deleteEmployee
+            // 
+            this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
+            this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_deleteEmployee.Location = new System.Drawing.Point(647, 319);
+            this.btn_deleteEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_deleteEmployee.Name = "btn_deleteEmployee";
+            this.btn_deleteEmployee.Size = new System.Drawing.Size(67, 62);
+            this.btn_deleteEmployee.TabIndex = 26;
+            this.btn_deleteEmployee.UseVisualStyleBackColor = false;
+            this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
+            // 
+            // updateButton5
+            // 
+            this.updateButton5.BackColor = System.Drawing.Color.Transparent;
+            this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
+            this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateButton5.Location = new System.Drawing.Point(344, 320);
+            this.updateButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.updateButton5.Name = "updateButton5";
+            this.updateButton5.Size = new System.Drawing.Size(67, 62);
+            this.updateButton5.TabIndex = 25;
+            this.updateButton5.UseVisualStyleBackColor = false;
+            this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
+            // 
+            // btn_addEmployee
+            // 
+            this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
+            this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_addEmployee.Location = new System.Drawing.Point(64, 319);
+            this.btn_addEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addEmployee.Name = "btn_addEmployee";
+            this.btn_addEmployee.Size = new System.Drawing.Size(67, 62);
+            this.btn_addEmployee.TabIndex = 24;
+            this.btn_addEmployee.UseVisualStyleBackColor = false;
+            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
+            // 
             // employeesDataGrid
             // 
             this.employeesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -628,7 +667,7 @@ namespace BusinessManager
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1261, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1261, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -638,20 +677,20 @@ namespace BusinessManager
             this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -660,54 +699,15 @@ namespace BusinessManager
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem1});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(142, 26);
             this.aboutToolStripMenuItem1.Text = "About...";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
-            // 
-            // btn_deleteEmployee
-            // 
-            this.btn_deleteEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btn_deleteEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_deleteEmployee.BackgroundImage")));
-            this.btn_deleteEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_deleteEmployee.Location = new System.Drawing.Point(647, 319);
-            this.btn_deleteEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_deleteEmployee.Name = "btn_deleteEmployee";
-            this.btn_deleteEmployee.Size = new System.Drawing.Size(67, 62);
-            this.btn_deleteEmployee.TabIndex = 26;
-            this.btn_deleteEmployee.UseVisualStyleBackColor = false;
-            this.btn_deleteEmployee.Click += new System.EventHandler(this.btn_deleteEmployee_Click);
-            // 
-            // updateButton5
-            // 
-            this.updateButton5.BackColor = System.Drawing.Color.Transparent;
-            this.updateButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updateButton5.BackgroundImage")));
-            this.updateButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateButton5.Location = new System.Drawing.Point(344, 320);
-            this.updateButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.updateButton5.Name = "updateButton5";
-            this.updateButton5.Size = new System.Drawing.Size(67, 62);
-            this.updateButton5.TabIndex = 25;
-            this.updateButton5.UseVisualStyleBackColor = false;
-            this.updateButton5.Click += new System.EventHandler(this.employee_details_Click);
-            // 
-            // btn_addEmployee
-            // 
-            this.btn_addEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btn_addEmployee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addEmployee.BackgroundImage")));
-            this.btn_addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_addEmployee.Location = new System.Drawing.Point(64, 319);
-            this.btn_addEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_addEmployee.Name = "btn_addEmployee";
-            this.btn_addEmployee.Size = new System.Drawing.Size(67, 62);
-            this.btn_addEmployee.TabIndex = 24;
-            this.btn_addEmployee.UseVisualStyleBackColor = false;
-            this.btn_addEmployee.Click += new System.EventHandler(this.btn_addEmployee_Click);
             // 
             // addButton4
             // 
@@ -868,6 +868,8 @@ namespace BusinessManager
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Business Manager 1.0";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
