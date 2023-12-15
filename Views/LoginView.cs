@@ -27,7 +27,7 @@ namespace BusinessManager.Views
             this.StartPosition = FormStartPosition.CenterScreen;
             mainForm.Visible = false;
 
-            employeeViewModel = new EmployeeViewModel();
+           
             textBox_password.PasswordChar = '*';
 
             //Instantiate a new logout listener
@@ -35,13 +35,15 @@ namespace BusinessManager.Views
 
             // Subscribe to the LogoutRequested event
             mainForm.LogoutRequested += MainForm_LogoutRequested;
-            employees = EmployeeViewModel.Employees;
+           
         }
 
         //Method to sign in
         private void btn_SignIn_Click(object sender, EventArgs e)
         { 
-          
+           employeeViewModel = new EmployeeViewModel();
+           employees = EmployeeViewModel.Employees;
+
             EmployeeModel employeeModel = employees.ToList().Find(emp => emp.Email == textBox_email.Text);
 
             //If can't verify credentials, then notify user
